@@ -1,31 +1,33 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import en from '../locales/en';
+import it from '../locales/it';
+
+import Layout from '../components/Layout';
 
 export default function IndexPage(props) {
-  const router = useRouter()
-  const { locale, locales, defaultLocale } = router
+  const router = useRouter();
+  const { locale, locales, defaultLocale } = router;
+  const t = locale === 'it' ? it : en;
+
+  const handleChangeLang = (e) => {
+    const locale = e.target.value;
+    router.push('/', '/', { locale });
+  };
 
   return (
-    <div>
+    <Layout>
       <h1>Index page</h1>
-      <p>Current locale: {locale}</p>
+      <p>Current locale: {t.homepage.welcome}</p>
       <p>Default locale: {defaultLocale}</p>
       <p>Configured locales: {JSON.stringify(locales)}</p>
 
-      <Link href="/gsp">
-        <a>To getStaticProps page</a>
-      </Link>
+      <select onChange={handleChangeLang} defaultValue={locale}>
+        <option value='en'>EN</option>
+        <option value='it'>IT</option>
+        <option value='de'>DE</option>
+      </select>
       <br />
-
-      <Link href="/gsp/first">
-        <a>To dynamic getStaticProps page</a>
-      </Link>
-      <br />
-
-      <Link href="/gssp">
-        <a>To getServerSideProps page</a>
-      </Link>
-      <br />
-    </div>
-  )
+    </Layout>
+  );
 }
