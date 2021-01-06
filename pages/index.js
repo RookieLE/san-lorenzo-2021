@@ -1,33 +1,13 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import en from '../locales/en';
-import it from '../locales/it';
 
-import Layout from '../components/Layout';
+import useLocale from '../hooks/useLocale';
 
-export default function IndexPage(props) {
-  const router = useRouter();
-  const { locale, locales, defaultLocale } = router;
-  const t = locale === 'it' ? it : en;
-
-  const handleChangeLang = (e) => {
-    const locale = e.target.value;
-    router.push('/', '/', { locale });
-  };
+export default function IndexPage() {
+  const { t } = useLocale();
 
   return (
-    <Layout>
-      <h1>Index page</h1>
-      <p>Current locale: {t.homepage.welcome}</p>
-      <p>Default locale: {defaultLocale}</p>
-      <p>Configured locales: {JSON.stringify(locales)}</p>
-
-      <select onChange={handleChangeLang} defaultValue={locale}>
-        <option value='en'>EN</option>
-        <option value='it'>IT</option>
-        <option value='de'>DE</option>
-      </select>
-      <br />
-    </Layout>
+    <>
+      <h1>{t.homepage?.welcome}</h1>
+    </>
   );
 }

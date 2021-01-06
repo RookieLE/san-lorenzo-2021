@@ -6,7 +6,7 @@ export default {
     contact: 'Contact',
   },
   homepage: {
-    welcome: 'Welcome',
+    welcome: 'Benvenuti',
     san_lorenzo: {
       title: 'A hidden paradise behind a mountain',
       text:
