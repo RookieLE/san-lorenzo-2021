@@ -16,7 +16,7 @@ export default function TwoColumn() {
             A hidden paradise
             <span class='block text-gray-700'>behind a mountain </span>
           </h1>
-          <p class='mb-8 leading-relaxed'>
+          <p class='mb-8 leading-relaxed max-w-prose'>
             Welcome in Persegno, a wonderful location surrounded by nature in
             the Alto Garda Bresciano natural park, at the foot of Mount
             Pizzocolo. Located at an altitude of 400 meters and situated at 7 km

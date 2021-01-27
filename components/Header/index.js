@@ -4,7 +4,7 @@ import Menu from 'components/Menu';
 export default function Header() {
   const { t } = useLocale();
   return (
-    <header class='h-2/3 md:h-5/6 w-full bg-home-header bg-cover p-6 relative'>
+    <header class='h-2/3 md:h-5/6 w-full bg-home-header bg-cover p-6 relative  lg:bg-no-repeat lg:bg-bottom'>
       <Menu />
       <div class='h-2/3 md:h-5/6 w-full absolute top-0 left-0 z-0 '>
         <div class='relative h-full flex justify-center blackCarpet z-10'></div>

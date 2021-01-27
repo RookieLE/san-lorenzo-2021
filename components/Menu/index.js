@@ -32,7 +32,7 @@ export default function Menu() {
           size={42}
           speed={3}
           strokeColor='white'
-          class={` rounded-full ${isOpen && 'bg-green-900 fill-current '}`}
+          class={` rounded ${isOpen && 'bg-yellow-900 fill-current '}`}
         />
       </div>
 
