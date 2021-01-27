@@ -14,15 +14,16 @@ export default function Menu() {
   };
 
   return (
-    <nav class='flex justify-between z-50 font-sans text-white '>
-      <div class='z-20 lg:flex lg:gap-5'>
-        <img src={Logo} class='w-1/4 lg:w-24 lg:h-16' />
-        <h1 class='text-3xl tracking-wider font-medium font-serif lg:w-80'>
-          San Lorenzo <span class='block text-lg font-light'>di Persegno</span>
+    <nav className='flex justify-between z-50 font-sans text-white '>
+      <div className='z-20 lg:flex lg:gap-5'>
+        <img src={Logo} className='w-1/4 lg:w-24 lg:h-16' />
+        <h1 className='text-3xl tracking-wider font-medium font-serif lg:w-80'>
+          San Lorenzo{' '}
+          <span className='block text-lg font-light'>di Persegno</span>
         </h1>
       </div>
 
-      <div onClick={handleHamb} class='z-50  hover:cursor lg:hidden'>
+      <div onClick={handleHamb} className='z-50  hover:cursor lg:hidden'>
         <UseAnimations
           animation={menu2}
           wrapperStyle={
@@ -32,23 +33,23 @@ export default function Menu() {
           size={42}
           speed={3}
           strokeColor='white'
-          class={` rounded ${isOpen && 'bg-yellow-900 fill-current '}`}
+          className={` rounded ${isOpen && 'bg-gray-300 fill-current '}`}
         />
       </div>
 
       <ul
-        class={`grid absolute bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:text-white lg:shadow-none lg:justify-end ${
+        className={`grid absolute bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:text-white lg:shadow-none lg:justify-end ${
           (isOpen && 'block') || 'hidden'
         }`}>
-        <li class='navLink navLink_active'>Home</li>
-        <li class='navLink navLink_notActive'>Apartments</li>
-        <li class='navLink navLink_notActive'>Activities</li>
-        <li class='navLink navLink_notActive'>Contact</li>
-        <li class='navLink navLink_notActive'>
+        <li className='navLink navLink_active'>Home</li>
+        <li className='navLink navLink_notActive'>Apartments</li>
+        <li className='navLink navLink_notActive'>Activities</li>
+        <li className='navLink navLink_notActive'>Contact</li>
+        <li className='navLink navLink_notActive'>
           <select
             onChange={handleChangeLang}
             defaultValue={locale}
-            class='text-black rounded border appearance-none border-gray-300 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer'>
+            className='text-black rounded border appearance-none border-gray-300 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer'>
             <option value='en'>EN</option>
             <option value='it'>IT</option>
             <option value='de'>DE</option>

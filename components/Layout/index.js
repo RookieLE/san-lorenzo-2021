@@ -2,7 +2,7 @@ import Menu from '../Menu';
 
 export default function Layout({ children }) {
   return (
-    <main class='grid'>
+    <main className='grid'>
       <div>{children}</div>
     </main>
   );
