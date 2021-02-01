@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header
       className='h-2/3 md:h-5/6 w-full bg-home-header bg-cover p-6 relative lg:bg-no-repeat lg:bg-bottom'
-      style={{ maxHeight: '700px' }}>
+      style={{ maxHeight: '700px', minHeight: '80vh' }}>
       <Menu />
       <div className='h-2/3 md:h-5/6 w-full absolute top-0 left-0 z-0 '>
         <div className='relative h-full flex justify-center blackCarpet z-10'></div>

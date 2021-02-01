@@ -12,7 +12,7 @@ export default function Footer() {
         style={{ maxHeight: '600px' }}
       /> */}
       <div className='h-full w-full absolute bottom-0 left-0 z-0 '>
-        <div className='relative h-full flex justify-center whiteCarpet z-10'></div>
+        <div className='relative h-full w-full flex justify-center whiteCarpet z-10'></div>
       </div>
 
       <div className='z-50 w-full flex justify-center pb-4 md:pb-10'>
