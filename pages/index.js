@@ -12,13 +12,13 @@ export default function IndexPage() {
 
   return (
     <>
-      <Header />
-      <Agriturismo />
-      <Rooms />
-      <Activities />
-      <Features />
-      <Contact />
-      <Footer />
+      <Header t={t} />
+      <Agriturismo t={t} />
+      <Rooms t={t} />
+      <Activities t={t} />
+      <Features t={t} />
+      <Contact t={t} />
+      <Footer t={t} />
     </>
   );
 }

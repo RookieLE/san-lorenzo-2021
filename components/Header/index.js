@@ -1,13 +1,11 @@
-import useLocale from 'hooks/useLocale';
 import Menu from 'components/Menu';
 
-export default function Header() {
-  const { t } = useLocale();
+export default function Header({ t }) {
   return (
     <header
       className='h-2/3 md:h-5/6 w-full bg-home-header bg-cover p-6 relative lg:bg-no-repeat lg:bg-bottom'
       style={{ maxHeight: '700px', minHeight: '80vh' }}>
-      <Menu />
+      <Menu navbar={t.navbar} />
       <div className='h-2/3 md:h-5/6 w-full absolute top-0 left-0 z-0 '>
         <div className='relative h-full flex justify-center blackCarpet z-10'></div>
       </div>

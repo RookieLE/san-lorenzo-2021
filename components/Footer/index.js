@@ -1,7 +1,11 @@
 import Logo from 'assets/home/logo.png';
 import Forest from 'assets/footer.png';
 
-export default function Footer() {
+export default function Footer({
+  t: {
+    navbar: { home, apartments, activities, contact },
+  },
+}) {
   return (
     <footer
       className='flex flex-col justify-end pb-10 z-50 bg-footer object-cover h-full w-full bg-bottom text-white relative'
@@ -21,16 +25,16 @@ export default function Footer() {
 
       <ul className='z-50 grid place-content-center text-center gap-3 pb-20 md:grid-cols-4 max-w-screen-sm mx-auto'>
         <li className='text-lg tracking-wider font-sans cursor-pointer font-light lg:hover:border-white md:text-xl'>
-          Home
+          {home}
         </li>
         <li className='text-lg tracking-wider font-sans cursor-pointer font-light lg:hover:border-white md:text-xl'>
-          Apartments
+          {apartments}
         </li>
         <li className='text-lg tracking-wider font-sans cursor-pointer font-light lg:hover:border-white md:text-xl'>
-          Activities
+          {activities}
         </li>
         <li className='text-lg tracking-wider font-sans cursor-pointer font-light lg:hover:border-white md:text-xl'>
-          Contact
+          {contact}
         </li>
       </ul>
 
@@ -64,7 +68,12 @@ export default function Footer() {
             </svg>
           </a>
         </span>
-        <p> © 2021 powered by Leonardo Tononi</p>
+        <a
+          href='https://leonardotononi.com'
+          target='_blank'
+          title='Web Developer Website'>
+          © 2021 powered by Leonardo Tononi
+        </a>
       </div>
     </footer>
   );

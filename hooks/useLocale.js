@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 
 import en from '../locales/en';
 import it from '../locales/it';

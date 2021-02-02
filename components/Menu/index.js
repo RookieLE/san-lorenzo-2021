@@ -5,7 +5,9 @@ import useLocale from 'hooks/useLocale';
 import UseAnimations from 'react-useanimations';
 import menu2 from 'react-useanimations/lib/menu2';
 
-export default function Menu() {
+export default function Menu({
+  navbar: { home, apartments, activities, contact },
+}) {
   const { locale, handleChangeLang } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,10 +43,10 @@ export default function Menu() {
         className={`grid absolute bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:text-white lg:shadow-none lg:justify-end ${
           (isOpen && 'block') || 'hidden'
         }`}>
-        <li className='navLink navLink_active'>Home</li>
-        <li className='navLink navLink_notActive'>Apartments</li>
-        <li className='navLink navLink_notActive'>Activities</li>
-        <li className='navLink navLink_notActive'>Contact</li>
+        <li className='navLink navLink_active'>{home}</li>
+        <li className='navLink navLink_notActive'>{apartments}</li>
+        <li className='navLink navLink_notActive'>{activities}</li>
+        <li className='navLink navLink_notActive'>{contact}</li>
         <li className='navLink navLink_notActive'>
           <select
             onChange={handleChangeLang}

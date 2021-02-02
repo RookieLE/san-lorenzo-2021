@@ -6,18 +6,21 @@ import LimoneImg from 'assets/activities/limoni.png';
 import FormaggiImg from 'assets/activities/formaggi.png';
 import LagoImg from 'assets/activities/lago.png';
 
-export default function Activities() {
+export default function Activities({ t }) {
+  const {
+    homepage: {
+      activities: { title, desc, cta },
+    },
+  } = t;
   return (
     <section className='text-gray-600 bg-gray-100 py-10 md:py-28'>
       <div className='container px-5 py-6 mx-auto flex flex-wrap'>
         <div className='flex flex-col text-center w-full mb-20'>
           <h2 className='title_section'>
-            <span className='block text-gray-700'>Activities</span>
+            <span className='block text-gray-700'>{title}</span>
           </h2>
           <p className='lg:w-2/3 mx-auto leading-relaxed text-base max-w-prose'>
-            At our Lodge, there is a variety of rooms to choose from. Whether
-            you are a casual traveler or a person demanding luxury wherever you
-            go, you won’t be disappointed.
+            {desc}
           </p>
         </div>
         <div className='flex flex-wrap md:-m-2 -m-1'>
@@ -78,7 +81,7 @@ export default function Activities() {
       </div>
       <div className='flex justify-center pt-5 md:pt-10'>
         <button className='inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-900 rounded text-lg shadow hover:shadow-md'>
-          Learn More
+          {cta}
         </button>
       </div>
     </section>

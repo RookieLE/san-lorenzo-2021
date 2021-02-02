@@ -1,4 +1,10 @@
-export default function Contact() {
+export default function Contact({
+  t: {
+    homepage: {
+      contact: { title, desc, form },
+    },
+  },
+}) {
   return (
     <section class='text-gray-600 body-font relative'>
       <div class='flex mt-6 justify-center'>
@@ -6,18 +12,15 @@ export default function Contact() {
       </div>
       <div class='container px-5 py-24 mx-auto'>
         <div class='flex flex-col text-center w-full mb-12'>
-          <h2 class='title_section'>Contact Us</h2>
-          <p class='lg:w-2/3 mx-auto leading-relaxed text-base'>
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify.
-          </p>
+          <h2 class='title_section'>{title}</h2>
+          <p class='lg:w-2/3 mx-auto leading-relaxed text-base'>{desc}</p>
         </div>
         <div class='lg:w-1/2 md:w-2/3 mx-auto'>
           <div class='flex flex-wrap -m-2'>
             <div class='p-2 w-1/2'>
               <div class='relative'>
                 <label for='name' class='leading-7 text-sm text-gray-600'>
-                  Name
+                  {form.name}
                 </label>
                 <input
                   type='text'
@@ -30,7 +33,7 @@ export default function Contact() {
             <div class='p-2 w-1/2'>
               <div class='relative'>
                 <label for='email' class='leading-7 text-sm text-gray-600'>
-                  Email
+                  {form.email}
                 </label>
                 <input
                   type='email'
@@ -43,7 +46,7 @@ export default function Contact() {
             <div class='p-2 w-1/2'>
               <div class='relative'>
                 <label for='date' class='leading-7 text-sm text-gray-600'>
-                  Arrival Date
+                  {form.arrival_date}
                 </label>
                 <input
                   type='date'
@@ -56,7 +59,7 @@ export default function Contact() {
             <div class='p-2 w-1/2'>
               <div class='relative'>
                 <label for='date' class='leading-7 text-sm text-gray-600'>
-                  Departure Date
+                  {form.departure_date}
                 </label>
                 <input
                   type='date'
@@ -69,7 +72,7 @@ export default function Contact() {
             <div class='p-2 w-full'>
               <div class='relative'>
                 <label for='message' class='leading-7 text-sm text-gray-600'>
-                  Message
+                  {form.message}
                 </label>
                 <textarea
                   id='message'
@@ -79,7 +82,7 @@ export default function Contact() {
             </div>
             <div class='p-2 w-full'>
               <button class='flex mx-auto text-white bg-gray-300 border-0 py-2 px-8 focus:outline-none hover:bg-green-900 rounded text-lg'>
-                Send
+                {form.button}
               </button>
             </div>
             <div class='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
@@ -125,16 +128,7 @@ export default function Contact() {
                   </svg>
                 </a>
               </span>
-              <p className='pt-10'>
-                Vi consigliamo di impostare nel navigatore località Gaino. C’è
-                la possibilità che il navigatore vi porti a Navazzo, NON dovete
-                assolutamente seguire questa direzione. Una volta arrivati a
-                Toscolano Maderno, proseguite per Gaino, poi entrate nella valle
-                delle Camerate e proseguite per 5 km circa. La strada è una
-                classica strada montana, sterrata e non asfaltata, consigliamo
-                tranquillità e di godervi il percorso perchè una volta giunti in
-                agriturismo la pace ricompenserà ogni sforzo.
-              </p>
+              <p className='pt-10'>{form.info}</p>
             </div>
           </div>
         </div>
