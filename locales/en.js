@@ -32,12 +32,6 @@ export default {
           img: 'https://dummyimage.com/600x360',
         },
         {
-          name: 'freedom',
-          price: '80',
-          text: 'per night',
-          img: 'https://dummyimage.com/600x360',
-        },
-        {
           name: 'joy',
           price: '60',
           text: 'per night',

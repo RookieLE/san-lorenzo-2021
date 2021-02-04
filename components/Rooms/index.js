@@ -3,9 +3,7 @@ import Room from './Room';
 export default function Rooms({
   t: {
     homepage: {
-      title,
-      desc,
-      rooms: { rooms },
+      rooms: { title, desc, rooms },
     },
   },
 }) {
