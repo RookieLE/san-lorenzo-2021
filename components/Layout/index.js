@@ -1,4 +1,4 @@
-import Menu from '../Menu';
+import Menu from 'components/organism/Menu';
 
 export default function Layout({ children }) {
   return (

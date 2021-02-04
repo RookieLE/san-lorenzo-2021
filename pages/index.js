@@ -1,12 +1,12 @@
-import Header from 'components/Header';
+import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
-import Agriturismo from 'components/Agriturismo';
-import Ratings from 'components/Ratings';
-import Rooms from 'components/Rooms';
-import Activities from 'components/Activities';
-import Features from 'components/Features';
-import Contact from 'components/Contact';
-import Footer from 'components/Footer';
+import Agriturismo from '@/components/organism/Agriturismo';
+import Ratings from '@/components/organism/Ratings';
+import Rooms from '@/components/organism/Rooms';
+import Activities from '@/components/organism/Activities';
+import Features from '@/components/organism/Features';
+import Contact from '@/components/organism/Contact';
+import Footer from '@/components/organism/Footer';
 
 export default function IndexPage() {
   const { t } = useLocale();

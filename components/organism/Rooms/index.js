@@ -1,5 +1,5 @@
 import Room from './Room';
-
+import Button from 'components/atoms/Button';
 export default function Rooms({
   t: {
     homepage: {
@@ -20,6 +20,9 @@ export default function Rooms({
           {rooms.map((room) => (
             <Room room={room} />
           ))}
+        </div>
+        <div className='flex justify-center pt-12'>
+          <Button text='View Rooms' primary />
         </div>
       </div>
     </section>

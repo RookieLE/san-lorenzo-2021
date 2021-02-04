@@ -10,7 +10,7 @@ export default function Ratings() {
             <img
               src={BookingImg}
               alt='Booking logo'
-              class='block object-contain w-2/5'
+              class='block object-contain w-4/5 lg:w-2/5'
               style={{ filter: 'grayscale(100%)', opacity: '0.3' }}
             />
           </div>
@@ -18,7 +18,7 @@ export default function Ratings() {
             <img
               src={GoogleImg}
               alt='Google logo'
-              class='block object-contain w-2/5'
+              class='block object-contain w-4/5 lg:w-2/5'
               style={{ filter: 'grayscale(100%)', opacity: '0.3' }}
             />
           </div>

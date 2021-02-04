@@ -1,4 +1,5 @@
 import Agri from 'assets/home/agri.png';
+import Button from 'components/atoms/Button';
 
 export default function Agriturismo({
   t: {
@@ -25,9 +26,7 @@ export default function Agriturismo({
 
           <p className='mb-8 leading-relaxed max-w-prose'>{text}</p>
           <div className='flex justify-center'>
-            <button className='inline-flex text-white bg-gray-400 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded text-lg shadow hover:shadow-md'>
-              {cta}
-            </button>
+            <Button text={cta} primary />
           </div>
         </div>
       </div>

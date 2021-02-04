@@ -21,7 +21,7 @@
 }
 
 .navLink {
-  @apply text-lg m-2 pl-2 tracking-wider lg:pl-0 font-sans cursor-pointer font-light lg:hover:border-white;
+  @apply text-lg m-2 pl-2 tracking-wider lg:pl-0 font-sans cursor-pointer font-light capitalize lg:hover:border-white;
 }
 
 .navLink_notActive {

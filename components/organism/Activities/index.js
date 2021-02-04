@@ -1,3 +1,4 @@
+import Button from 'components/atoms/Button';
 import CaneImg from 'assets/activities/cane.png';
 import FiumeImg from 'assets/activities/fiume.png';
 import PizzoccoloImg from 'assets/activities/pizzoccolo.png';
@@ -80,9 +81,7 @@ export default function Activities({ t }) {
         </div>
       </div>
       <div className='flex justify-center pt-5 md:pt-10'>
-        <button className='inline-flex text-white bg-green-800 border-0 py-2 px-6 focus:outline-none hover:bg-green-900 rounded text-lg shadow hover:shadow-md'>
-          {cta}
-        </button>
+        <Button text={cta} primary />
       </div>
     </section>
   );

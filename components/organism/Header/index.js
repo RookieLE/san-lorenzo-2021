@@ -1,4 +1,4 @@
-import Menu from 'components/Menu';
+import Menu from '@/components/organism/Menu';
 
 export default function Header({ t }) {
   return (
