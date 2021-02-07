@@ -13,7 +13,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <Header t={t} />
+      <Header background='bg-home-header' page_type='home' />
       <Agriturismo t={t} />
       <Ratings />
       <Rooms t={t} />
