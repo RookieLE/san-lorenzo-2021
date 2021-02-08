@@ -7,7 +7,7 @@ export default function Footer({
   },
 }) {
   return (
-    <footer className='flex flex-col justify-end py-10 z-50 h-full w-full bg-bottom bg-gray-50 text-gray-800 relative max-h-800'>
+    <footer className='flex flex-col justify-end py-10 z-50  w-full bg-bottom bg-gray-50 text-gray-800 relative max-h-800'>
       {/*    <div class='flex mt-6 justify-center pb-10'>
         <div class='w-16 h-1 rounded-full bg-green-900 inline-flex'></div>
       </div> */}
