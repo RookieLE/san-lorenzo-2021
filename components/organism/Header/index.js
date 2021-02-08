@@ -12,10 +12,8 @@ export default function Header({ background, page_type }) {
 
   return (
     <header
-      className={`h-2/3 md:h-5/6 w-full ${background} bg-cover p-6 relative lg:bg-no-repeat lg:bg-bottom`}
-      style={{
-        maxHeight: '700px',
-      }}>
+      className={`h-2/3 min-h-400 md:h-5/6 w-full ${background} bg-cover p-6 relative lg:bg-no-repeat lg:bg-bottom max-h-800`}
+      style={{ minHeight: '500px' }}>
       <Menu navbar={t.navbar} />
       <div className='h-2/3 md:h-5/6 w-full absolute top-0 left-0 z-0 '>
         <div className='relative h-full flex justify-center blackCarpet z-10'></div>

@@ -7,9 +7,6 @@ export default function Contact({
 }) {
   return (
     <section class='text-gray-600 body-font relative'>
-      <div class='flex mt-6 justify-center'>
-        <div class='w-16 h-1 rounded-full bg-green-900 inline-flex'></div>
-      </div>
       <div class='container px-5 py-24 mx-auto'>
         <div class='flex flex-col text-center w-full mb-12'>
           <h2 class='title_section'>{title}</h2>

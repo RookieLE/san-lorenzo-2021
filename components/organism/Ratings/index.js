@@ -11,7 +11,11 @@ export default function Ratings() {
               src={BookingImg}
               alt='Booking logo'
               class='block object-contain w-4/5 lg:w-2/5'
-              style={{ filter: 'grayscale(100%)', opacity: '0.3' }}
+              style={{
+                filter: 'grayscale(100%)',
+                opacity: '0.3',
+                maxHeight: '150px',
+              }}
             />
           </div>
           <div class='flex justify-center'>
@@ -19,7 +23,11 @@ export default function Ratings() {
               src={GoogleImg}
               alt='Google logo'
               class='block object-contain w-4/5 lg:w-2/5'
-              style={{ filter: 'grayscale(100%)', opacity: '0.3' }}
+              style={{
+                filter: 'grayscale(100%)',
+                opacity: '0.3',
+                maxHeight: '150px',
+              }}
             />
           </div>
         </div>

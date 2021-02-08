@@ -13,9 +13,7 @@ export default function ColumnSection({
   );
   return (
     <section className={`text-gray-600 body-font ${bgSmoke && 'bg-gray-100'}`}>
-      <div
-        className='container mx-auto flex px-5 py-14 md:py-28 md:flex-row flex-col items-center justify-center'
-        style={{ maxWidth: '1280px' }}>
+      <div className='container mx-auto flex px-5 py-14 md:py-28 md:flex-row flex-col items-center justify-center max-w-screen-xl'>
         <div
           className={`lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 ${
             inverted && 'lg:order-last'
