@@ -21,15 +21,15 @@
 }
 
 .navLink {
-  @apply text-lg m-2 pl-2 tracking-wider lg:pl-0 font-sans cursor-pointer font-light capitalize lg:hover:border-white;
+  @apply text-lg m-2 pl-2 tracking-wider lg:pl-0 font-sans cursor-pointer font-light capitalize;
 }
 
 .navLink_notActive {
-  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2;
+  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-200 lg:opacity-80 lg:hover:opacity-95;
 }
 
 .navLink_active {
-  @apply h-8 border-l-4 border-green-900  lg:border-b-2 lg:border-transparent lg:border-l-0;
+  @apply h-8 border-l-4 border-green-900  lg:border-b-2 lg:border-white lg:border-l-0;
 }
 
 .title_section {

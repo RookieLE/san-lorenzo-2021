@@ -1,9 +1,10 @@
 export default {
   navbar: {
     home: 'Home',
-    apartments: 'appartamenti',
-    activities: 'attività',
-    contact: 'contatti',
+    lodge: 'Agriturismo',
+    apartments: 'Appartamenti',
+    activities: 'Attività',
+    contact: 'Contatti',
   },
   homepage: {
     welcome: 'benvenuti',

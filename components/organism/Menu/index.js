@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Logo from 'assets/home/logo.png';
 import useLocale from 'hooks/useLocale';
@@ -6,14 +7,18 @@ import UseAnimations from 'react-useanimations';
 import menu2 from 'react-useanimations/lib/menu2';
 
 export default function Menu({
-  navbar: { home, apartments, activities, contact },
+  navbar: { home, lodge, apartments, activities, contact },
 }) {
+  const router = useRouter();
   const { locale, handleChangeLang } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleHamb = () => {
     setTimeout(() => setIsOpen(!isOpen), 300);
   };
+
+  const isMenuActive = (_menu) =>
+    router.pathname === _menu ? 'navLink_active' : 'navLink_notActive';
 
   return (
     <nav className='flex justify-between z-50 font-sans text-white '>
@@ -43,10 +48,31 @@ export default function Menu({
         className={`grid absolute bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:text-white lg:shadow-none lg:justify-end ${
           (isOpen && 'block') || 'hidden'
         }`}>
-        <li className='navLink navLink_active'>{home}</li>
-        <li className='navLink navLink_notActive'>{apartments}</li>
-        <li className='navLink navLink_notActive'>{activities}</li>
-        <li className='navLink navLink_notActive'>{contact}</li>
+        <li className={`navLink ${isMenuActive(`/`)}`}>
+          <Link href={`/${locale}`}>
+            <a>{home}</a>
+          </Link>
+        </li>
+        <li className={`navLink ${isMenuActive(`/agriturismo`)}`}>
+          <Link href={`/${locale}/agriturismo`}>
+            <a>{lodge}</a>
+          </Link>
+        </li>
+        <li className={`navLink ${isMenuActive('/appartamenti')}`}>
+          <Link href={`/${locale}/appartamenti`}>
+            <a>{apartments}</a>
+          </Link>
+        </li>
+        <li className={`navLink ${isMenuActive('/attività')}`}>
+          <Link href={`/${locale}/attività`}>
+            <a>{activities}</a>
+          </Link>
+        </li>
+        <li className={`navLink ${isMenuActive('/contatti')}`}>
+          <Link href={`/${locale}/contatti`}>
+            <a>{contact}</a>
+          </Link>
+        </li>
         <li className='navLink navLink_notActive'>
           <select
             onChange={handleChangeLang}

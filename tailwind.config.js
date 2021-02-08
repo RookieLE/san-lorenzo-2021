@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage: (theme) => ({
         'home-header': "url('assets/home/mountain.png')",
         footer: "url('assets/footer.png')",
+        agriturismo: "url('assets/agriturismo.jpeg')",
       }),
     },
   },

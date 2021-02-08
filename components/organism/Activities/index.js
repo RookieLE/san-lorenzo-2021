@@ -23,6 +23,9 @@ export default function Activities({ t }) {
           <p className='lg:w-2/3 mx-auto leading-relaxed text-base max-w-prose'>
             {desc}
           </p>
+          <div className='flex justify-center pt-5 md:pt-10'>
+            <Button text={cta} ctaStyle='underline' />
+          </div>
         </div>
         <div className='flex flex-wrap md:-m-2 -m-1'>
           <div className='flex flex-wrap w-1/2'>
@@ -79,9 +82,6 @@ export default function Activities({ t }) {
             </div>
           </div>
         </div>
-      </div>
-      <div className='flex justify-center pt-5 md:pt-10'>
-        <Button text={cta} primary />
       </div>
     </section>
   );

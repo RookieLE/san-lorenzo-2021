@@ -22,7 +22,7 @@ export default function Rooms({
           ))}
         </div>
         <div className='flex justify-center pt-12'>
-          <Button text='View Rooms' primary />
+          <Button text='View Rooms' ctaStyle='primary' />
         </div>
       </div>
     </section>

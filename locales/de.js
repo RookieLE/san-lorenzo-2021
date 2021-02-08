@@ -1,6 +1,7 @@
 export default {
   navbar: {
     home: 'Home',
+    lodge: 'Lodge',
     apartments: 'Apartments',
     activities: 'Activities',
     contact: 'Contact',
