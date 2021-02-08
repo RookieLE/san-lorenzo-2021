@@ -69,9 +69,7 @@ export default function Menu({
           </Link>
         </li>
         <li className={`navLink ${isMenuActive('/contatti')}`}>
-          <Link href={`/${locale}/contatti`}>
-            <a>{contact}</a>
-          </Link>
+          <a href='#contact'>{contact}</a>
         </li>
         <li className='navLink navLink_notActive'>
           <select

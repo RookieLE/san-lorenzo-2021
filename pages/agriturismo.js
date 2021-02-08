@@ -56,8 +56,8 @@ export default function Agriturismo() {
       {/*  <ImgMosaic /> */}
       <ImgCentral />
       <ColumnSection data={flora} />
-      <ColumnSection data={fauna} inverted />
-      {/* <Contact t={t} /> */}
+      <ColumnSection data={fauna} inverted bgSmoke />
+      <Contact t={t} simplified />
       <Footer t={t} />
     </>
   );
