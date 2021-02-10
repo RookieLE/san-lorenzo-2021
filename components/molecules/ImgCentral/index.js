@@ -1,8 +1,8 @@
 export default function ImgCentral({ bgImage, textImage, bgSmoke, text, cta }) {
   return (
     <section className={`text-gray-600 ${bgSmoke && 'bg-gray-100'}`}>
-      <div className='container mx-auto flex px-5 py-24 items-center justify-center flex-col'>
-        <div className='w-4/5 relative'>
+      <div className='container mx-auto flex px-2 py-12 md:px-5 md:py-24 items-center justify-center flex-col'>
+        <div className='relative'>
           <img
             className='w-full object-cover object-center rounded-md lg:h-96'
             alt='hero'

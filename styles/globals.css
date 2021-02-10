@@ -49,3 +49,13 @@
     max-height: 800px;
   }
 }
+
+.carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}

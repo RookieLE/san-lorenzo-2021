@@ -2,6 +2,7 @@ import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
 import Title from 'components/atoms/Title';
 import ImgCentral from '@/components/molecules/ImgCentral';
+import Carousel from 'components/molecules/Carousel';
 import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
 
@@ -17,6 +18,7 @@ export default function Appartamenti() {
       <Header simplified />
       <Title title='Rooms & Views' margin='mt-10' />
       <ImgCentral bgImage={MountainRoomImg} textImage={textImage} />
+      <Carousel />
       <Contact t={t} simplified />
       <Footer t={t} />
     </>
