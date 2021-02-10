@@ -1,7 +1,7 @@
 import useLocale from '@/hooks/useLocale';
 import Menu from '@/components/organism/Menu';
 
-export default function Header({ background, page_type }) {
+export default function Header({ background, page_type, simplified }) {
   const { t } = useLocale();
   const title = page_type === 'home' && t.homepage?.welcome;
   const RenderTitle = page_type && (
@@ -9,6 +9,10 @@ export default function Header({ background, page_type }) {
       {title}
     </h1>
   );
+
+  if (simplified) {
+    return <Menu navbar={t.navbar} simplified />;
+  }
 
   return (
     <header

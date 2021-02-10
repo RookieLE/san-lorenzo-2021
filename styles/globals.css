@@ -28,8 +28,16 @@
   @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-200 lg:opacity-80 lg:hover:opacity-95;
 }
 
+.navLink_notActive_simpl {
+  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-400 lg:opacity-80 lg:hover:opacity-95;
+}
+
 .navLink_active {
   @apply h-8 border-l-4 border-green-900  lg:border-b-2 lg:border-white lg:border-l-0;
+}
+
+.navLink_active_simpl {
+  @apply h-8 border-l-4 border-green-900  lg:border-b-2 lg:border-gray-800 lg:border-l-0;
 }
 
 .title_section {

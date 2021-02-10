@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Logo from 'assets/home/logo.png';
+import LogoImg from 'assets/home/logo.png';
+import LogoBlackImg from 'assets/black-logo.png';
 import useLocale from 'hooks/useLocale';
 import UseAnimations from 'react-useanimations';
 import menu2 from 'react-useanimations/lib/menu2';
 
 export default function Menu({
+  simplified,
   navbar: { home, lodge, apartments, activities, contact },
 }) {
   const router = useRouter();
@@ -18,12 +20,21 @@ export default function Menu({
   };
 
   const isMenuActive = (_menu) =>
-    router.pathname === _menu ? 'navLink_active' : 'navLink_notActive';
+    (router.pathname === _menu && !simplified && 'navLink_active') ||
+    (router.pathname === _menu && simplified && 'navLink_active_simpl') ||
+    (router.pathname !== _menu && !simplified && 'navLink_notActive') ||
+    (router.pathname !== _menu && simplified && 'navLink_notActive_simpl');
+
+  const textColor = (simplified && 'text-gray-800') || 'text-white';
+  const logo = (!simplified && LogoImg) || LogoBlackImg;
 
   return (
-    <nav className='flex justify-between z-50 font-sans text-white '>
+    <nav
+      className={`flex justify-between z-50 font-sans ${textColor} ${
+        simplified && 'p-6'
+      }`}>
       <div className='z-20 lg:flex lg:gap-5'>
-        <img src={Logo} className='w-1/4 lg:w-24 lg:h-16' />
+        <img src={logo} className='w-1/4 lg:w-24 lg:h-16' />
         <h1 className='text-3xl tracking-wider font-medium font-serif lg:w-80'>
           San Lorenzo{' '}
           <span className='block text-lg font-light'>di Persegno</span>
@@ -45,7 +56,7 @@ export default function Menu({
       </div>
 
       <ul
-        className={`grid absolute bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:text-white lg:shadow-none lg:justify-end ${
+        className={`grid absolute bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
           (isOpen && 'block') || 'hidden'
         }`}>
         <li className={`navLink ${isMenuActive(`/`)}`}>

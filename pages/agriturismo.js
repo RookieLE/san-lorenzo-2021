@@ -9,6 +9,7 @@ import Footer from '@/components/organism/Footer';
 import Agri from 'assets/home/agri.png';
 import Fauna from 'assets/fauna.png';
 import Flora from 'assets/flora.png';
+import MountainImg from '@/assets/mountain.png';
 
 export default function Agriturismo() {
   const { t } = useLocale();
@@ -54,7 +55,7 @@ export default function Agriturismo() {
       <Header page_type='agriturismo' background='bg-agriturismo' />
       <ColumnSection data={agriturismo} />
       {/*  <ImgMosaic /> */}
-      <ImgCentral />
+      <ImgCentral bgImage={MountainImg} bgSmoke />
       <ColumnSection data={flora} />
       <ColumnSection data={fauna} inverted bgSmoke />
       <Contact t={t} simplified />
