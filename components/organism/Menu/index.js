@@ -74,8 +74,8 @@ export default function Menu({
             <a>{apartments}</a>
           </Link>
         </li>
-        <li className={`navLink ${isMenuActive('/attività')}`}>
-          <Link href={`/${locale}/attività`}>
+        <li className={`navLink ${isMenuActive('/attivita')}`}>
+          <Link href={`/${locale}/attivita`}>
             <a>{activities}</a>
           </Link>
         </li>
