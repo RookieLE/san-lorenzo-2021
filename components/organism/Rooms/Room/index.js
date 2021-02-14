@@ -12,7 +12,7 @@ export default function Room({ room: { name, img, price } }) {
         }>
         <img
           alt='gallery'
-          className='inset-0 w-96 h-96 object-cover object-center rounded shadow-md hover:shadow-lg'
+          className='inset-0 w-96 h-80 object-cover object-center rounded-md shadow-md hover:shadow-lg'
           src={img}
         />
         <div className='text-center'>
