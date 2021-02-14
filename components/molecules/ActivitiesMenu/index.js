@@ -12,7 +12,7 @@ export default function ActivitiesMenu() {
       <div class='container px-5 py-24 mx-auto'>
         <div class='flex flex-wrap -m-4 text-center'>
           <div class='p-4 md:w-1/4 sm:w-1/2 w-full'>
-            <div class='bg-gray-50 hover:shadow px-4 py-6 rounded-lg'>
+            <div class='bg-gray-50 hover:shadow cursor-pointer px-4 py-6 rounded-lg'>
               <img
                 src={MountainIcon}
                 class='text-indigo-500 w-8 h-8 mb-3 inline-block'
@@ -21,7 +21,7 @@ export default function ActivitiesMenu() {
             </div>
           </div>
           <div class='p-4 md:w-1/4 sm:w-1/2 w-full'>
-            <div class='bg-gray-50 hover:shadow px-4 py-6 rounded-lg'>
+            <div class='bg-gray-50 hover:shadow cursor-pointer px-4 py-6 rounded-lg'>
               <img
                 src={WellnessIcon}
                 class='text-indigo-500 w-8 h-8 mb-3 inline-block'
@@ -30,7 +30,7 @@ export default function ActivitiesMenu() {
             </div>
           </div>
           <div class='p-4 md:w-1/4 sm:w-1/2 w-full'>
-            <div class='bg-gray-50 hover:shadow px-4 py-6 rounded-lg'>
+            <div class='bg-gray-50 hover:shadow cursor-pointer px-4 py-6 rounded-lg'>
               <img
                 src={BeachIcon}
                 class='text-indigo-500 w-8 h-8 mb-3 inline-block'
@@ -39,7 +39,7 @@ export default function ActivitiesMenu() {
             </div>
           </div>
           <div class='p-4 md:w-1/4 sm:w-1/2 w-full'>
-            <div class='bg-gray-50 hover:shadow px-4 py-6 rounded-lg'>
+            <div class='bg-gray-50 hover:shadow cursor-pointer px-4 py-6 rounded-lg'>
               <img
                 src={BikeIcon}
                 class='text-indigo-500 w-12 h-8 mb-3 inline-block'

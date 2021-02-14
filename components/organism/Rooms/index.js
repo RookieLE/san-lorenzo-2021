@@ -16,7 +16,7 @@ export default function Rooms({
             {desc}
           </p>
         </div>
-        <div className='flex flex-wrap -m-4 max-w-screen-lg mx-auto place-content-center'>
+        <div className='flex flex-wrap -m-4 max-w-screen-lg mx-auto place-content-center md:gap-4 lg:gap-12'>
           {rooms.map((room) => (
             <Room room={room} />
           ))}

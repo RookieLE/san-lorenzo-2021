@@ -1,6 +1,7 @@
 import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
 import ImgCentral from '@/components/molecules/ImgCentral';
+import ColumnSection from '@/components/organism/ColumnSection';
 import ActivitiesMenu from '@/components/molecules/ActivitiesMenu';
 import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
@@ -28,10 +29,16 @@ export default function Attività() {
     },
   };
 
-  const centralImg = {
-    bgImage: Pizzoccolo2Img,
-    heightImg: 'lg:h-100',
-    title: 'Mountain Pizzoccolo',
+  const columnSectionData = {
+    data: {
+      img: {
+        url: Pizzoccolo2Img,
+        alt: 'mountain pizzoccolo',
+      },
+      title: 'Mountain Pizzoccolo',
+      text:
+        'This is the subtitile of mountain pizzoccolo category. This mountain is 1680m height. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
+    },
   };
 
   const centralImg2 = {
@@ -39,7 +46,7 @@ export default function Attività() {
     bgSmoke: true,
     bgImage: PizzoccoloImg,
     text:
-      'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda ',
+      'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
     cta: 'Watch Video',
   };
 
@@ -48,7 +55,7 @@ export default function Attività() {
       <Header background='bg-pizzoccolo' page_type='activities' />
       <ActivitiesMenu />
 
-      <ImgCentral {...centralImg} />
+      <ColumnSection {...columnSectionData} inverted />
       <ImgCentral {...centralImg2} />
       <Contact t={t} simplified />
       <Footer t={t} />

@@ -1,6 +1,6 @@
-const withImages = require('next-images');
+const withOptimizedImages = require('next-optimized-images');
 
-module.exports = withImages({
+module.exports = withOptimizedImages({
   i18n: {
     locales: ['en', 'it', 'de'],
     defaultLocale: 'it',
