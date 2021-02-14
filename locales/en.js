@@ -1,3 +1,8 @@
+import SerenityImg from '../assets/rooms/serenity.png';
+import JoyImg from '../assets/rooms/joy.png';
+import SilenceImg from '../assets/rooms/silence.png';
+import HarmonyImg from '../assets/rooms/harmony.png';
+
 export default {
   navbar: {
     home: 'Home',
@@ -24,25 +29,25 @@ export default {
           name: 'serenity',
           price: '50',
           text: 'per night',
-          img: 'https://dummyimage.com/600x360',
+          img: SerenityImg,
         },
         {
           name: 'harmony',
           price: '70',
           text: 'per night',
-          img: 'https://dummyimage.com/600x360',
+          img: HarmonyImg,
         },
         {
           name: 'joy',
           price: '60',
           text: 'per night',
-          img: 'https://dummyimage.com/600x360',
+          img: JoyImg,
         },
         {
           name: 'silence',
           price: '75',
           text: 'per night',
-          img: 'https://dummyimage.com/600x360',
+          img: SilenceImg,
         },
       ],
     },

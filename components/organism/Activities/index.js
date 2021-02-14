@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Button from 'components/atoms/Button';
 import CaneImg from 'assets/activities/cane.png';
 import FiumeImg from 'assets/activities/fiume.png';
@@ -13,6 +14,7 @@ export default function Activities({ t }) {
       activities: { title, desc, cta },
     },
   } = t;
+  const router = useRouter();
   return (
     <section className='text-gray-600 bg-gray-100 py-10 md:py-28'>
       <div className='container px-5 py-6 mx-auto flex flex-wrap'>
@@ -24,7 +26,13 @@ export default function Activities({ t }) {
             {desc}
           </p>
           <div className='flex justify-center pt-5 md:pt-10'>
-            <Button text={cta} ctaStyle='underline' />
+            <Button
+              text={cta}
+              ctaStyle='underline'
+              onClick={() =>
+                router.push('/attivita').then(() => window.scrollTo(0, 0))
+              }
+            />
           </div>
         </div>
         <div className='flex flex-wrap md:-m-2 -m-1'>

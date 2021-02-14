@@ -16,14 +16,14 @@ export default function Rooms({
             {desc}
           </p>
         </div>
-        <div className='flex flex-wrap -m-4 max-w-screen-xl mx-auto'>
+        <div className='flex flex-wrap -m-4 max-w-screen-lg mx-auto place-content-center'>
           {rooms.map((room) => (
             <Room room={room} />
           ))}
         </div>
-        <div className='flex justify-center pt-12'>
+        {/*  <div className='flex justify-center pt-12'>
           <Button text='View Rooms' ctaStyle='primary' />
-        </div>
+        </div> */}
       </div>
     </section>
   );

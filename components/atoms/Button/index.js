@@ -1,4 +1,4 @@
-export default function Button({ text, ctaStyle }) {
+export default function Button({ text, ctaStyle, onClick }) {
   const Arrow = ctaStyle === 'underline' && (
     <svg
       fill='none'
@@ -13,6 +13,7 @@ export default function Button({ text, ctaStyle }) {
   );
   return (
     <button
+      onClick={onClick}
       className={`inline-flex items-center border-0 py-2 focus:outline-none rounded text-lg ${
         (ctaStyle == 'secondary' &&
           'px-6 text-white bg-gray-400 hover:bg-gray-600 shadow hover:shadow-md') ||

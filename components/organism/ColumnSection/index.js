@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Button from 'components/atoms/Button';
 
 export default function ColumnSection({
@@ -5,10 +6,16 @@ export default function ColumnSection({
   inverted,
   bgSmoke,
   ctaStyle,
+  routerTo,
 }) {
+  const router = useRouter();
   const CTA = cta && (
     <div className='flex justify-center'>
-      <Button text={cta} ctaStyle={ctaStyle} />
+      <Button
+        text={cta}
+        ctaStyle={ctaStyle}
+        onClick={() => router.push(routerTo).then(() => window.scrollTo(0, 0))}
+      />
     </div>
   );
   return (

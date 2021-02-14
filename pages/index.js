@@ -27,7 +27,12 @@ export default function IndexPage() {
   return (
     <>
       <Header background='bg-home-header' page_type='home' />
-      <ColumnSection data={agriturismo} bgSmoke ctaStyle='underline' />
+      <ColumnSection
+        data={agriturismo}
+        routerTo='/agriturismo'
+        bgSmoke
+        ctaStyle='underline'
+      />
       <Ratings />
       <Rooms t={t} />
       <Activities t={t} />

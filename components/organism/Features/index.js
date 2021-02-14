@@ -18,15 +18,15 @@ export default function Features({
             <Feature name={item.name} text={item.text} icon={item.icon} />
           ))}
         </div>
-        <div className='pt-14 hidden flex-wrap max-w-screen-xl mx-auto justify-center lg:flex'>
+        {/*  <div className='pt-14 hidden flex-wrap max-w-screen-xl mx-auto justify-center lg:flex'>
           <img src='https://dummyimage.com/400x360' />
           <img src='https://dummyimage.com/400x360' />
           <img src='https://dummyimage.com/400x360' />
-        </div>
-        <div className='hidden flex-wrap max-w-screen-xl mx-auto justify-center lg:flex'>
+        </div> */}
+        {/*  <div className='hidden flex-wrap max-w-screen-xl mx-auto justify-center lg:flex'>
           <img src='https://dummyimage.com/600x360' />
           <img src='https://dummyimage.com/600x360' />
-        </div>
+        </div> */}
       </div>
     </section>
   );
