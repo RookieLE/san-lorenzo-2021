@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
 import ImgCentral from '@/components/molecules/ImgCentral';
@@ -16,6 +17,7 @@ import LagoImg from 'assets/activities/lago.png';
 
 export default function Attività() {
   const { t } = useLocale();
+  const [activity, setActivity] = useState('mountain');
 
   const agri = t.homepage.san_lorenzo;
   const agriturismo = {
@@ -47,14 +49,12 @@ export default function Attività() {
     bgImage: PizzoccoloImg,
     text:
       'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
-    cta: 'Watch Video',
   };
 
   return (
     <>
       <Header background='bg-pizzoccolo' page_type='activities' />
-      <ActivitiesMenu />
-
+      <ActivitiesMenu state={{ activity, setActivity }} />
       <ColumnSection {...columnSectionData} inverted />
       <ImgCentral {...centralImg2} />
       <Contact t={t} simplified />
