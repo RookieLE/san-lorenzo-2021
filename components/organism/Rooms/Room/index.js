@@ -8,7 +8,9 @@ export default function Room({ room: { name, img, price } }) {
       <div
         className='flex flex-col relative place-items-center cursor-pointer w-96 rounded-md transform hover:scale-105 hover:underline duration-100 ease-in-out'
         onClick={() =>
-          router.push('/appartamenti').then(() => window.scrollTo(0, 0))
+          router
+            .push({ pathname: '/appartamenti', query: { room: name } })
+            .then(() => window.scrollTo(0, 0))
         }>
         <img
           alt='gallery'

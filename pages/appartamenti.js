@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
 import Title from 'components/atoms/Title';
@@ -10,10 +11,17 @@ import Footer from '@/components/organism/Footer';
 
 import MountainRoomImg from '@/assets/rooms/mountain-room.jpg';
 
-export default function Appartamenti() {
+export default function Appartamenti({ roomFrom }) {
   const { t } = useLocale();
+  const [room, setRoom] = useState('serenity');
 
-  const textImage = `<h4 class='text-center font-extralight text-white text-5xl mb-2 '>Serenity Suite</h4><p class="text-xl font-extralight">4 guests</p>`;
+  useEffect(() => {
+    if (roomFrom) {
+      setRoom(roomFrom);
+    }
+  }, []);
+
+  const textImage = `<h4 class='text-center font-extralight text-white text-5xl mb-2 capitalize'>${room} Suite</h4><p class="text-xl font-extralight">4 guests</p>`;
 
   return (
     <>
@@ -22,9 +30,14 @@ export default function Appartamenti() {
       <ImgCentral bgImage={MountainRoomImg} textImage={textImage} />
       <Carousel />
       <InfoRoom />
-      <RoomsPreview />
+      <RoomsPreview state={{ room, setRoom }} locale={t} />
       <Contact t={t} simplified />
       <Footer t={t} />
     </>
   );
 }
+
+Appartamenti.getInitialProps = async ({ query }) => {
+  const { room } = query;
+  return { roomFrom: room };
+};
