@@ -89,7 +89,7 @@ export default function Menu({
             className='text-black rounded border appearance-none border-gray-300 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer'>
             <option value='en'>EN</option>
             <option value='it'>IT</option>
-            <option value='de'>DE</option>
+            {/*  <option value='de'>DE</option> */}
           </select>
         </li>
       </ul>
