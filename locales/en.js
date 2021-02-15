@@ -2,6 +2,13 @@ import SerenityImg from '../assets/rooms/serenity.png';
 import JoyImg from '../assets/rooms/joy.png';
 import SilenceImg from '../assets/rooms/silence.png';
 import HarmonyImg from '../assets/rooms/harmony.png';
+import BeachIcon from '../assets/icons/beach.png';
+import BikeIcon from '../assets/icons/bike.png';
+import GolfIcon from '../assets/icons/golf.png';
+import LakeIcon from '../assets/icons/lake.png';
+import MountainIcon from '../assets/icons/mountain.png';
+import RiverIcon from '../assets/icons/river.png';
+import WellnessIcon from '../assets/icons/wellness.png';
 
 export default {
   navbar: {
@@ -56,6 +63,12 @@ export default {
       desc:
         'At our Lodge, there is a variety of rooms to choose from. Whether you are a casual traveler or a person demanding luxury wherever you go, you won’t be disappointed.',
       cta: 'Learn More',
+      activitiesList: [
+        { name: 'mountain', icon: MountainIcon },
+        { name: 'bike', icon: BikeIcon },
+        { name: 'wellness', icon: WellnessIcon },
+        { name: 'beach', icon: BeachIcon },
+      ],
     },
     features: {
       title: 'Our most Loved Characteristic',
