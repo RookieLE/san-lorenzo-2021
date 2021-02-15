@@ -153,5 +153,49 @@ export default {
         },
       ],
     },
+    wellness: {
+      title: 'Wellness in Toscolano Maderno',
+      desc:
+        'This is the subtitile of mountain pizzoccolo category. This mountain is 1680m height. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
+      img: FiumeImg,
+      sections: [
+        {
+          title: 'A pleasure in a SPA',
+          desc:
+            'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
+          img: LagoImg,
+          component: 'central',
+        },
+        {
+          title: 'Massage',
+          desc:
+            'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
+          img: Agri,
+          component: 'left',
+        },
+      ],
+    },
+    beach: {
+      title: 'Beach in Garda Lake',
+      desc:
+        'This is the subtitile of mountain pizzoccolo category. This mountain is 1680m height. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
+      img: LagoImg,
+      sections: [
+        {
+          title: 'Limone Beach awasome',
+          desc:
+            'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
+          img: LagoImg,
+          component: 'central',
+        },
+        {
+          title: 'Sirmione exclusive beach',
+          desc:
+            'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
+          img: Agri,
+          component: 'left',
+        },
+      ],
+    },
   },
 };
