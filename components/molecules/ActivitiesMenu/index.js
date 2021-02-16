@@ -12,24 +12,24 @@ export default function ActivitiesMenu({ state: { activity, setActivity } }) {
   const { activitiesList } = t.homepage.activities;
 
   return (
-    <section class='text-gray-600 body-font'>
-      <div class='container px-5 py-24 mx-auto'>
-        <div class='flex flex-wrap -m-4 text-center'>
+    <section className='text-gray-600 body-font'>
+      <div className='container px-5 py-24 mx-auto'>
+        <div className='flex flex-wrap -m-4 text-center'>
           {activitiesList?.map(({ icon, name }) => {
             const isActive = activity === name;
             return (
               <div
-                class='p-4 md:w-1/4 sm:w-1/2 w-full'
+                className='p-4 md:w-1/4 sm:w-1/2 w-full'
                 onClick={() => setActivity(name)}>
                 <div
-                  class={`bg-gray-50 hover:shadow-md cursor-pointer p-4 rounded-lg h-full ${
+                  className={`bg-gray-50 hover:shadow-md cursor-pointer p-4 rounded-lg h-full ${
                     isActive && 'shadow-md scale-102'
                   }`}>
                   <img
                     src={icon}
-                    class={`text-indigo-500 w-8 mb-3 inline-block`}
+                    className={`text-indigo-500 w-8 mb-3 inline-block`}
                   />
-                  <p class='leading-relaxed capitalize'>{name}</p>
+                  <p className='leading-relaxed capitalize'>{name}</p>
                 </div>
               </div>
             );

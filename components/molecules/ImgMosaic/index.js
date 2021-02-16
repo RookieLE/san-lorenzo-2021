@@ -51,16 +51,16 @@ export default function ImgMosaic() {
             </div>
           </div>
 
-          <div class='text-center lg:w-2/3 w-full'>
-            <p class='mb-8 leading-relaxed'>
+          <div className='text-center lg:w-2/3 w-full'>
+            <p className='mb-8 leading-relaxed'>
               Meggings kinfolk echo park stumptown DIY, kale chips beard
               jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice
               godard disrupt ramps hexagon mustache umami snackwave tilde
               chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac
               mlkshk freegan photo booth af fingerstache pitchfork.
             </p>
-            <div class='flex justify-center'>
-              <button class='ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg'>
+            <div className='flex justify-center'>
+              <button className='ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg'>
                 Button
               </button>
             </div>
