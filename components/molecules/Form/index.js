@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
 import DateRowPicker from 'components/atoms/DatePicker';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 export default function Form({ form }) {
   const [status, setStatus] = useState({
@@ -8,67 +9,55 @@ export default function Form({ form }) {
     submitting: false,
     info: { error: false, msg: null },
   });
-  const [inputs, setInputs] = useState({
-    email: '',
-    message: '',
-  });
 
-  const handleServerResponse = (ok, msg) => {
-    if (ok) {
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: msg },
-      });
-      setInputs({
-        email: '',
-        message: '',
-      });
-    } else {
-      setStatus({
-        info: { error: true, msg: msg },
-      });
-    }
+  const { register, handleSubmit, formState, errors, reset } = useForm();
+
+  const onSubmit = (data) => {
+    setStatus((state) => ({ ...state, submitting: true }));
+    console.log(data);
+    setStatus((state) => ({ ...state, submitting: false, submitted: true }));
+    reset();
   };
-  const handleOnChange = (e) => {
-    e.persist();
-    setInputs((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-    setStatus({
-      submitted: false,
-      submitting: false,
-      info: { error: false, msg: null },
-    });
-  };
+
   const handleOnSubmit = (e) => {
+    const token = 'kEKVpXAIQaefRLV5vrSmJg';
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-    axios({
-      method: 'POST',
-      url: 'https://formspree.io/[your-formspree-endpoint]',
-      data: inputs,
-    })
-      .then((response) => {
-        handleServerResponse(
-          true,
-          'Thank you, your message has been submitted.'
-        );
+    /*  axios
+      .post(
+        'https://api.sendgrid.com/v3/mail/send',
+        { data: inputs },
+        {
+          headers: {
+            Authorization: `Basic ${token}`,
+          },
+        }
+      )
+      .then((res) => {
+        console.log('Thank you, your message has been submitted.');
       })
       .catch((error) => {
-        handleServerResponse(false, error.response.data.error);
-      });
+        console.error(error.response.data.error);
+      }); */
+  };
+
+  const buttonTxt = () => {
+    if (status.submitting) return 'Submitting...';
+    if (status.submitted) return 'Submitted';
+    else return form.button;
   };
 
   const pickerAttributes = {
     arrival: form.arrival_date,
     departure: form.departure_date,
+    register,
+    errors,
+    submitted: status.submitted,
   };
 
   return (
     <form
-      onSubmit={handleOnSubmit}
+      onSubmit={handleSubmit(onSubmit)}
       className='flex flex-wrap -m-2 lg:w-1/2 md:w-2/3 mx-auto'>
       <div className='p-2 w-1/2'>
         <div className='relative'>
@@ -78,12 +67,16 @@ export default function Form({ form }) {
             {form.name}
           </label>
           <input
-            onChange={handleOnChange}
+            placeHolder='Full Name'
+            ref={register({ required: true })}
             type='text'
             id='name'
             name='name'
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
           />
+          {errors.name && (
+            <span className='text-red-600'>This field is required</span>
+          )}
         </div>
       </div>
       <div className='p-2 w-1/2'>
@@ -94,12 +87,16 @@ export default function Form({ form }) {
             {form.email}
           </label>
           <input
-            onChange={handleOnChange}
+            placeholder='Email'
+            ref={register({ required: true })}
             type='email'
             id='email'
             name='email'
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
           />
+          {errors.email && (
+            <span className='text-red-600'>This field is required</span>
+          )}
         </div>
       </div>
 
@@ -113,22 +110,23 @@ export default function Form({ form }) {
             {form.message}
           </label>
           <textarea
-            onChange={handleOnChange}
+            placeHolder='Write your message'
+            ref={register({ required: true })}
             id='message'
             name='message'
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'></textarea>
+          {errors.message && (
+            <span className='text-red-600'>This field is required</span>
+          )}
         </div>
       </div>
+      {status.info.error === true && <div>ERROR</div>}
       <div className='p-2 w-full'>
-        <button
-          className='capitalize flex mx-auto text-white bg-gray-300 border-0 py-2 px-8 focus:outline-none hover:bg-green-900 rounded text-lg'
-          disabled={status.submitting}>
-          {!status.submitting
-            ? !status.submitted
-              ? form.button
-              : 'Submitted'
-            : 'Submitting...'}
-        </button>
+        <input
+          type='submit'
+          className='capitalize cursor-pointer flex mx-auto text-white bg-green-800 border-0 py-2 px-8 focus:outline-none hover:bg-green-900 rounded text-lg'
+          value={buttonTxt()}
+        />
       </div>
     </form>
   );
