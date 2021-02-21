@@ -5,17 +5,26 @@ import Success from 'components/atoms/Modals/Success';
 import Error from 'components/atoms/Modals/Error';
 import * as emailjs from 'emailjs-com';
 
-export default function Form({ form }) {
+export default function Form({
+  form: {
+    name,
+    arrival,
+    departure,
+    email,
+    message,
+    is_required,
+    success_msg,
+    error_msg,
+    button_text,
+  },
+}) {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
-    info: {
-      error: false,
-      msg: 'Error message is this one. You can try again!',
-    },
+    error: false,
   });
 
-  const { register, handleSubmit, formState, errors, reset } = useForm();
+  const { register, handleSubmit, errors, reset } = useForm();
 
   const onSubmit = async (data) => {
     await setStatus((state) => ({ ...state, submitting: true }));
@@ -39,7 +48,7 @@ export default function Form({ form }) {
       })
       .catch((error) => {
         setStatus((state) => ({
-          info: { error: true, msg: error },
+          error: true,
           submitting: false,
           submitted: false,
         }));
@@ -49,24 +58,22 @@ export default function Form({ form }) {
   const buttonTxt = () => {
     if (status.submitting) return 'Submitting...';
     if (status.submitted) return 'Submitted';
-    else return form.button;
+    else return button_text;
   };
 
   const pickerAttributes = {
-    arrival: form.arrival_date,
-    departure: form.departure_date,
+    arrival,
+    departure,
     register,
     errors,
+    is_required,
     submitted: status.submitted,
   };
 
   const cleanError = () =>
     setStatus((state) => ({
       ...state,
-      info: {
-        error: false,
-        msg: 'Error message is this one. You can try again!',
-      },
+      error: false,
     }));
 
   const cleanSuccess = () =>
@@ -75,6 +82,10 @@ export default function Form({ form }) {
       submitted: false,
     }));
 
+  const RenderRequired = () => (
+    <span className='text-red-600'>{is_required}</span>
+  );
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -82,41 +93,37 @@ export default function Form({ form }) {
       <div className='p-2 w-1/2'>
         <div className='relative'>
           <label
-            for='name'
+            for={name.name}
             className='leading-7 capitalize text-sm text-gray-600'>
-            {form.name}
+            {name.name}
           </label>
           <input
-            placeHolder='Full Name'
+            placeHolder={name.placeholder}
             ref={register({ required: true })}
             type='text'
-            id='name'
-            name='name'
+            id={name.name}
+            name={name.name}
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
           />
-          {errors.name && (
-            <span className='text-red-600'>This field is required</span>
-          )}
+          {errors.name && <RenderRequired />}
         </div>
       </div>
       <div className='p-2 w-1/2'>
         <div className='relative'>
           <label
-            for='email'
+            for={email.name}
             className='leading-7 capitalize text-sm text-gray-600'>
-            {form.email}
+            {email.name}
           </label>
           <input
-            placeholder='Email'
+            placeholder={email.placeholder}
             ref={register({ required: true })}
             type='email'
-            id='email'
-            name='email'
+            id={email.name}
+            name={email.name}
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
           />
-          {errors.email && (
-            <span className='text-red-600'>This field is required</span>
-          )}
+          {errors.email && <RenderRequired />}
         </div>
       </div>
 
@@ -125,31 +132,24 @@ export default function Form({ form }) {
       <div className='p-2 w-full'>
         <div className='relative'>
           <label
-            for='message'
+            for={message.name}
             className='leading-7 capitalize text-sm text-gray-600'>
-            {form.message}
+            {message.name}
           </label>
           <textarea
-            placeHolder='Write your message'
+            placeHolder={message.placeholder}
             ref={register({ required: true })}
-            id='message'
-            name='message'
+            id={message.name}
+            name={message.name}
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'></textarea>
-          {errors.message && (
-            <span className='text-red-600'>This field is required</span>
-          )}
+          {errors.message && <RenderRequired />}
         </div>
       </div>
       {status.submitted === true && (
-        <Success
-          message={
-            'Email submitted correctly! We will reply you as soon as possible. Thanks.'
-          }
-          close={cleanSuccess}
-        />
+        <Success message={success_msg} close={cleanSuccess} />
       )}
-      {status.info.error === true && (
-        <Error message={status.info.msg} close={cleanError} />
+      {status.error === true && (
+        <Error message={error_msg} close={cleanError} />
       )}
       <div className='p-2 w-full'>
         <input

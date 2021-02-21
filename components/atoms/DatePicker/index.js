@@ -7,6 +7,7 @@ export default function DateRowPicker({
   departure,
   errors,
   register,
+  is_required,
   submitted,
 }) {
   const [startDate, setStartDate] = useState(null);
@@ -29,10 +30,10 @@ export default function DateRowPicker({
       onClick={onClick}
       ref={register({ required: true })}
       value={value}
-      placeHolder='Select an arrival date'
+      placeHolder={arrival.placeholder}
       type='text'
-      id='arrival'
-      name='arrival'
+      id={arrival.name}
+      name={arrival.name}
       className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
     />
   );
@@ -42,12 +43,16 @@ export default function DateRowPicker({
       onClick={onClick}
       ref={register({ required: true })}
       value={value}
-      placeHolder='Select a departure date'
+      placeHolder={departure.placeholder}
       type='text'
-      id='departure'
-      name='departure'
+      id={departure.name}
+      name={departure.name}
       className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
     />
+  );
+
+  const RenderRequired = () => (
+    <span className='text-red-600'>{is_required}</span>
   );
 
   return (
@@ -55,9 +60,9 @@ export default function DateRowPicker({
       <div className='p-2 w-1/2'>
         <div className='relative grid'>
           <label
-            for='arrival'
+            for={arrival.name}
             className='leading-7 capitalize text-sm text-gray-600'>
-            {arrival}
+            {arrival.name}
           </label>
           <DatePicker
             customInput={<CustomInputArrival />}
@@ -70,17 +75,15 @@ export default function DateRowPicker({
             popperModifiers={popperCustomStyle}
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
           />
-          {errors.arrival && (
-            <span className='text-red-600'>This field is required</span>
-          )}
+          {errors.arrival && <RenderRequired />}
         </div>
       </div>
       <div className='p-2 w-1/2'>
         <div className='relative grid'>
           <label
-            for='departure'
+            for={departure.name}
             className='leading-7 capitalize text-sm text-gray-600'>
-            {departure}
+            {departure.name}
           </label>
           <DatePicker
             customInput={<CustomInputDeparture />}
@@ -94,9 +97,7 @@ export default function DateRowPicker({
             popperModifiers={popperCustomStyle}
             className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
           />
-          {errors.departure && (
-            <span className='text-red-600'>This field is required</span>
-          )}
+          {errors.departure && <RenderRequired />}
         </div>
       </div>
     </>
