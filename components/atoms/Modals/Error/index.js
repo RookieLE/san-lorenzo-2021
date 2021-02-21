@@ -1,4 +1,4 @@
-export default function Error({ message }) {
+export default function Error({ message, close }) {
   return (
     <div class='w-full text-white bg-red-400 rounded m-2'>
       <div class='container flex items-center justify-between px-6 py-4 mx-auto'>

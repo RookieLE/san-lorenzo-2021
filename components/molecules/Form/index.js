@@ -65,7 +65,7 @@ export default function Form({ form }) {
       ...state,
       info: {
         error: false,
-        msg: '',
+        msg: 'Error message is this one. You can try again!',
       },
     }));
 
