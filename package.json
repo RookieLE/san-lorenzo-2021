@@ -27,5 +27,8 @@
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "emailjs-com": "^2.6.4"
+  }
 }

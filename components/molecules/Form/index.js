@@ -1,44 +1,49 @@
 import { useState, useEffect } from 'react';
 import DateRowPicker from 'components/atoms/DatePicker';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import Success from 'components/atoms/Modals/Success';
+import Error from 'components/atoms/Modals/Error';
+import * as emailjs from 'emailjs-com';
 
 export default function Form({ form }) {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
-    info: { error: false, msg: null },
+    info: {
+      error: false,
+      msg: 'Error message is this one. You can try again!',
+    },
   });
 
   const { register, handleSubmit, formState, errors, reset } = useForm();
 
-  const onSubmit = (data) => {
-    setStatus((state) => ({ ...state, submitting: true }));
-    console.log(data);
-    setStatus((state) => ({ ...state, submitting: false, submitted: true }));
-    reset();
-  };
-
-  const handleOnSubmit = (e) => {
-    const token = 'kEKVpXAIQaefRLV5vrSmJg';
-    e.preventDefault();
-    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-    /*  axios
-      .post(
-        'https://api.sendgrid.com/v3/mail/send',
-        { data: inputs },
-        {
-          headers: {
-            Authorization: `Basic ${token}`,
-          },
-        }
+  const onSubmit = async (data) => {
+    await setStatus((state) => ({ ...state, submitting: true }));
+    const templateParams = {
+      ...data,
+    };
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_EMAILJS,
+        process.env.NEXT_PUBLIC_TEMPLATE_EMAILJS,
+        templateParams,
+        process.env.NEXT_PUBLIC_USER_EMAILJS
       )
-      .then((res) => {
-        console.log('Thank you, your message has been submitted.');
+      .then((response) => {
+        setStatus((state) => ({
+          ...state,
+          submitting: false,
+          submitted: true,
+        }));
+        reset();
       })
       .catch((error) => {
-        console.error(error.response.data.error);
-      }); */
+        setStatus((state) => ({
+          info: { error: true, msg: error },
+          submitting: false,
+          submitted: false,
+        }));
+      });
   };
 
   const buttonTxt = () => {
@@ -54,6 +59,21 @@ export default function Form({ form }) {
     errors,
     submitted: status.submitted,
   };
+
+  const cleanError = () =>
+    setStatus((state) => ({
+      ...state,
+      info: {
+        error: false,
+        msg: '',
+      },
+    }));
+
+  const cleanSuccess = () =>
+    setStatus((state) => ({
+      ...state,
+      submitted: false,
+    }));
 
   return (
     <form
@@ -120,11 +140,21 @@ export default function Form({ form }) {
           )}
         </div>
       </div>
-      {status.info.error === true && <div>ERROR</div>}
+      {status.submitted === true && (
+        <Success
+          message={
+            'Email submitted correctly! We will reply you as soon as possible. Thanks.'
+          }
+          close={cleanSuccess}
+        />
+      )}
+      {status.info.error === true && (
+        <Error message={status.info.msg} close={cleanError} />
+      )}
       <div className='p-2 w-full'>
         <input
           type='submit'
-          className='capitalize cursor-pointer flex mx-auto text-white bg-green-800 border-0 py-2 px-8 focus:outline-none hover:bg-green-900 rounded text-lg'
+          className='capitalize cursor-pointer flex mx-auto text-white bg-gray-700 border-0 py-2 px-8 focus:outline-none hover:bg-gray-900 rounded text-lg'
           value={buttonTxt()}
         />
       </div>
