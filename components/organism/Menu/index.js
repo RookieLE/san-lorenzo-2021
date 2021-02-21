@@ -54,13 +54,13 @@ export default function Menu({
           speed={3}
           strokeColor='white'
           className={` rounded ${
-            (isOpen || simplified) && 'bg-gray-300 fill-current '
+            (isOpen || simplified) && 'bg-green-900 fill-current '
           }`}
         />
       </div>
 
       <ul
-        className={`grid absolute bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
+        className={`grid absolute border-b-8 border-green-900 lg:border-0 bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
           (isOpen && 'block') || 'hidden'
         }`}>
         <li className={`navLink ${isMenuActive(`/`)}`}>
