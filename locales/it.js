@@ -105,12 +105,32 @@ export default {
       desc:
         'At our Lodge, there is a variety of rooms to choose from. Whether you.',
       form: {
-        name: 'name',
-        arrival_date: 'arrival date',
-        departure_date: 'departure date',
-        email: 'email',
-        message: 'message',
-        button: 'send',
+        name: {
+          name: 'name',
+          placeholder: 'Full Name',
+        },
+        arrival: {
+          name: 'arrival',
+          placeholder: 'Select an arrival date',
+        },
+        departure: {
+          name: 'departure',
+          placeholder: 'Select a departure date',
+        },
+        email: {
+          name: 'email',
+          placeholder: 'Email',
+        },
+        message: {
+          name: 'message',
+          placeholder: 'Write your message',
+        },
+        is_required: 'This field is required',
+        success_msg:
+          'Email submitted correctly! We will reply you as soon as possible. Thanks.',
+        error_msg:
+          'Oops, it seems that there is an error, try again. Otherwise write us directly at agri@gmail.com',
+        button_text: 'send',
         info:
           'Vi consigliamo di impostare nel navigatore località Gaino. C’è la possibilità che il navigatore vi porti a Navazzo, NON dovete assolutamente seguire questa direzione. Una volta arrivati a Toscolano Maderno, proseguite per Gaino, poi entrate nella valle delle Camerate e proseguite per 5 km circa. La strada è una classica strada montana, sterrata e non asfaltata, consigliamo tranquillità e di godervi il percorso perchè una volta giunti in agriturismo la pace ricompenserà ogni sforzo.',
       },
