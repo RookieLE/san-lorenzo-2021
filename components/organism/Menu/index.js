@@ -41,7 +41,9 @@ export default function Menu({
         </h1>
       </div>
 
-      <div onClick={handleHamb} className='z-50  hover:cursor lg:hidden'>
+      <div
+        onClick={handleHamb}
+        className='z-50  hover:cursor lg:hidden place-self-center'>
         <UseAnimations
           animation={menu2}
           wrapperStyle={
@@ -51,7 +53,9 @@ export default function Menu({
           size={42}
           speed={3}
           strokeColor='white'
-          className={` rounded ${isOpen && 'bg-gray-300 fill-current '}`}
+          className={` rounded ${
+            (isOpen || simplified) && 'bg-gray-300 fill-current '
+          }`}
         />
       </div>
 
