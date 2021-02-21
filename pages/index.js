@@ -33,10 +33,10 @@ export default function IndexPage() {
         bgSmoke
         ctaStyle='underline'
       />
-      <Ratings />
       <Rooms t={t} />
       <Activities t={t} />
       <Features t={t} />
+      <Ratings />
       <Contact t={t} />
       <Footer t={t} />
     </>
