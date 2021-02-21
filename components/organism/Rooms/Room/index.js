@@ -4,7 +4,7 @@ export default function Room({ room: { name, img, price }, index }) {
   const router = useRouter();
   return (
     <section class='lg:py-12 lg:flex lg:justify-center'>
-      <div class='lg:mx-8 lg:flex lg:max-w-5xl bg-gray-100 rounded-lg'>
+      <div class='lg:mx-8 lg:flex lg:max-w-5xl rounded-lg'>
         <div class={`lg:w-1/2`}>
           <div
             class='h-64 bg-cover rounded-lg lg:h-full'
@@ -14,9 +14,9 @@ export default function Room({ room: { name, img, price }, index }) {
         </div>
 
         <div class='max-w-xl px-6 py-6 lg:py-12 lg:max-w-5xl lg:w-1/2'>
-          <h2 class='text-2xl font-bold text-green-900 dark:text-white md:text-3xl capitalize'>
+          <h2 class='text-2xl font-semilbold font-serif text-green-900 dark:text-white md:text-3xl capitalize'>
             {name}
-            <span class='text-xl text-green-600 dark:text-indigo-400 grid font-semibold'>
+            <span class='text-xl text-gray-500 dark:text-indigo-400 grid font-semibold'>
               4 guest
             </span>
           </h2>
