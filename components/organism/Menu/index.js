@@ -13,10 +13,10 @@ export default function Menu({
 }) {
   const router = useRouter();
   const { locale, handleChangeLang } = useLocale();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleHamb = () => {
-    setTimeout(() => setIsOpen(!isOpen), 300);
+    setTimeout(() => setIsMenuOpen(!isMenuOpen), 300);
   };
 
   const isMenuActive = (_menu) =>
@@ -42,26 +42,26 @@ export default function Menu({
       </div>
 
       <div
-        onClick={handleHamb}
-        className='z-50  hover:cursor lg:hidden place-self-center'>
+        className='z-50  hover:cursor lg:hidden place-self-center'
+        onClick={handleHamb}>
         <UseAnimations
           animation={menu2}
           wrapperStyle={
-            (isOpen && { textColor: 'black' }) || { textColor: 'black' }
+            (isMenuOpen && { textColor: 'black' }) || { textColor: 'black' }
           }
-          reverse={isOpen}
+          reverse={isMenuOpen}
           size={42}
           speed={3}
           strokeColor='white'
           className={` rounded ${
-            (isOpen || simplified) && 'bg-green-900 fill-current '
+            (isMenuOpen || simplified) && 'bg-green-900 fill-current '
           }`}
         />
       </div>
 
       <ul
         className={`grid absolute border-b-8 border-green-900 lg:border-0 bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
-          (isOpen && 'block') || 'hidden'
+          (isMenuOpen && 'block') || 'hidden'
         }`}>
         <li className={`navLink ${isMenuActive(`/`)}`}>
           <Link href={`/${locale}`}>
@@ -90,11 +90,17 @@ export default function Menu({
           <select
             onChange={handleChangeLang}
             defaultValue={locale}
+            className=' text-black lg:text-white rounded border bg-transparent appearance-none border-gray-300 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer'>
+            <option value='en'>English</option>
+            <option value='it'>Italiano</option>
+          </select>
+          {/* <select
+            onChange={handleChangeLang}
+            defaultValue={locale}
             className='text-black rounded border appearance-none border-gray-300 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer'>
             <option value='en'>EN</option>
             <option value='it'>IT</option>
-            {/*  <option value='de'>DE</option> */}
-          </select>
+          </select> */}
         </li>
       </ul>
     </nav>
