@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ImgCentral({
   bgImage,
   textImage,
@@ -21,12 +23,14 @@ export default function ImgCentral({
           </div>
         )}
         <div className='relative'>
-          <img
+          <Image
             className={`w-full object-cover object-center rounded-md ${
               (heightImg && heightImg) || 'lg:h-96'
             }`}
             alt='hero'
             src={bgImage}
+            width={1425}
+            height={475}
           />
           <div
             className='absolute text-center bottom-1/4 left-2/4 text-white w-300px -ml-32'

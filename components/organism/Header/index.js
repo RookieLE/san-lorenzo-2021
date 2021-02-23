@@ -23,7 +23,7 @@ export default function Header({ background, page_type, simplified }) {
       style={{ minHeight: '500px', maxHeight: '600px' }}>
       <Image
         alt='Mountains'
-        src='/mountain.png'
+        src={background}
         layout='fill'
         objectFit='cover'
         quality={100}

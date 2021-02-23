@@ -8,6 +8,7 @@ import Features from '@/components/organism/Features';
 import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
 import Agri from 'assets/home/agri.png';
+import MountainImg from 'assets/home/mountain.png';
 
 export default function IndexPage() {
   const { t } = useLocale();
@@ -26,7 +27,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <Header background='bg-home-header' page_type='home' />
+      <Header background={MountainImg} page_type='home' />
       <ColumnSection
         data={agriturismo}
         routerTo='/agriturismo'

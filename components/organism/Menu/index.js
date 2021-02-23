@@ -25,6 +25,9 @@ export default function Menu({
     (router.pathname !== _menu && !simplified && 'navLink_notActive') ||
     (router.pathname !== _menu && simplified && 'navLink_notActive_simpl');
 
+  const simplifiedTextColor =
+    (router.pathname === '/appartamenti' && 'lg:text-black') || 'lg:text-white';
+
   const textColor = (simplified && 'text-gray-800') || 'text-white';
   const logo = (!simplified && LogoImg) || LogoBlackImg;
 
@@ -90,17 +93,10 @@ export default function Menu({
           <select
             onChange={handleChangeLang}
             defaultValue={locale}
-            className=' text-black lg:text-white rounded border bg-transparent appearance-none border-gray-300 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer'>
+            className={`text-black ${simplifiedTextColor} rounded border bg-transparent appearance-none border-gray-600 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer`}>
             <option value='en'>English</option>
             <option value='it'>Italiano</option>
           </select>
-          {/* <select
-            onChange={handleChangeLang}
-            defaultValue={locale}
-            className='text-black rounded border appearance-none border-gray-300 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer'>
-            <option value='en'>EN</option>
-            <option value='it'>IT</option>
-          </select> */}
         </li>
       </ul>
     </nav>

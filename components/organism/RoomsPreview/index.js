@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function RoomsPreview({ state: { room, setRoom }, locale }) {
   const rooms = locale.homepage.rooms.rooms;
 
@@ -29,9 +31,11 @@ export default function RoomsPreview({ state: { room, setRoom }, locale }) {
                 <div className='flex rounded-lg h-2/3 bg-gray-100 px-8 flex-col content-center'>
                   <div className='flex items-center'>
                     <div className='mr-3 inline-flex items-center justify-center flex-shrink-0'>
-                      <img
+                      <Image
                         src={el.img}
                         className='rounded-full w-24 h-24 shadow-md'
+                        width={80}
+                        height={80}
                       />
                     </div>
                     <div className='block'>

@@ -10,6 +10,7 @@ import Agri from 'assets/home/agri.png';
 import Fauna from 'assets/fauna.png';
 import Flora from 'assets/flora.png';
 import MountainImg from '@/assets/mountain.png';
+import AgriturismoImg from '@/assets/agriturismo.jpeg';
 
 export default function Agriturismo() {
   const { t } = useLocale();
@@ -52,7 +53,7 @@ export default function Agriturismo() {
 
   return (
     <>
-      <Header page_type='agriturismo' background='bg-agriturismo' />
+      <Header page_type='agriturismo' background={AgriturismoImg} />
       <ColumnSection data={agriturismo} />
       {/*  <ImgMosaic /> */}
       <ImgCentral bgImage={MountainImg} bgSmoke />
