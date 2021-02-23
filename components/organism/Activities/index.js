@@ -7,6 +7,7 @@ import Pizzoccolo2Img from 'assets/activities/pizzoccolo2.png';
 import LimoneImg from 'assets/activities/limoni.png';
 import FormaggiImg from 'assets/activities/formaggi.png';
 import LagoImg from 'assets/activities/lago.png';
+import Image from 'next/image';
 
 export default function Activities({ t }) {
   const {
@@ -38,54 +39,68 @@ export default function Activities({ t }) {
         <div className='flex flex-wrap md:-m-2 -m-1'>
           <div className='flex flex-wrap w-1/2'>
             <div className='md:p-2 p-1 w-1/2'>
-              <img
+              <Image
                 alt='gallery'
                 className='w-full rounded object-cover h-full object-center block'
                 src={CaneImg}
+                width={475}
+                height={475}
               />
             </div>
             <div className='md:p-2 p-1 w-1/2'>
-              <img
+              <Image
                 alt='gallery'
                 className='w-full rounded object-cover h-full object-center block'
                 src={FiumeImg}
+                width={475}
+                height={475}
               />
             </div>
             <div className='md:p-2 p-1 w-full'>
-              <img
+              <Image
                 alt='gallery'
                 className='w-full rounded h-full object-cover object-center block'
                 src={PizzoccoloImg}
+                width={775}
+                height={1225}
               />
             </div>
           </div>
           <div className='flex flex-wrap w-1/2'>
             <div className='md:p-2 p-1 w-full'>
-              <img
+              <Image
                 alt='gallery'
                 className='w-full rounded h-full object-cover object-center block'
                 src={Pizzoccolo2Img}
+                width={875}
+                height={675}
               />
             </div>
             <div className='md:p-2 p-1 w-1/2'>
-              <img
+              <Image
                 alt='gallery'
                 className='w-full rounded object-cover h-full object-center block'
                 src={LimoneImg}
+                width={475}
+                height={475}
               />
             </div>
             <div className='md:p-2 p-1 w-1/2'>
-              <img
+              <Image
                 alt='gallery'
                 className='w-full rounded object-cover h-full object-center block'
                 src={FormaggiImg}
+                width={475}
+                height={475}
               />
             </div>
             <div className='md:p-2 p-1 w-full'>
-              <img
+              <Image
                 alt='gallery'
                 className='w-full rounded object-cover h-full object-center block'
                 src={LagoImg}
+                width={775}
+                height={595}
               />
             </div>
           </div>

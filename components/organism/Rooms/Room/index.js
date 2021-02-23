@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Room({ room: { name, img, price }, index }) {
   const router = useRouter();
@@ -7,11 +8,16 @@ export default function Room({ room: { name, img, price }, index }) {
       <div class='lg:mx-8 lg:flex lg:max-w-5xl rounded-lg'>
         <div
           class={`lg:w-1/2 ${(index + 1) % 2 === 0 && 'order-2  md:order-1'}`}>
-          <div
-            class='h-64 bg-cover rounded-lg lg:h-full'
-            style={{
-              backgroundImage: `url(${img})`,
-            }}></div>
+          <div class='rounded-lg lg:h-full'>
+            <Image
+              className='rounded-lg w-full h-full'
+              alt='apartment'
+              objectFit='cover'
+              src={img}
+              width={475}
+              height={475}
+            />
+          </div>
         </div>
 
         <div class='max-w-xl px-6 py-6 lg:py-12 lg:max-w-5xl lg:w-1/2'>
