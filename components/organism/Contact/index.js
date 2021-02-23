@@ -16,7 +16,7 @@ export default function Contact({
           <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>{desc}</p>
         </div>
         <Form form={form} />
-        {!simplified && <AdditionalInfo form={form} />}
+        {/*  {!simplified && <AdditionalInfo form={form} />} */}
       </div>
     </section>
   );

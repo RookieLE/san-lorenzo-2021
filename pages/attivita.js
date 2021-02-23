@@ -15,6 +15,8 @@ import LimoneImg from 'assets/activities/limoni.png';
 import FormaggiImg from 'assets/activities/formaggi.png';
 import LagoImg from 'assets/activities/lago.png';
 
+import Pizzoccolo3Img from 'assets/pizzoccolo.jpeg';
+
 export default function Attività() {
   const { t } = useLocale();
   const [activity, setActivity] = useState('mountain');
@@ -44,7 +46,7 @@ export default function Attività() {
 
   return (
     <>
-      <Header background='bg-pizzoccolo' page_type='activities' />
+      <Header background={Pizzoccolo3Img} page_type='activities' />
       <ActivitiesMenu state={{ activity, setActivity }} />
       <ColumnSection {...columnSectionData} inverted bgSmoke />
       {RenderSections}
