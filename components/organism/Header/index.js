@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import useLocale from '@/hooks/useLocale';
 import Menu from '@/components/organism/Menu';
 
@@ -18,8 +19,16 @@ export default function Header({ background, page_type, simplified }) {
 
   return (
     <header
-      className={`h-2/3 min-h-400 md:h-5/6 w-full ${background} bg-cover p-6 relative lg:bg-no-repeat lg:bg-bottom`}
+      className={`h-2/3 min-h-400 md:h-5/6 w-full bg-cover p-6 relative lg:bg-no-repeat lg:bg-bottom`}
       style={{ minHeight: '500px', maxHeight: '600px' }}>
+      <Image
+        alt='Mountains'
+        src='/mountain.png'
+        layout='fill'
+        objectFit='cover'
+        quality={100}
+        priority
+      />
       <Menu navbar={t.navbar} />
       <div className='h-2/3 md:h-5/6 w-full absolute top-0 left-0 z-0 '>
         <div className='relative h-full flex justify-center blackCarpet z-10'></div>
