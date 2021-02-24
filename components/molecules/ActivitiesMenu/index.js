@@ -12,30 +12,20 @@ export default function ActivitiesMenu({ state: { activity, setActivity } }) {
   const { activitiesList } = t.homepage.activities;
 
   return (
-    <section className='text-gray-600 body-font'>
-      <div className='container px-5 py-24 mx-auto'>
-        <div className='flex flex-wrap -m-4 text-center'>
-          {activitiesList?.map(({ icon, name }) => {
-            const isActive = activity === name;
-            return (
-              <div
-                className='p-4 md:w-1/4 sm:w-1/2 w-full'
-                onClick={() => setActivity(name)}>
-                <div
-                  className={`bg-gray-50 hover:shadow-md cursor-pointer p-4 rounded-lg h-full ${
-                    isActive && 'shadow-md scale-102'
-                  }`}>
-                  <img
-                    src={icon}
-                    className={`text-indigo-500 w-8 mb-3 inline-block`}
-                  />
-                  <p className='leading-relaxed capitalize'>{name}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+    <section className='grid grid-cols-2 lg:grid-cols-4 px-4 py-8 lg:pt-24 gap-6 place-items-center max-w-screen-xl lg:mx-auto'>
+      {activitiesList?.map(({ icon, name }) => {
+        const isActive = activity === name;
+        return (
+          <div
+            className={`bg-gray-50 mx-8 p-4 w-32 h-32 lg:w-2/3 grid place-content-center place-items-center hover:bg-gray-100 cursor-pointer rounded-lg ${
+              isActive && 'scale-102 bg-gray-200'
+            }`}
+            onClick={() => setActivity(name)}>
+            <img src={icon} className={`w-8 mb-3 inline-block`} />
+            <p className='leading-relaxed capitalize'>{name}</p>
+          </div>
+        );
+      })}
     </section>
   );
 }

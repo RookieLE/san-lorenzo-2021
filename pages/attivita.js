@@ -41,14 +41,14 @@ export default function Attività() {
       bgImage: el.img,
       text: el.desc,
     };
-    return <ImgCentral {...content} />;
+    return <ImgCentral {...content} bgSmoke />;
   });
 
   return (
     <>
       <Header background={Pizzoccolo3Img} page_type='activities' />
       <ActivitiesMenu state={{ activity, setActivity }} />
-      <ColumnSection {...columnSectionData} inverted bgSmoke />
+      <ColumnSection {...columnSectionData} inverted />
       {RenderSections}
       <Contact t={t} simplified />
       <Footer t={t} />

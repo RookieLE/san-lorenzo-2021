@@ -8,6 +8,7 @@ export default function ImgCentral({
   cta,
   heightImg,
   title,
+  priorityImg,
 }) {
   return (
     <section className={`text-gray-600 ${bgSmoke && 'bg-gray-100'} `}>
@@ -31,6 +32,7 @@ export default function ImgCentral({
             src={bgImage}
             width={1425}
             height={475}
+            priority={priorityImg}
           />
           <div
             className='absolute text-center bottom-1/4 left-2/4 text-white w-300px -ml-32'
