@@ -40,7 +40,7 @@ export default function Activities({ t }) {
           <div className='flex flex-wrap w-1/2'>
             <div className='md:p-2 p-1 w-1/2'>
               <Image
-                alt='gallery'
+                alt='A white mountain after snowing and a black dog'
                 className='w-full rounded object-cover h-full object-center block'
                 src={CaneImg}
                 width={475}
@@ -49,7 +49,7 @@ export default function Activities({ t }) {
             </div>
             <div className='md:p-2 p-1 w-1/2'>
               <Image
-                alt='gallery'
+                alt='the river inside valle camerate valley, near agriturismo'
                 className='w-full rounded object-cover h-full object-center block'
                 src={FiumeImg}
                 width={475}
@@ -58,7 +58,7 @@ export default function Activities({ t }) {
             </div>
             <div className='md:p-2 p-1 w-full'>
               <Image
-                alt='gallery'
+                alt='The monte pizzoccolo from the Salo village'
                 className='w-full rounded h-full object-cover object-center block'
                 src={PizzoccoloImg}
                 width={775}
@@ -78,7 +78,7 @@ export default function Activities({ t }) {
             </div>
             <div className='md:p-2 p-1 w-1/2'>
               <Image
-                alt='gallery'
+                alt='A lemon plant in Limone del Garda'
                 className='w-full rounded object-cover h-full object-center block'
                 src={LimoneImg}
                 width={475}
@@ -87,7 +87,7 @@ export default function Activities({ t }) {
             </div>
             <div className='md:p-2 p-1 w-1/2'>
               <Image
-                alt='gallery'
+                alt='A selection of mountain cheese on a table'
                 className='w-full rounded object-cover h-full object-center block'
                 src={FormaggiImg}
                 width={475}
@@ -96,7 +96,7 @@ export default function Activities({ t }) {
             </div>
             <div className='md:p-2 p-1 w-full'>
               <Image
-                alt='gallery'
+                alt='The Toscolano Maderno square with a view of the so called "golfo", a porto with a lot of boats.'
                 className='w-full rounded object-cover h-full object-center block'
                 src={LagoImg}
                 width={775}

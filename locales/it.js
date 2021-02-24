@@ -16,6 +16,17 @@ import PizzoccoloImg from '../assets/activities/pizzoccolo.png';
 import LimoneImg from '../assets/activities/limoni.png';
 import FormaggiImg from '../assets/activities/formaggi.png';
 import LagoImg from '../assets/activities/lago.png';
+import {
+  KitchenIcon,
+  ParkingIcon,
+  WifiIcon,
+  DogIcon,
+} from '../components/organism/InfoRoom/icons';
+
+// ROOMS IMAGE
+import MountainRoomImg from '../assets/rooms/mountain-room.jpg';
+import HarmonyRoomImg from '../assets/rooms/harmony.png';
+import JoyRoomImg from '../assets/rooms/joy.png';
 
 export default {
   navbar: {
@@ -33,6 +44,10 @@ export default {
       text:
         'Welcome in Persegno, a wonderful location surrounded by nature in the Alto Garda Bresciano natural park, at the foot of Mount Pizzocolo. Located at an altitude of 400 meters and situated at 7 km from Toscolano Maderno and from the shores of Lake Garda, the San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area.',
       cta: 'Learn More',
+      img: {
+        url: Agri,
+        alt: 'Agriturismo san lorenzo viewed from outside, on a mountain view.',
+      },
     },
     rooms: {
       title: 'Rooms & Views',
@@ -42,28 +57,99 @@ export default {
         {
           name: 'serenity',
           price: '50',
-          text: 'per night',
+          guest: '4',
+          text:
+            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit.',
           img: SerenityImg,
+          alt:
+            'An internal view of serenity apartment, with a wood table and a big window.',
+          othersImages: [
+            { url: MountainRoomImg, alt: '' },
+            { url: HarmonyRoomImg, alt: '' },
+            { url: JoyRoomImg, alt: '' },
+            { url: HarmonyImg, alt: '' },
+          ],
         },
         {
           name: 'harmony',
           price: '70',
-          text: 'per night',
+          guest: '4',
+          text:
+            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit.',
           img: HarmonyImg,
+          alt:
+            'An internal view of serenity apartment, with a wood table and a big window.',
+          othersImages: [
+            { url: MountainRoomImg, alt: '' },
+            { url: HarmonyRoomImg, alt: '' },
+            { url: JoyRoomImg, alt: '' },
+            { url: HarmonyImg, alt: '' },
+          ],
         },
         {
           name: 'joy',
           price: '60',
-          text: 'per night',
+          guest: '4',
+          text:
+            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit.',
           img: JoyImg,
+          alt:
+            'An internal view of serenity apartment, with a wood table and a big window.',
+          othersImages: [
+            { url: MountainRoomImg, alt: '' },
+            { url: HarmonyRoomImg, alt: '' },
+            { url: JoyRoomImg, alt: '' },
+            { url: HarmonyImg, alt: '' },
+          ],
         },
         {
           name: 'silence',
           price: '75',
-          text: 'per night',
+          guest: '4',
+          text:
+            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit.',
           img: SilenceImg,
+          alt:
+            'An internal view of serenity apartment, with a wood table and a big window.',
+          othersImages: [
+            { url: MountainRoomImg, alt: '' },
+            { url: HarmonyRoomImg, alt: '' },
+            { url: JoyRoomImg, alt: '' },
+            { url: HarmonyImg, alt: '' },
+          ],
         },
       ],
+      viewOtherRooms: {
+        title: 'View other Rooms',
+        text:
+          'Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.',
+      },
+    },
+    infoRooms: {
+      features: [
+        { name: 'Kitchen', icon: <KitchenIcon /> },
+        { name: 'Parking', icon: <ParkingIcon /> },
+        { name: 'Wi-Fi', icon: <WifiIcon /> },
+        { name: 'Animal Friendly', icon: <DogIcon /> },
+      ],
+      bulletList: [
+        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.',
+        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably.',
+        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.',
+      ],
+      additionalInfo: {
+        title: 'Additional Info',
+        arrivalDeparture: {
+          title: 'Check-in / Check-out',
+          text:
+            'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.',
+        },
+        towels: {
+          title: 'Lenzuola e Asciugamani',
+          text:
+            'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.',
+        },
+      },
     },
     activities: {
       title: 'Activities',

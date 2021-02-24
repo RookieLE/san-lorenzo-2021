@@ -1,7 +1,10 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
-export default function Room({ room: { name, img, price }, index }) {
+export default function Room({
+  room: { name, img, price, alt, text, guest },
+  index,
+}) {
   const router = useRouter();
   return (
     <section class='lg:py-12 lg:flex lg:justify-center'>
@@ -11,7 +14,7 @@ export default function Room({ room: { name, img, price }, index }) {
           <div class='rounded-lg lg:h-full'>
             <Image
               className='rounded-lg w-full h-full'
-              alt='apartment'
+              alt={alt}
               objectFit='cover'
               src={img}
               width={475}
@@ -24,13 +27,10 @@ export default function Room({ room: { name, img, price }, index }) {
           <h2 class='text-2xl font-semilbold font-serif text-green-900 dark:text-white md:text-3xl capitalize'>
             {name}
             <span class='text-xl text-gray-500 dark:text-indigo-400 grid font-semibold'>
-              4 guest
+              {guest} guest
             </span>
           </h2>
-          <p class='mt-4 text-gray-600 dark:text-gray-400'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-            modi reprehenderit.
-          </p>
+          <p class='mt-4 text-gray-600 dark:text-gray-400'>{text}</p>
           <div class='mt-8'>
             <button
               onClick={() =>

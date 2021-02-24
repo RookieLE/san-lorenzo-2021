@@ -20,8 +20,8 @@ export default function IndexPage() {
     text: agri.text,
     cta: agri.cta,
     img: {
-      url: Agri,
-      alt: 'agriturismo san lorenzo photo',
+      url: agri.img.url,
+      alt: agri.img.alt,
     },
   };
 

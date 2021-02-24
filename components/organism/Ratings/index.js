@@ -10,7 +10,7 @@ export default function Ratings() {
           <div className='flex justify-center'>
             <Image
               src={BookingImg}
-              alt='Booking logo'
+              alt='The Booking platform logo'
               className='block object-contain w-4/5 lg:w-2/5 opacity-30 grayScale'
               width={275}
               height={180}
@@ -19,7 +19,7 @@ export default function Ratings() {
           <div className='flex justify-center'>
             <Image
               src={GoogleImg}
-              alt='Google logo'
+              alt='The google logo'
               className='block object-contain w-4/5 lg:w-2/5 opacity-30 grayScale'
               width={275}
               height={180}

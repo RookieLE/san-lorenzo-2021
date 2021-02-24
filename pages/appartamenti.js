@@ -28,8 +28,8 @@ export default function Appartamenti({ roomFrom }) {
       <Header simplified />
       <Title title='Rooms & Views' margin='mt-10' />
       <ImgCentral bgImage={MountainRoomImg} textImage={textImage} priorityImg />
-      <Carousel />
-      <InfoRoom />
+      <Carousel t={t} selectedRoom={room} />
+      <InfoRoom t={t} />
       <RoomsPreview state={{ room, setRoom }} locale={t} />
       <Contact t={t} simplified />
       <Footer t={t} />
