@@ -12,6 +12,7 @@ import Agri from 'assets/home/agri.png';
 import FiumeImg from 'assets/activities/fiume.png';
 import PizzoccoloImg from 'assets/activities/pizzoccolo.png';
 import Pizzoccolo2Img from 'assets/activities/pizzoccolo2.png';
+import Pizzoccolo3Img from 'assets/pizzoccolo.jpeg';
 import LimoneImg from 'assets/activities/limoni.png';
 import FormaggiImg from 'assets/activities/formaggi.png';
 import LagoImg from 'assets/activities/lago.png';
