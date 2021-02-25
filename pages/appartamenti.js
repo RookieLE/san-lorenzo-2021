@@ -8,6 +8,7 @@ import Carousel from 'components/molecules/Carousel';
 import InfoRoom from 'components/organism/InfoRoom';
 import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
+import Seo from '@/components/Layout/Seo';
 
 import MountainRoomImg from '@/assets/rooms/mountain-room.jpg';
 
@@ -23,8 +24,13 @@ export default function Appartamenti({ roomFrom }) {
 
   const textImage = `<h4 class='text-center font-extralight text-white text-5xl mb-2 capitalize'>${room} Suite</h4><p class="text-xl font-extralight">4 guests</p>`;
 
+  const seoAttributes = {
+    title: t.seo.apartments,
+  };
+
   return (
     <>
+      <Seo {...seoAttributes} />
       <Header simplified />
       <Title title='Rooms & Views' margin='mt-10' />
       <ImgCentral bgImage={MountainRoomImg} textImage={textImage} priorityImg />

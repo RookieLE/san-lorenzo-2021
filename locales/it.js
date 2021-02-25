@@ -29,9 +29,15 @@ import HarmonyRoomImg from '../assets/rooms/harmony.png';
 import JoyRoomImg from '../assets/rooms/joy.png';
 
 export default {
+  seo: {
+    homepage: 'Homepage',
+    apartments: 'Appartamenti',
+    lodge: "L'Agriturismo",
+    activities: 'Attivita',
+  },
   navbar: {
     home: 'Home',
-    lodge: 'Lodge',
+    lodge: 'The Lodge',
     apartments: 'Apartments',
     activities: 'Activities',
     contact: 'Contact',

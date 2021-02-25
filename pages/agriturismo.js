@@ -1,5 +1,6 @@
 import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
+import Seo from '@/components/Layout/Seo';
 import ColumnSection from '@/components/organism/ColumnSection';
 import ImgMosaic from '@/components/molecules/ImgMosaic';
 import ImgCentral from '@/components/molecules/ImgCentral';
@@ -51,8 +52,13 @@ export default function Agriturismo() {
     },
   };
 
+  const seoAttributes = {
+    title: t.seo.lodge,
+  };
+
   return (
     <>
+      <Seo {...seoAttributes} />
       <Header page_type='agriturismo' background={AgriturismoImg} />
       <ColumnSection data={agriturismo} />
       {/*  <ImgMosaic /> */}

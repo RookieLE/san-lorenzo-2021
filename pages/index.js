@@ -9,6 +9,7 @@ import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
 import Agri from 'assets/home/agri.png';
 import MountainImg from 'assets/home/mountain.png';
+import Seo from '@/components/Layout/Seo';
 
 export default function IndexPage() {
   const { t } = useLocale();
@@ -25,8 +26,13 @@ export default function IndexPage() {
     },
   };
 
+  const seoAttributes = {
+    title: t.seo.homepage,
+  };
+
   return (
     <>
+      <Seo {...seoAttributes} />
       <Header background={MountainImg} page_type='home' />
       <ColumnSection
         data={agriturismo}

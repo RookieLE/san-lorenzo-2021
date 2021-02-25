@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
+import Seo from '@/components/Layout/Seo';
 import ImgCentral from '@/components/molecules/ImgCentral';
 import ColumnSection from '@/components/organism/ColumnSection';
 import ActivitiesMenu from '@/components/molecules/ActivitiesMenu';
@@ -14,8 +15,6 @@ import Pizzoccolo2Img from 'assets/activities/pizzoccolo2.png';
 import LimoneImg from 'assets/activities/limoni.png';
 import FormaggiImg from 'assets/activities/formaggi.png';
 import LagoImg from 'assets/activities/lago.png';
-
-import Pizzoccolo3Img from 'assets/pizzoccolo.jpeg';
 
 export default function Attività() {
   const { t } = useLocale();
@@ -44,8 +43,13 @@ export default function Attività() {
     return <ImgCentral {...content} bgSmoke />;
   });
 
+  const seoAttributes = {
+    title: t.seo.activities,
+  };
+
   return (
     <>
+      <Seo {...seoAttributes} />
       <Header background={Pizzoccolo3Img} page_type='activities' />
       <ActivitiesMenu state={{ activity, setActivity }} />
       <ColumnSection {...columnSectionData} inverted />
