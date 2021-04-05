@@ -1,7 +1,7 @@
-import SerenityImg from '../assets/rooms/serenity.png';
-import JoyImg from '../assets/rooms/joy.png';
-import SilenceImg from '../assets/rooms/silence.png';
-import HarmonyImg from '../assets/rooms/harmony.png';
+import SerenityImg from '../assets/rooms/serenity.jpg';
+import JoyImg from '../assets/rooms/joy.jpg';
+import SilenceImg from '../assets/rooms/silence.jpg';
+import HarmonyImg from '../assets/rooms/armony.jpg';
 
 export default {
   navbar: {

@@ -1,7 +1,3 @@
-import SerenityImg from '../assets/rooms/serenity.png';
-import JoyImg from '../assets/rooms/joy.png';
-import SilenceImg from '../assets/rooms/silence.png';
-import HarmonyImg from '../assets/rooms/harmony.png';
 import BeachIcon from '../assets/icons/beach.png';
 import BikeIcon from '../assets/icons/bike.png';
 import GolfIcon from '../assets/icons/golf.png';
@@ -25,8 +21,13 @@ import {
 
 // ROOMS IMAGE
 import MountainRoomImg from '../assets/rooms/mountain-room.jpg';
-import HarmonyRoomImg from '../assets/rooms/harmony.png';
-import JoyRoomImg from '../assets/rooms/joy.png';
+import HarmonyRoomImg from '../assets/rooms/armony.jpg';
+import JoyRoomImg from '../assets/rooms/joy.jpg';
+
+import SerenityImg from '../assets/rooms/serenity.jpg';
+import JoyImg from '../assets/rooms/joy.jpg';
+import SilenceImg from '../assets/rooms/silence.jpg';
+import HarmonyImg from '../assets/rooms/armony.jpg';
 
 export default {
   seo: {

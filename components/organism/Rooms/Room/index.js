@@ -9,11 +9,10 @@ export default function Room({
   return (
     <section class='lg:py-12 lg:flex lg:justify-center'>
       <div class='lg:mx-8 lg:flex lg:max-w-5xl rounded-lg'>
-        <div
-          class={`lg:w-1/2 ${(index + 1) % 2 === 0 && 'order-2  md:order-1'}`}>
+        <div class={`lg:w-1/2`}>
           <div class='rounded-lg lg:h-full'>
             <Image
-              className='rounded-lg w-full h-full'
+              className='w-full h-full rounded-lg'
               alt={alt}
               objectFit='cover'
               src={img}
