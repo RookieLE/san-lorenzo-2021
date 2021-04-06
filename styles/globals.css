@@ -20,7 +20,7 @@
 }
 
 .navLink {
-  @apply text-lg m-2 pl-2 tracking-wider lg:pl-0 font-sans cursor-pointer font-light capitalize;
+  @apply pl-2 m-2 font-sans text-lg tracking-wider capitalize cursor-pointer lg:pl-0;
 }
 
 .navLink_notActive {
@@ -32,15 +32,15 @@
 }
 
 .navLink_active {
-  @apply h-8 border-l-4 border-green-900  lg:border-b-2 lg:border-white lg:border-l-0 lg:text-white;
+  @apply h-8 border-l-4 border-green-900 lg:border-b-2 lg:border-white lg:border-l-0 lg:text-white;
 }
 
 .navLink_active_simpl {
-  @apply h-8 border-l-4 border-green-900  lg:border-b-2 lg:border-gray-800 lg:border-l-0;
+  @apply h-8 border-l-4 border-green-900 lg:border-b-2 lg:border-gray-800 lg:border-l-0;
 }
 
 .title_section {
-  @apply font-serif sm:text-4xl text-3xl mb-4 font-bold text-green-800;
+  @apply mb-4 font-serif text-3xl font-bold text-green-800 sm:text-4xl lg:text-5xl;
 }
 
 @layer utilities {

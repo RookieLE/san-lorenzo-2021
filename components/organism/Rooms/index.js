@@ -8,15 +8,15 @@ export default function Rooms({
   },
 }) {
   return (
-    <section className='text-gray-600 body-font'>
+    <section className='text-gray-600 bg-gray-100 body-font'>
       <div className='container px-5 py-24 mx-auto'>
-        <div className='flex flex-col text-center w-full mb-20'>
+        <div className='flex flex-col w-full mb-20 text-center'>
           <h2 className='title_section'>{title}</h2>
-          <p className='lg:w-2/3 mx-auto leading-relaxed text-base max-w-prose'>
+          <p className='mx-auto text-base leading-relaxed lg:w-2/3 max-w-prose'>
             {desc}
           </p>
         </div>
-        <div className='grid xl:grid-cols-2 mx-auto place-content-center gap-8'>
+        <div className='grid gap-8 mx-auto xl:grid-cols-2 place-content-center'>
           {rooms.map((room, index) => (
             <Room room={room} index={index} key={index} />
           ))}

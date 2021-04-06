@@ -12,8 +12,7 @@ export default function useLocale() {
     (locale === 'de' && de) ||
     (locale === 'en' && en);
 
-  const handleChangeLang = (e) => {
-    const locale = e.target.value;
+  const handleChangeLang = (locale) => {
     router.push('/', '/', { locale });
   };
 

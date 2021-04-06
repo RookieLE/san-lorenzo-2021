@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Ratings() {
   return (
-    <section className='mx-auto bg-gray-50'>
+    <section className='mx-auto bg-gray-100'>
       <div className='container px-5 mx-auto lg:px-16'>
         <div className='grid grid-cols-2 gap-16 text-center'>
           <div className='flex justify-center'>

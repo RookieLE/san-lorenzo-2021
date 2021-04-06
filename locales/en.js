@@ -48,7 +48,7 @@ export default {
       title: `A hidden paradise`,
       subTitle: 'behind a mountain',
       text:
-        'Welcome in Persegno, a wonderful location surrounded by nature in the Alto Garda Bresciano natural park, at the foot of Mount Pizzocolo. Located at an altitude of 400 meters and situated at 7 km from Toscolano Maderno and from the shores of Lake Garda, the San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area.',
+        'Welcome in Persegno, a wonderful location surrounded by nature in the Alto Garda Bresciano natural park. The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area.',
       cta: 'Learn More',
       img: {
         url: Agri,

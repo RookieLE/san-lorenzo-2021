@@ -28,26 +28,26 @@ export default function DateRowPicker({
   const CustomInputArrival = ({ value, onClick }) => (
     <input
       onClick={onClick}
-      ref={register({ required: true })}
+      {...register(arrival.name, { required: true })}
       value={value}
       placeHolder={arrival.placeholder}
       type='text'
       id={arrival.name}
       name={arrival.name}
-      className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+      className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
     />
   );
 
   const CustomInputDeparture = ({ value, onClick }) => (
     <input
       onClick={onClick}
-      ref={register({ required: true })}
+      {...register(departure.name, { required: true })}
       value={value}
       placeHolder={departure.placeholder}
       type='text'
       id={departure.name}
       name={departure.name}
-      className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+      className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
     />
   );
 
@@ -57,11 +57,11 @@ export default function DateRowPicker({
 
   return (
     <>
-      <div className='p-2 w-1/2'>
+      <div className='w-1/2 p-2'>
         <div className='relative grid'>
           <label
             for={arrival.name}
-            className='leading-7 capitalize text-sm text-gray-600'>
+            className='text-sm leading-7 text-gray-600 capitalize'>
             {arrival.name}
           </label>
           <DatePicker
@@ -73,16 +73,16 @@ export default function DateRowPicker({
             endDate={endDate}
             popperPlacement='top-end'
             popperModifiers={popperCustomStyle}
-            className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+            className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
           />
           {errors.arrival && <RenderRequired />}
         </div>
       </div>
-      <div className='p-2 w-1/2'>
+      <div className='w-1/2 p-2'>
         <div className='relative grid'>
           <label
             for={departure.name}
-            className='leading-7 capitalize text-sm text-gray-600'>
+            className='text-sm leading-7 text-gray-600 capitalize'>
             {departure.name}
           </label>
           <DatePicker
@@ -95,7 +95,7 @@ export default function DateRowPicker({
             minDate={startDate}
             popperPlacement='top-end'
             popperModifiers={popperCustomStyle}
-            className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+            className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
           />
           {errors.departure && <RenderRequired />}
         </div>

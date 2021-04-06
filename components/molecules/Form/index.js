@@ -24,7 +24,12 @@ export default function Form({
     error: false,
   });
 
-  const { register, handleSubmit, errors, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
   const onSubmit = async (data) => {
     await setStatus((state) => ({ ...state, submitting: true }));
@@ -89,39 +94,39 @@ export default function Form({
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='flex flex-wrap -m-2 lg:w-1/2 md:w-2/3 mx-auto'>
-      <div className='p-2 w-1/2'>
+      className='flex flex-wrap mx-auto -m-2 lg:w-1/2 md:w-2/3'>
+      <div className='w-1/2 p-2'>
         <div className='relative'>
           <label
             for={name.name}
-            className='leading-7 capitalize text-sm text-gray-600'>
+            className='text-sm leading-7 text-gray-600 capitalize'>
             {name.name}
           </label>
           <input
             placeHolder={name.placeholder}
-            ref={register({ required: true })}
+            {...register(name.name, { required: true })}
             type='text'
             id={name.name}
             name={name.name}
-            className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+            className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
           />
           {errors.name && <RenderRequired />}
         </div>
       </div>
-      <div className='p-2 w-1/2'>
+      <div className='w-1/2 p-2'>
         <div className='relative'>
           <label
             for={email.name}
-            className='leading-7 capitalize text-sm text-gray-600'>
+            className='text-sm leading-7 text-gray-600 capitalize'>
             {email.name}
           </label>
           <input
             placeholder={email.placeholder}
-            ref={register({ required: true })}
+            {...register(email.name, { required: true })}
             type='email'
             id={email.name}
             name={email.name}
-            className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+            className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
           />
           {errors.email && <RenderRequired />}
         </div>
@@ -129,19 +134,19 @@ export default function Form({
 
       <DateRowPicker {...pickerAttributes} />
 
-      <div className='p-2 w-full'>
+      <div className='w-full p-2'>
         <div className='relative'>
           <label
             for={message.name}
-            className='leading-7 capitalize text-sm text-gray-600'>
+            className='text-sm leading-7 text-gray-600 capitalize'>
             {message.name}
           </label>
           <textarea
             placeHolder={message.placeholder}
-            ref={register({ required: true })}
+            {...register(message.name, { required: true })}
             id={message.name}
             name={message.name}
-            className='w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'></textarea>
+            className='w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'></textarea>
           {errors.message && <RenderRequired />}
         </div>
       </div>
@@ -151,10 +156,10 @@ export default function Form({
       {status.error === true && (
         <Error message={error_msg} close={cleanError} />
       )}
-      <div className='p-2 w-full'>
+      <div className='w-full p-2'>
         <input
           type='submit'
-          className='capitalize cursor-pointer flex mx-auto text-white bg-gray-700 border-0 py-2 px-8 focus:outline-none hover:bg-gray-900 rounded text-lg'
+          className='flex px-8 py-2 mx-auto text-lg text-white capitalize bg-gray-700 border-0 rounded cursor-pointer focus:outline-none hover:bg-gray-900'
           value={buttonTxt()}
         />
       </div>

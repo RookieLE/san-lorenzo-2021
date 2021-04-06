@@ -3,7 +3,7 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <Layout class='antialiased bg-white'>
       <Component {...pageProps} />
     </Layout>
   );

@@ -6,6 +6,8 @@ import LogoBlackImg from 'assets/black-logo.png';
 import useLocale from 'hooks/useLocale';
 import UseAnimations from 'react-useanimations';
 import menu2 from 'react-useanimations/lib/menu2';
+import dynamic from 'next/dynamic';
+const Flag = dynamic(() => import('react-flagpack'), { ssr: false });
 
 export default function Menu({
   simplified,
@@ -14,6 +16,7 @@ export default function Menu({
   const router = useRouter();
   const { locale, handleChangeLang } = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleHamb = () => {
     setTimeout(() => setIsMenuOpen(!isMenuOpen), 300);
@@ -31,6 +34,19 @@ export default function Menu({
   const textColor = (simplified && 'text-gray-800') || 'text-white';
   const logo = (!simplified && LogoImg) || LogoBlackImg;
 
+  const parseFlag = (name) => {
+    if (name === 'it')
+      return (
+        <Flag code='ITA' size='M' hasDropShadow gradient='real-circular' />
+      );
+    if (name === 'en')
+      return (
+        <Flag code='GB-UKM' size='M' hasDropShadow gradient='real-circular' />
+      );
+  };
+
+  const oppositeLocale = (locale === 'it' && 'en') || (locale === 'en' && 'it');
+
   return (
     <nav
       className={`flex justify-between z-50 font-sans ${textColor} ${
@@ -38,14 +54,14 @@ export default function Menu({
       }`}>
       <div className='z-20 lg:flex lg:gap-5'>
         <img src={logo} className='w-1/4 lg:w-24 lg:h-16' />
-        <h1 className='text-3xl tracking-wider font-medium font-serif lg:w-80'>
+        <h1 className='font-serif text-3xl font-medium tracking-wider lg:w-80'>
           San Lorenzo{' '}
           <span className='block text-lg font-light'>di Persegno</span>
         </h1>
       </div>
 
       <div
-        className='z-50  hover:cursor lg:hidden place-self-center'
+        className='z-50 hover:cursor lg:hidden place-self-center'
         onClick={handleHamb}>
         <UseAnimations
           animation={menu2}
@@ -89,14 +105,42 @@ export default function Menu({
         <li className={`navLink ${isMenuActive('/contatti')}`}>
           <a href='#contact'>{contact}</a>
         </li>
-        <li className='navLink navLink_notActive'>
-          <select
-            onChange={handleChangeLang}
-            defaultValue={locale}
-            className={`text-black ${simplifiedTextColor} rounded border bg-transparent appearance-none border-gray-600 py-1 focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-900 text-base px-2 cursor-pointer`}>
-            <option value='en'>English</option>
-            <option value='it'>Italiano</option>
-          </select>
+        <li className='navLink'>
+          <div class='w-1/3 sm:w-full relative flex place-items-center place-content-center px-2 py-3 sm:px-2 sm:py-1 hover:bg-gray-50 rounded-md bg-gray-100 sm:bg-white'>
+            {/*  <!-- Dropdown toggle button --> */}
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              class='relative z-10 focus:outline-none flex place-content-center place-items-center'>
+              <svg
+                className={`relative w-5 h-5 text-gray-600 top-1 dark:text-white transform transition-transform ${
+                  isDropdownOpen && 'rotate-180'
+                }`}
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'>
+                <path
+                  fill-rule='evenodd'
+                  d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+                  clip-rule='evenodd'
+                />
+              </svg>
+              {parseFlag(locale)}
+            </button>
+
+            {/* <!-- Dropdown menu --> */}
+            {isDropdownOpen && (
+              <div class='absolute sm:top-5 -right-16 -top-5 sm:right-0 z-20 w-14 p-2 mt-4 border-4 border-gray-200 bg-white hover:bg-gray-50 rounded-md shadow-xl'>
+                <button
+                  onClick={() => {
+                    handleChangeLang(oppositeLocale);
+                    setIsDropdownOpen(false);
+                  }}
+                  class='flex place-content-center w-full py-1 capitalize transition-colors duration-200 transform focus:outline-none'>
+                  {parseFlag(oppositeLocale)}
+                </button>
+              </div>
+            )}
+          </div>
         </li>
       </ul>
     </nav>
