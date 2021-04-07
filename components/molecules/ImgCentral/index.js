@@ -26,11 +26,6 @@ export default function ImgCentral({
             <div className='' dangerouslySetInnerHTML={{ __html: textImage }} />
           </>
         )}
-        {text && (
-          <div className='w-full pt-6 pb-10 text-center lg:w-2/3'>
-            <p className='leading-relaxed'>{text}</p>
-          </div>
-        )}
 
         <Popup
           trigger={

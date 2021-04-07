@@ -5,6 +5,7 @@ export default function RoomsPreview({ locale, room }) {
   const router = useRouter();
   const rooms = locale.rooms.rooms;
   const { title, text } = locale.rooms.viewOtherRooms;
+
   return (
     <section className='text-gray-600 body-font'>
       <div className='container px-5 py-12 mx-auto'>
@@ -43,10 +44,10 @@ export default function RoomsPreview({ locale, room }) {
                       <h2 className='text-lg font-semibold text-green-900 capitalize title-font'>
                         {el.name}
                       </h2>
-                      <p>4 guests</p>
+                      <p className='capitalize'>{el.guest}</p>
                       <div className='flex-grow'>
                         <a className='inline-flex items-center mt-3 text-green-800 group-hover:underline group-hover:active:underline'>
-                          View More
+                          {el.viewMore}
                           <svg
                             fill='none'
                             stroke='currentColor'

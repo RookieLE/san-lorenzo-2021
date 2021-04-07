@@ -50,12 +50,13 @@ export default {
   rooms: {
     title: 'Rooms & Views',
     desc:
-      'At our Lodge, there is a variety of rooms to choose from. Whether you are a casual traveler or a person demanding luxury wherever you go, you won’t be disappointed.',
+      'Surrounded by 14 hectares of land, the facility is part of an ancient cheese-making farm dating back to the 19th century. Each room can host up to four guests in a warm and cozy atmosphere, distinctively charming and comfortable.',
     rooms: [
       {
         name: 'serenity',
         price: '50',
-        guest: '2',
+        guest: '2 guests',
+        viewMore: 'View more',
         img: '/assets/rooms/thumbnail/serenity.jpg',
         videoUrl: 'https://www.youtube.com/embed/FCwlLM-Jqic',
         alt:
@@ -74,7 +75,8 @@ export default {
       {
         name: 'armony',
         price: '70',
-        guest: '4',
+        guest: '4 guests',
+        viewMore: 'View more',
         img: '/assets/rooms/thumbnail/armony.jpg',
         videoUrl: 'https://www.youtube.com/embed/lG8iiNx6A2g',
         alt:
@@ -93,9 +95,10 @@ export default {
       {
         name: 'joy',
         price: '60',
-        guest: '4',
+        guest: '4 guests',
+        viewMore: 'View more',
         img: '/assets/rooms/thumbnail/joy.jpg',
-        videoUrl: 'https://www.youtube.com/embed/FCwlLM-Jqic',
+        videoUrl: 'https://www.youtube.com/embed/Efg7OlrCklY',
         alt:
           'An internal view of Joy apartment, with a wood table and a big window.',
         othersImages: [
@@ -112,7 +115,8 @@ export default {
       {
         name: 'silence',
         price: '75',
-        guest: '4',
+        guest: '4 guests',
+        viewMore: 'View more',
         img: '/assets/rooms/thumbnail/silence.jpg',
         videoUrl: 'https://www.youtube.com/embed/BY4r-m_67oU',
         alt:
@@ -131,31 +135,34 @@ export default {
     viewOtherRooms: {
       title: 'View other Rooms',
       text:
-        'Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.',
+        'The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey. Clicking on the image above you will also find a wonderful video showing the apartment in detail.',
     },
     infoRooms: {
       features: [
         { name: 'Kitchen', icon: <MdKitchen className='text-2xl' /> },
         { name: 'Parking', icon: <FaParking className='text-2xl' /> },
-        { name: 'Wi-Fi', icon: <WifiIcon className='text-2xl' /> },
+        { name: 'Free Wi-Fi', icon: <WifiIcon className='text-2xl' /> },
         { name: 'Animal Friendly', icon: <DogIcon className='text-2xl' /> },
       ],
-      bulletList: [
-        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.',
-        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably.',
-        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.',
-      ],
+      bulletList: {
+        title: 'Description',
+        list: [
+          'We offer open-space apartments with 3 rooms: living room/kitchen (fully furnished), bathroom and bedroom.',
+          'Each accommodation disposes of a double bed, a sofa bed in the living room and/or in the bedroom and a private bathroom with a shower.',
+          'The living room is equipped with a dining table, some chairs and a sofa. If needed, you can also enjoy the wood stove heating.',
+        ],
+      },
       additionalInfo: {
         title: 'Additional Info',
         arrivalDeparture: {
           title: 'Check-in / Check-out',
           text:
-            'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.',
+            'The check-in is allowed from 2:00 pm to 6:00 pm. The check-out limit is 11:00 am.',
         },
         towels: {
-          title: 'Lenzuola e Asciugamani',
+          title: 'Bed sheets and Towels',
           text:
-            'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.',
+            'The bed sheets and towels are extra, they cost 10€ per person for the whole stay.',
         },
       },
     },
@@ -164,7 +171,7 @@ export default {
   activities: {
     title: 'Activities',
     desc:
-      'At our Lodge, there is a variety of rooms to choose from. Whether you are a casual traveler or a person demanding luxury wherever you go, you won’t be disappointed.',
+      'There are a lot of activities you can do. The park is full of attractions, with plenty of routes for incredible walking, cycling and climbing. The magnificent beach of Toscolano Maderno is also 15 minutes away by car.',
     cta: 'Learn More',
     activitiesList: [
       { name: 'mountain', icon: MountainIcon },

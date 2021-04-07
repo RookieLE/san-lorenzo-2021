@@ -20,42 +20,44 @@ import MountainIcon from '../assets/icons/mountain.png';
 
 export default {
   seo: {
-    homepage: 'Homepage',
-    apartments: 'Apartments',
-    lodge: 'The Lodge',
-    activities: 'Activities',
+    homepage: 'Home',
+    apartments: 'Appartamenti',
+    lodge: "L'Agriturismo",
+    activities: 'Attività',
   },
   navbar: {
     home: 'Home',
-    lodge: 'The Lodge',
-    apartments: 'Apartments',
-    activities: 'Activities',
-    contact: 'Contact',
+    lodge: "L'Agriturismo",
+    apartments: 'Appartamenti',
+    activities: 'Attività',
+    contact: 'Contatti',
   },
   header: {
-    welcome: 'welcome',
+    welcome: 'benvenuti',
     san_lorenzo: {
-      title: `A hidden paradise`,
-      subTitle: 'behind a mountain',
+      title: `Un paradiso nascosto`,
+      subTitle: 'dietro la montagna',
       text:
-        'Welcome in Persegno, a wonderful location surrounded by nature in the Alto Garda Bresciano natural park. The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area.',
-      cta: 'Learn More',
+        "Benvenuti in Persegno località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo. L'agriturismo San Lorenzo offre vari appartamenti in una bella zona di montagna.",
+      cta: 'Scopri di più',
       img: {
         url: Agri,
-        alt: 'Agriturismo san lorenzo viewed from outside, on a mountain view.',
+        alt: 'Una vista del lago di garda dal monte pizzoccolo',
       },
     },
   },
 
   rooms: {
-    title: 'Rooms & Views',
+    title: 'Gli Appartamenti',
     desc:
-      'At our Lodge, there is a variety of rooms to choose from. Whether you are a casual traveler or a person demanding luxury wherever you go, you won’t be disappointed.',
+      "All'interno di 14 ettari di terreno, la struttura fa parte di una vecchia formaggiaia risalente al 1800, le stanze possono accogliere fino a quattro ospiti ciascuna in un' atmosfera calda e raccolta, dallo charme caratteristico e confortevole.",
+
     rooms: [
       {
         name: 'serenity',
         price: '50',
-        guest: '2',
+        guest: '2 ospiti',
+        viewMore: 'Scopri di più',
         img: '/assets/rooms/thumbnail/serenity.jpg',
         videoUrl: 'https://www.youtube.com/embed/FCwlLM-Jqic',
         alt:
@@ -74,7 +76,8 @@ export default {
       {
         name: 'armony',
         price: '70',
-        guest: '4',
+        guest: '4 ospiti',
+        viewMore: 'Scopri di più',
         img: '/assets/rooms/thumbnail/armony.jpg',
         videoUrl: 'https://www.youtube.com/embed/lG8iiNx6A2g',
         alt:
@@ -93,9 +96,10 @@ export default {
       {
         name: 'joy',
         price: '60',
-        guest: '4',
+        guest: '4 ospiti',
+        viewMore: 'Scopri di più',
         img: '/assets/rooms/thumbnail/joy.jpg',
-        videoUrl: 'https://www.youtube.com/embed/FCwlLM-Jqic',
+        videoUrl: 'https://www.youtube.com/embed/Efg7OlrCklY',
         alt:
           'An internal view of Joy apartment, with a wood table and a big window.',
         othersImages: [
@@ -112,7 +116,8 @@ export default {
       {
         name: 'silence',
         price: '75',
-        guest: '4',
+        guest: '4 ospiti',
+        viewMore: 'Scopri di più',
         img: '/assets/rooms/thumbnail/silence.jpg',
         videoUrl: 'https://www.youtube.com/embed/BY4r-m_67oU',
         alt:
@@ -129,42 +134,45 @@ export default {
       },
     ],
     viewOtherRooms: {
-      title: 'View other Rooms',
+      title: 'Vedi gli altri Appartamenti',
       text:
-        'Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.',
+        "Gli appartamenti sono spaziosi e ben arredati, forniti di ogni utensile necessario. Cliccate sull'immagine in alto per poter vedere un video tour dell'appartamento.",
     },
     infoRooms: {
       features: [
-        { name: 'Kitchen', icon: <MdKitchen className='text-2xl' /> },
-        { name: 'Parking', icon: <FaParking className='text-2xl' /> },
-        { name: 'Wi-Fi', icon: <WifiIcon className='text-2xl' /> },
-        { name: 'Animal Friendly', icon: <DogIcon className='text-2xl' /> },
+        { name: 'Cucina', icon: <MdKitchen className='text-2xl' /> },
+        { name: 'Parcheggio', icon: <FaParking className='text-2xl' /> },
+        { name: 'Free Internet', icon: <WifiIcon className='text-2xl' /> },
+        { name: 'Benvenuti Animali', icon: <DogIcon className='text-2xl' /> },
       ],
-      bulletList: [
-        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.',
-        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably.',
-        'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.',
-      ],
+      bulletList: {
+        title: 'Descrizione',
+        list: [
+          'Gli appartamenti sono open space, con tre stanze totali: soggiorno/cucina (completamente accessoriata), bagno e camera da letto.',
+          'In ogni alloggio troverete un letto matrimoniale, un divano letto nel soggiorno e/o nella stanza e un bagno privato con doccia.',
+          'La zona soggiorno è arredata con tavolo, sedie e divano. Inoltre potrete gioire anche del riscaldamento a legna nel caso di bisogno.',
+        ],
+      },
       additionalInfo: {
-        title: 'Additional Info',
+        title: "Informazioni all'Arrivo",
         arrivalDeparture: {
           title: 'Check-in / Check-out',
           text:
-            'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.',
+            'Il check-in è consentito dalle ore 14.00 alle ore 18.00. Il check-out non oltre le ore 11.00.',
         },
         towels: {
           title: 'Lenzuola e Asciugamani',
           text:
-            'Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.',
+            'Le lenzuola e gli asciugamani sono extra, il prezzo è di € 10 per persona per soggiorno.',
         },
       },
     },
   },
 
   activities: {
-    title: 'Activities',
+    title: 'Attività',
     desc:
-      'At our Lodge, there is a variety of rooms to choose from. Whether you are a casual traveler or a person demanding luxury wherever you go, you won’t be disappointed.',
+      'Ci sono moltissime attvità da poter fare. Il parco è ricco di attrazioni, con moltissimi percorsi per incredibili passeggiate, giri in bicicletta e arrampicate. La magnifica spiaggia di Toscolano Maderno inoltre si trova a 15 minuti di macchina. ',
     cta: 'Learn More',
     activitiesList: [
       { name: 'mountain', icon: MountainIcon },
@@ -174,46 +182,46 @@ export default {
     ],
   },
   contact: {
-    title: 'Book Now',
+    title: 'Prenota Ora',
     desc:
-      'At our Lodge, there is a variety of rooms to choose from. Whether you.',
+      'Potete scriverci qualsiasi informazione che possa esserci utile al fine di regalarvi la miglior esperienza possibile.',
     form: {
       name: {
-        name: 'name',
-        placeholder: 'Full Name',
+        name: 'nome',
+        placeholder: 'Nome completo',
       },
       arrival: {
-        name: 'arrival',
-        placeholder: 'Select an arrival date',
+        name: 'arrivo',
+        placeholder: 'Seleziona una data di arrivo',
       },
       departure: {
-        name: 'departure',
+        name: 'partenza',
         placeholder: 'Select a departure date',
       },
       email: {
         name: 'email',
-        placeholder: 'Email',
+        placeholder: 'esempio@gmail.com',
       },
       message: {
-        name: 'message',
-        placeholder: 'Write your message',
+        name: 'messaggio',
+        placeholder: 'Scrivici un messaggio',
       },
-      is_required: 'This field is required',
+      is_required: 'Questo campo è obbligatorio',
       success_msg:
-        'Email submitted correctly! We will reply you as soon as possible. Thanks.',
+        'Email inviata correttamente! Vi risponderemo il prima possibile. Grazie.',
       error_msg:
-        'Oops, it seems that there is an error, try again. Otherwise write us directly at agri@gmail.com',
-      button_text: 'send',
+        'Oops, sembra esserci un problema, prova ancora. Altrimenti scrivici direttamente a info@sanlorenzodipersegno.it',
+      button_text: 'invia',
       info:
         'Vi consigliamo di impostare nel navigatore località Gaino. C’è la possibilità che il navigatore vi porti a Navazzo, NON dovete assolutamente seguire questa direzione. Una volta arrivati a Toscolano Maderno, proseguite per Gaino, poi entrate nella valle delle Camerate e proseguite per 5 km circa. La strada è una classica strada montana, sterrata e non asfaltata, consigliamo tranquillità e di godervi il percorso perchè una volta giunti in agriturismo la pace ricompenserà ogni sforzo.',
     },
   },
   lodge: {
-    img_text: "It's coazy",
-    title: `Our Lodge`,
-    subTitle: 'is like home',
+    img_text: 'è accogliente',
+    title: `Nel nostro Agriturismo`,
+    subTitle: 'ti sentirai a casa',
     text:
-      'Located at an altitude of 400 meters and situated at 7 km from Toscolano Maderno and from the shores of Lake Garda, the San Lorenzo Farm Holiday Accommodation offers a set of nice full equipped apartments in a quiet mountain area.',
+      'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.',
   },
   activities_page: {
     mountain: {
