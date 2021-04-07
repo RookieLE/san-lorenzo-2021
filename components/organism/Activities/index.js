@@ -44,7 +44,7 @@ export default function Activities({ t }) {
             lazy
             alt='the river inside valle camerate valley, near agriturismo'
             className='block object-cover object-center w-full h-full rounded'
-            src='/assets/activities/fiume.png'
+            src='/assets/activities/river.jpg'
             width={475}
             height={475}
           />
@@ -86,7 +86,7 @@ export default function Activities({ t }) {
             lazy
             alt='A selection of mountain cheese on a table'
             className='block object-cover object-center w-full h-full rounded'
-            src='/assets/activities/formaggi.png'
+            src='/assets/activities/spritz.jpg'
             width={475}
             height={475}
           />
@@ -96,7 +96,7 @@ export default function Activities({ t }) {
             lazy
             alt='The Toscolano Maderno square with a view of the so called "golfo", a porto with a lot of boats.'
             className='block object-cover object-center w-full h-full rounded'
-            src='/assets/activities/lago.jpg'
+            src='/assets/activities/lido.jpg'
             width={775}
             height={595}
           />

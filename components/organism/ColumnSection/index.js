@@ -21,24 +21,23 @@ export default function ColumnSection({
   );
   return (
     <section className={`text-gray-600 body-font ${bgSmoke && 'bg-gray-100'}`}>
-      <div className='container flex flex-col items-center justify-center max-w-screen-xl px-6 mx-auto py-14 md:py-28 md:flex-row'>
+      <div className='container flex flex-col items-center justify-center max-w-screen-xl px-6 mx-auto py-14 md:py-20 md:flex-row'>
         <div
           className={`lg:max-w-lg lg:w-full md:w-1/2 mb-10 md:mb-0 md:pr-8 ${
-            inverted && 'lg:order-last'
+            inverted && 'md:order-last'
           }`}>
           <Image
             className='object-cover object-center rounded-lg'
-            objectFit='cover'
-            alt={img.alt}
-            src={img.url}
-            width={700}
-            height={475}
+            /*             alt={img.alt} */
+            src={img}
+            width={875}
+            height={675}
             lazy
           />
         </div>
         <div
           className={`lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center  ${
-            (inverted && 'md:pl-0 lg:pl-0  md:pr-16') || 'md:pl-16 lg:pl-24'
+            (inverted && 'md:pl-0 lg:pl-0 md:pr-16') || 'md:pl-16'
           }`}>
           <h1 className='title_section'>
             {title}

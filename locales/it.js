@@ -1,9 +1,7 @@
 /* ==== ACTIVITIES ==== */
 import Pizzoccolo2Img from '../assets/activities/pizzoccolo2.png';
 import Agri from '../public/assets/home/mountain.png';
-import FiumeImg from '../public/assets/activities/fiume.png';
 import PizzoccoloImg from '../public/assets/activities/pizzoccolo-verticale.jpg';
-import LagoImg from '../public/assets/activities/lago.jpg';
 
 /* ==== ICONS ===== */
 import { GiSittingDog as DogIcon } from 'react-icons/gi';
@@ -103,6 +101,7 @@ export default {
         alt:
           'An internal view of Joy apartment, with a wood table and a big window.',
         othersImages: [
+          { url: '/assets/rooms/joy/1.jpeg', alt: '' },
           { url: '/assets/rooms/joy/2.jpeg', alt: '' },
           { url: '/assets/rooms/joy/3.jpeg', alt: '' },
           { url: '/assets/rooms/joy/4.jpeg', alt: '' },
@@ -123,6 +122,7 @@ export default {
         alt:
           'An internal view of Silence apartment, with a wood table and a big window.',
         othersImages: [
+          { url: '/assets/rooms/silence/1.jpeg', alt: '' },
           { url: '/assets/rooms/silence/2.jpeg', alt: '' },
           { url: '/assets/rooms/silence/3.jpeg', alt: '' },
           { url: '/assets/rooms/silence/4.jpeg', alt: '' },
@@ -222,6 +222,18 @@ export default {
     subTitle: 'ti sentirai a casa',
     text:
       'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.',
+    facility: {
+      img: '/assets/agriturismo/agriturismo-outside.jpg',
+      title: 'La Struttura',
+      text:
+        "All'interno di 14 ettari di terreno, la struttura fa parte di una vecchia formaggiaia risalente al 1800, le stanze possono accogliere fino a quattro ospiti ciascuna in un' atmosfera calda e raccolta, dallo charme caratteristico e confortevole.",
+    },
+    terrace: {
+      img: '/assets/agriturismo/terrace.jpg',
+      title: 'La Terrazza',
+      text:
+        "Gli appartamenti sono spaziosi e ben arredati, forniti di ogni utensile necessario. All'esterno troverete una terrazza solarium dove poter godere delle bellissime giornate di sole, mai troppo calde grazie alla brezza caratteristica del parco.",
+    },
   },
   activities_page: {
     mountain: {
@@ -242,13 +254,13 @@ export default {
       title: 'Bike in Garda Lake',
       desc:
         'This is the subtitile of mountain pizzoccolo category. This mountain is 1680m height. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
-      img: FiumeImg,
+      img: '',
       sections: [
         {
           title: 'An amazing walk',
           desc:
             'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
-          img: LagoImg,
+          img: '',
           component: 'central',
         },
         {
@@ -264,13 +276,13 @@ export default {
       title: 'Wellness in Toscolano Maderno',
       desc:
         'This is the subtitile of mountain pizzoccolo category. This mountain is 1680m height. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
-      img: FiumeImg,
+      img: '',
       sections: [
         {
           title: 'A pleasure in a SPA',
           desc:
             'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
-          img: LagoImg,
+          img: '',
           component: 'central',
         },
         {
@@ -286,13 +298,13 @@ export default {
       title: 'Beach in Garda Lake',
       desc:
         'This is the subtitile of mountain pizzoccolo category. This mountain is 1680m height. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
-      img: LagoImg,
+      img: '',
       sections: [
         {
           title: 'Limone Beach awasome',
           desc:
             'Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.Benvenuti in Persegno località immersa nella natura del parco Alto Garda.',
-          img: LagoImg,
+          img: '',
           component: 'central',
         },
         {
