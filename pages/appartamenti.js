@@ -55,5 +55,5 @@ export default function Appartamenti({ roomFrom }) {
 
 Appartamenti.getInitialProps = async ({ query }) => {
   const { room } = query;
-  return { roomFrom: room || 'serenity' };
+  return { roomFrom: room || 'joy' };
 };

@@ -52,9 +52,9 @@ export default function ImgCentral({
               height='315'
               src={videoUrl}
               title='YouTube video player'
-              frameborder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen></iframe>
+              frameBorder='0'
+              allowFullScreen
+            />
           </div>
         </Popup>
 
