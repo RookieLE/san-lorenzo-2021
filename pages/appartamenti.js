@@ -9,16 +9,19 @@ import InfoRoom from 'components/organism/InfoRoom';
 import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
 import Seo from '@/components/Layout/Seo';
-
-import MountainRoomImg from '@/assets/rooms/mountain-room.jpg';
-
 export default function Appartamenti({ roomFrom }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const [room, setRoom] = useState('serenity');
+  const filteredRoom = t.rooms.rooms.filter(
+    (room) => room.name === roomFrom
+  )[0];
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (roomFrom) {
       setRoom(roomFrom);
+      console.log(filteredRoom.videoUrl);
+      setIsLoading(false);
     }
   }, []);
 
@@ -28,15 +31,22 @@ export default function Appartamenti({ roomFrom }) {
     title: t.seo.apartments,
   };
 
+  if (isLoading) return <div>....</div>;
+
   return (
     <>
       <Seo {...seoAttributes} />
       <Header simplified />
-      <Title title='Rooms & Views' margin='mt-10' />
-      <ImgCentral bgImage={MountainRoomImg} textImage={textImage} priorityImg />
-      <Carousel t={t} selectedRoom={room} />
+      {/*  <Title title={roomFrom} t={t} locale={locale} margin='mt-10' /> */}
+      <ImgCentral
+        image={filteredRoom.img}
+        textImage={textImage}
+        videoUrl={filteredRoom.videoUrl}
+        priorityImg
+      />
+      {/* <Carousel t={t} selectedRoom={roomFrom} /> */}
       <InfoRoom t={t} />
-      <RoomsPreview state={{ room, setRoom }} locale={t} />
+      <RoomsPreview locale={t} room={roomFrom} />
       <Contact t={t} simplified />
       <Footer t={t} />
     </>
@@ -45,5 +55,5 @@ export default function Appartamenti({ roomFrom }) {
 
 Appartamenti.getInitialProps = async ({ query }) => {
   const { room } = query;
-  return { roomFrom: room };
+  return { roomFrom: room || 'serenity' };
 };

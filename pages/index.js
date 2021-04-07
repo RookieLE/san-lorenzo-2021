@@ -5,7 +5,6 @@ import Rooms from '@/components/organism/Rooms';
 import Activities from '@/components/organism/Activities';
 import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
-import MountainImg from 'assets/home/mountain.jpg';
 import Seo from '@/components/Layout/Seo';
 
 export default function IndexPage() {
@@ -15,10 +14,17 @@ export default function IndexPage() {
     title: t.seo.homepage,
   };
 
+  const { title, subTitle, text, cta } = t.header.san_lorenzo;
+  const headerText = { title, subTitle, text, cta };
+
   return (
     <>
       <Seo {...seoAttributes} />
-      <Header background={MountainImg} page_type='home' />
+      <Header
+        background='/assets/home/mountain.jpg'
+        {...headerText}
+        img_text={t.header.welcome}
+      />
       <Rooms t={t} />
       <Activities t={t} />
       <Ratings />

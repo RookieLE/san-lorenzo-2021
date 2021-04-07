@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import LogoImg from 'assets/home/logo.png';
-import LogoBlackImg from 'assets/black-logo.png';
 import useLocale from 'hooks/useLocale';
 import UseAnimations from 'react-useanimations';
 import menu2 from 'react-useanimations/lib/menu2';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 const Flag = dynamic(() => import('react-flagpack'), { ssr: false });
 
 export default function Menu({
@@ -32,7 +31,6 @@ export default function Menu({
     (router.pathname === '/appartamenti' && 'lg:text-black') || 'lg:text-white';
 
   const textColor = (simplified && 'text-gray-800') || 'text-white';
-  const logo = (!simplified && LogoImg) || LogoBlackImg;
 
   const parseFlag = (name) => {
     if (name === 'it')
@@ -52,9 +50,17 @@ export default function Menu({
       className={`flex justify-between z-50 font-sans ${textColor} ${
         simplified && 'p-6'
       }`}>
-      <div className='z-20 lg:flex lg:gap-5'>
-        <img src={logo} className='w-1/4 lg:w-24 lg:h-16' />
-        <h1 className='font-serif text-3xl font-medium tracking-wider lg:w-80'>
+      <div className='z-20 grid w-20 gap-2 md:w-96 md:grid-cols-3 lg:gap-5'>
+        <Image
+          src={'/black-logo.png'}
+          className={`object-container object-center col-span-1`}
+          alt='hero'
+          src='/black-logo.png'
+          width={140}
+          height={80}
+          priority
+        />
+        <h1 className='hidden col-span-2 font-serif text-3xl font-medium tracking-wider lg:w-80 md:grid'>
           San Lorenzo{' '}
           <span className='block text-lg font-light'>di Persegno</span>
         </h1>
@@ -97,11 +103,11 @@ export default function Menu({
             <a>{apartments}</a>
           </Link>
         </li>
-        <li className={`navLink ${isMenuActive('/attivita')}`}>
+        {/* <li className={`navLink ${isMenuActive('/attivita')}`}>
           <Link href={`/${locale}/attivita`}>
             <a>{activities}</a>
           </Link>
-        </li>
+        </li> */}
         <li className={`navLink ${isMenuActive('/contatti')}`}>
           <a href='#contact'>{contact}</a>
         </li>

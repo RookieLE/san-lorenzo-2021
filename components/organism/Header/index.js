@@ -3,12 +3,17 @@ import Link from 'next/link';
 import useLocale from '@/hooks/useLocale';
 import Menu from '@/components/organism/Menu';
 
-export default function Header({ background, page_type, simplified }) {
+export default function Header({
+  background,
+  simplified,
+  img_text,
+  title,
+  subTitle,
+  text,
+  cta,
+}) {
   const { t } = useLocale();
-  const img_text =
-    (page_type === 'home' && t.homepage?.welcome) ||
-    (page_type === 'activities' && 'Activities');
-  const renderImgText = page_type && (
+  const renderImgText = img_text && (
     <h1 className='absolute bottom-0 left-0 z-50 ml-2 font-serif text-6xl text-white lowercase sm:bottom-0 md:bottom-0 lg:-bottom-4 sm:-left-1 lg:text-9xl'>
       {img_text}
     </h1>
@@ -17,8 +22,7 @@ export default function Header({ background, page_type, simplified }) {
   if (simplified) {
     return <Menu navbar={t.navbar} simplified />;
   }
-
-  const { title, subTitle, text, cta } = t.homepage.san_lorenzo;
+  const {} = t.header.san_lorenzo;
 
   return (
     <>
@@ -36,11 +40,13 @@ export default function Header({ background, page_type, simplified }) {
             {text}
           </p>
 
-          <Link href='/agriturismo'>
-            <a className='flex-none w-auto px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent hover:bg-green-800 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none'>
-              {cta}
-            </a>
-          </Link>
+          {cta && (
+            <Link href='/agriturismo'>
+              <a className='flex-none w-auto px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent hover:bg-green-800 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none'>
+                {cta}
+              </a>
+            </Link>
+          )}
         </div>
         <div className='relative mx-auto my-10 md:my-20 max-w-screen-2xl'>
           <Image

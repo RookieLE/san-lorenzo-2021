@@ -9,10 +9,10 @@ import WellnessIcon from 'assets/icons/wellness.png';
 
 export default function ActivitiesMenu({ state: { activity, setActivity } }) {
   const { t } = useLocale();
-  const { activitiesList } = t.homepage.activities;
+  const { activitiesList } = t.activities;
 
   return (
-    <section className='grid grid-cols-2 lg:grid-cols-4 px-4 py-8 lg:pt-24 gap-6 place-items-center max-w-screen-xl lg:mx-auto'>
+    <section className='grid max-w-screen-xl grid-cols-2 gap-6 px-4 py-8 lg:grid-cols-4 lg:pt-24 place-items-center lg:mx-auto'>
       {activitiesList?.map(({ icon, name }) => {
         const isActive = activity === name;
         return (

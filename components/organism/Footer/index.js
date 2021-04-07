@@ -1,8 +1,7 @@
 import useLocale from 'hooks/useLocale';
 import Link from 'next/link';
-import BlackLogo from 'assets/black-logo.png';
 import { SiInstagram, SiFacebook } from 'react-icons/si';
-
+import Image from 'next/image';
 export default function Footer({
   t: {
     navbar: { home, lodge, apartments, activities, contact },
@@ -12,7 +11,15 @@ export default function Footer({
   return (
     <footer className='relative z-50 flex flex-col justify-end w-full py-10 text-gray-800 bg-bottom bg-gray-50 max-h-800'>
       <div className='z-50 flex justify-center w-full pb-4 md:pb-10'>
-        <img src={BlackLogo} />
+        <Image
+          src={'/black-logo.png'}
+          className={`object-container object-center`}
+          alt='hero'
+          src='/black-logo.png'
+          width={120}
+          height={80}
+          lazy
+        />
       </div>
 
       <ul className='z-50 grid max-w-screen-sm gap-3 pb-16 mx-auto text-center place-content-center md:grid-cols-4'>

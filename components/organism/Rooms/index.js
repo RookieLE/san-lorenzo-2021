@@ -2,9 +2,7 @@ import Room from './Room';
 import Button from 'components/atoms/Button';
 export default function Rooms({
   t: {
-    homepage: {
-      rooms: { title, desc, rooms },
-    },
+    rooms: { title, desc, rooms },
   },
 }) {
   return (

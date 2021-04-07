@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 export default function Room({
-  room: { name, img, price, alt, text, guest },
+  room: { name, othersImages, price, alt, text, guest },
   index,
 }) {
   const router = useRouter();
@@ -19,28 +19,27 @@ export default function Room({
           <div class='rounded-lg lg:h-full'>
             <Image
               className='w-full h-full rounded-lg'
-              alt={alt}
+              alt={othersImages[0].alt}
               objectFit='cover'
-              src={img}
+              src={othersImages[0].url}
               width={600}
               height={400}
+              lazy
             />
           </div>
         </div>
 
         <div class='max-w-xl px-6 py-2 lg:max-w-5xl flex place-content-between place-items-center'>
-          <h2 class='text-2xl font-semilbold font-serif text-green-900 dark:text-white md:text-3xl capitalize'>
+          <h2 class='text-2xl font-bold font-serif text-green-900 dark:text-white md:text-3xl capitalize'>
             {name}
-            <span class='text-xl text-gray-500 dark:text-indigo-400 grid font-semibold'>
+            <span class='text-xl text-gray-500 grid font-normal'>
               {guest} guest
             </span>
           </h2>
 
-          <div class='mt-8'>
-            <button class='px-5 group-hover:bg-gray-700 group-hover:text-gray-100 py-2 font-semibold text-gray-700 transition-colors duration-200 transform rounded-xl border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-100'>
-              View More
-            </button>
-          </div>
+          <button class='px-5 group-hover:bg-gray-700 group-hover:text-gray-100 py-2 font-semibold text-gray-700 transition-colors duration-200 transform rounded-xl border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-100'>
+            View More
+          </button>
         </div>
       </div>
     </section>

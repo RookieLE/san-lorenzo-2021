@@ -4,12 +4,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: (theme) => ({
-        'home-header': "url('assets/home/mountain.png')",
-        footer: "url('assets/footer.png')",
-        agriturismo: "url('assets/agriturismo.jpeg')",
-        pizzoccolo: "url('assets/pizzoccolo.jpeg')",
-      }),
       fontSize: {
         '10xl': '10rem',
         '11xl': '12rem',

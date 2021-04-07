@@ -2,31 +2,14 @@ import Header from '@/components/organism/Header';
 import useLocale from 'hooks/useLocale';
 import Seo from '@/components/Layout/Seo';
 import ColumnSection from '@/components/organism/ColumnSection';
-import ImgMosaic from '@/components/molecules/ImgMosaic';
-import ImgCentral from '@/components/molecules/ImgCentral';
 import Contact from '@/components/organism/Contact';
 import Footer from '@/components/organism/Footer';
-
-import Agri from 'assets/home/agri.png';
-import Fauna from 'assets/fauna.png';
-import Flora from 'assets/flora.png';
-import MountainImg from '@/assets/mountain.png';
-import AgriturismoImg from '@/assets/agriturismo.jpeg';
 
 export default function Agriturismo() {
   const { t } = useLocale();
 
-  const agri = t.homepage.san_lorenzo;
-  const agriturismo = {
-    title: agri.title,
-    sub_title: agri.subTitle,
-    text: agri.text,
-    cta: null,
-    img: {
-      url: Agri,
-      alt: 'agriturismo san lorenzo photo',
-    },
-  };
+  const { title, subTitle, text, cta } = t.lodge;
+  const headerText = { title, subTitle, text };
 
   const flora = {
     title: 'Flora',
@@ -35,7 +18,7 @@ export default function Agriturismo() {
       'Benvenuti in Persegno località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.',
     cta: null,
     img: {
-      url: Flora,
+      url: '/assets/agriturismo/flora.jpeg',
       alt: 'flower',
     },
   };
@@ -47,7 +30,7 @@ export default function Agriturismo() {
       'Benvenuti in Persegno località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo. Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.',
     cta: null,
     img: {
-      url: Fauna,
+      url: '/assets/agriturismo/fauna.jpeg',
       alt: 'animal',
     },
   };
@@ -59,12 +42,15 @@ export default function Agriturismo() {
   return (
     <>
       <Seo {...seoAttributes} />
-      <Header page_type='agriturismo' background={AgriturismoImg} />
-      <ColumnSection data={agriturismo} />
+      <Header
+        background='/assets/agriturismo/agriturismo-three.jpg'
+        {...headerText}
+      />
+
       {/*  <ImgMosaic /> */}
-      <ImgCentral bgImage={MountainImg} bgSmoke />
-      <ColumnSection data={flora} />
-      <ColumnSection data={fauna} inverted bgSmoke />
+      {/*  <ImgCentral bgImage={MountainImg} bgSmoke /> */}
+      <ColumnSection data={flora} inverted bgSmoke />
+      <ColumnSection data={fauna} bgSmoke />
       <Contact t={t} simplified />
       <Footer t={t} />
     </>
