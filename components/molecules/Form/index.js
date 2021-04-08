@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useLocale from 'hooks/useLocale';
 import DateRowPicker from 'components/atoms/DatePicker';
 import { useForm } from 'react-hook-form';
 import Success from 'components/atoms/Modals/Success';
 import Error from 'components/atoms/Modals/Error';
+
 import * as emailjs from 'emailjs-com';
 
 export default function Form({
@@ -18,6 +20,7 @@ export default function Form({
     button_text,
   },
 }) {
+  const { locale } = useLocale();
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -33,6 +36,7 @@ export default function Form({
 
   const onSubmit = async (data) => {
     await setStatus((state) => ({ ...state, submitting: true }));
+
     const templateParams = {
       ...data,
     };
@@ -61,8 +65,13 @@ export default function Form({
   };
 
   const buttonTxt = () => {
-    if (status.submitting) return 'Submitting...';
-    if (status.submitted) return 'Submitted';
+    const submittingTxt =
+      (locale === 'it' && 'Inviando...') ||
+      (locale === 'en' && 'Submitting...');
+    const submittedTxt =
+      (locale === 'it' && 'Inviato') || (locale === 'en' && 'Submitted');
+    if (status.submitting) return submittingTxt;
+    if (status.submitted) return submittedTxt;
     else return button_text;
   };
 
@@ -98,16 +107,16 @@ export default function Form({
       <div className='w-1/2 p-2'>
         <div className='relative'>
           <label
-            for={name.name}
+            for='name'
             className='text-sm leading-7 text-gray-600 capitalize'>
             {name.name}
           </label>
           <input
             placeHolder={name.placeholder}
-            {...register(name.name, { required: true })}
+            {...register('name', { required: true })}
             type='text'
-            id={name.name}
-            name={name.name}
+            id='name'
+            name='name'
             className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
           />
           {errors.name && <RenderRequired />}
@@ -116,16 +125,16 @@ export default function Form({
       <div className='w-1/2 p-2'>
         <div className='relative'>
           <label
-            for={email.name}
+            for='email'
             className='text-sm leading-7 text-gray-600 capitalize'>
             {email.name}
           </label>
           <input
             placeholder={email.placeholder}
-            {...register(email.name, { required: true })}
+            {...register('email', { required: true })}
             type='email'
-            id={email.name}
-            name={email.name}
+            id='email'
+            name='email'
             className='w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'
           />
           {errors.email && <RenderRequired />}
@@ -137,15 +146,15 @@ export default function Form({
       <div className='w-full p-2'>
         <div className='relative'>
           <label
-            for={message.name}
+            for='message'
             className='text-sm leading-7 text-gray-600 capitalize'>
             {message.name}
           </label>
           <textarea
             placeHolder={message.placeholder}
-            {...register(message.name, { required: true })}
-            id={message.name}
-            name={message.name}
+            {...register('message', { required: true })}
+            id='message'
+            name='message'
             className='w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200'></textarea>
           {errors.message && <RenderRequired />}
         </div>
@@ -159,7 +168,10 @@ export default function Form({
       <div className='w-full p-2'>
         <input
           type='submit'
-          className='flex px-8 py-2 mx-auto text-lg text-white capitalize bg-gray-700 border-0 rounded cursor-pointer focus:outline-none hover:bg-gray-900'
+          className={`flex px-8 py-2 mx-auto text-lg text-white capitalize border-0 rounded cursor-pointer focus:outline-none ${
+            (status.submitted && 'bg-green-400') ||
+            'hover:bg-gray-900 bg-gray-700'
+          }`}
           value={buttonTxt()}
         />
       </div>

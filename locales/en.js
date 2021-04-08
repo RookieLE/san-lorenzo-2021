@@ -209,7 +209,7 @@ export default {
       success_msg:
         'Email submitted correctly! We will reply you as soon as possible. Thanks.',
       error_msg:
-        'Oops, it seems that there is an error, try again. Otherwise write us directly at agri@gmail.com',
+        'Oops, it seems that there is an error, try again. Otherwise write us directly at info@sanlorenzodipersegno.it',
       button_text: 'send',
       info:
         'Vi consigliamo di impostare nel navigatore località Gaino. C’è la possibilità che il navigatore vi porti a Navazzo, NON dovete assolutamente seguire questa direzione. Una volta arrivati a Toscolano Maderno, proseguite per Gaino, poi entrate nella valle delle Camerate e proseguite per 5 km circa. La strada è una classica strada montana, sterrata e non asfaltata, consigliamo tranquillità e di godervi il percorso perchè una volta giunti in agriturismo la pace ricompenserà ogni sforzo.',

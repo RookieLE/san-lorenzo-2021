@@ -147,7 +147,7 @@ export default function Menu({
 
             {/* <!-- Dropdown menu --> */}
             {isDropdownOpen && (
-              <div class='absolute lg:top-5 -right-16 -top-5 lg:right-0 z-20 w-14 p-2 mt-4 border-4 border-gray-200 bg-white hover:bg-gray-50 rounded-md shadow-xl'>
+              <div class='absolute lg:top-5 -right-16 -top-5 lg:right-0 z-20 w-14 p-2 mt-4 border border-gray-200 bg-white hover:bg-gray-50 rounded-md shadow-xl'>
                 <button
                   onClick={() => {
                     handleChangeLang(oppositeLocale);

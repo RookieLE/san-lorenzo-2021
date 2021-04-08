@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 export default function Room({
-  room: { name, othersImages, price, alt, text, guest },
+  room: { name, othersImages, price, alt, text, guest, viewMore },
   index,
 }) {
   const router = useRouter();
@@ -32,13 +32,11 @@ export default function Room({
         <div class='max-w-xl px-6 py-2 lg:max-w-5xl flex place-content-between place-items-center'>
           <h2 class='text-2xl font-bold font-serif text-green-900 dark:text-white md:text-3xl capitalize'>
             {name}
-            <span class='text-xl text-gray-500 grid font-normal'>
-              {guest} guest
-            </span>
+            <span class='text-xl text-gray-500 grid font-normal'>{guest}</span>
           </h2>
 
           <button class='px-5 group-hover:bg-gray-700 group-hover:text-gray-100 py-2 font-semibold text-gray-700 transition-colors duration-200 transform rounded-xl border-2 border-gray-700 hover:bg-gray-700 hover:text-gray-100'>
-            View More
+            {viewMore}
           </button>
         </div>
       </div>
