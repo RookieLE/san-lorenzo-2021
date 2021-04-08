@@ -14,7 +14,7 @@ export default function Header({
 }) {
   const { t } = useLocale();
   const renderImgText = img_text && (
-    <h1 className='absolute bottom-0 left-0 z-50 ml-2 font-serif text-6xl text-white lowercase sm:bottom-0 md:bottom-0 lg:-bottom-4 sm:-left-1 lg:text-9xl'>
+    <h1 className='absolute bottom-0 left-0 z-10 ml-2 font-serif text-6xl text-white lowercase sm:bottom-0 md:bottom-0 lg:-bottom-4 sm:-left-1 lg:text-9xl'>
       {img_text}
     </h1>
   );
@@ -30,7 +30,7 @@ export default function Header({
       <header
         className={`w-full bg-cover p-6 relative max-w-screen-xl mx-auto`}>
         <div
-          className={`lg:flex-grow flex flex-col md:items-start md:text-left items-center text-center md:pl-16
+          className={`lg:flex-grow flex flex-col md:items-start md:text-left items-center text-center md:pl-2
             `}>
           <h1 className='mt-10 mb-8 font-serif text-4xl font-extrabold leading-none text-gray-900 sm:text-6xl lg:text-7xl sm:mt-14 sm:mb-10'>
             {title} <span className='text-green-900'>{subTitle}</span>

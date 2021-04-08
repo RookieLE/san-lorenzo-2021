@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import useLocale from 'hooks/useLocale';
@@ -13,9 +13,19 @@ export default function Menu({
   navbar: { home, lodge, apartments, activities, contact },
 }) {
   const router = useRouter();
+
   const { locale, handleChangeLang } = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+
+      document.body.style.overflow = 'hidden';
+      return () => (document.body.style.overflow = originalStyle);
+    }
+  }, [isMenuOpen]);
 
   const handleHamb = () => {
     setTimeout(() => setIsMenuOpen(!isMenuOpen), 300);
@@ -47,20 +57,18 @@ export default function Menu({
 
   return (
     <nav
-      className={`flex justify-between z-50 font-sans ${textColor} ${
-        simplified && 'p-6'
+      className={`flex justify-between z-50 font-sans max-w-screen-2xl lg:mx-auto ${textColor} ${
+        simplified && 'p-6 lg:p-0 lg:py-6'
       }`}>
-      <div className='z-20 grid w-20 gap-2 md:w-96 md:grid-cols-3 lg:gap-5'>
-        <Image
+      <div className='z-20 grid md:grid-cols-2 md:place-content-center'>
+        <img
           src={'/black-logo.png'}
-          className={`object-container object-center col-span-1`}
+          className={`object-container object-center w-20 place-self-center`}
           alt='hero'
           src='/black-logo.png'
-          width={140}
-          height={80}
           priority
         />
-        <h1 className='hidden col-span-2 font-serif text-3xl font-medium tracking-wider lg:w-80 md:grid'>
+        <h1 className='hidden font-serif text-3xl font-medium tracking-wider md:flex md:flex-col min-w-[200px] md:place-content-center'>
           San Lorenzo{' '}
           <span className='block text-lg font-light'>di Persegno</span>
         </h1>
@@ -78,14 +86,18 @@ export default function Menu({
           size={42}
           speed={3}
           strokeColor='white'
-          className={` rounded ${
-            (isMenuOpen || simplified) && 'bg-green-900 fill-current '
-          }`}
+          className={`transform transition ${
+            (isMenuOpen && 'rounded-full bg-green-700') || 'rounded-md'
+          } ${(isMenuOpen || simplified) && 'bg-green-900 fill-current '}`}
         />
       </div>
 
+      {isMenuOpen && (
+        <div className='absolute top-0 left-0 z-20 w-full h-screen bg-gray-900 opacity-50'></div>
+      )}
+
       <ul
-        className={`grid absolute border-b-8 border-green-900 lg:border-0 bg-white text-black shadow left-0 top-0 z-20 p-2 w-full lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
+        className={`grid absolute lg:border-0 bg-white text-black shadow left-0 top-0 z-20 p-2 w-2/3 sm:w-1/3 lg:w-full m-6 rounded-xl lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
           (isMenuOpen && 'block') || 'hidden'
         }`}>
         <li className={`navLink ${isMenuActive(`/`)}`}>
@@ -112,7 +124,7 @@ export default function Menu({
           <a href='#contact'>{contact}</a>
         </li>
         <li className='navLink'>
-          <div class='w-1/3 sm:w-full relative flex place-items-center place-content-center px-2 py-3 sm:px-2 sm:py-1 hover:bg-gray-50 rounded-md bg-gray-100 sm:bg-white'>
+          <div class='w-1/3 lg:w-full relative flex place-items-center place-content-center px-2 py-3 sm:px-2 sm:py-1 hover:bg-gray-50 rounded-md bg-gray-100 sm:bg-white'>
             {/*  <!-- Dropdown toggle button --> */}
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -135,7 +147,7 @@ export default function Menu({
 
             {/* <!-- Dropdown menu --> */}
             {isDropdownOpen && (
-              <div class='absolute sm:top-5 -right-16 -top-5 sm:right-0 z-20 w-14 p-2 mt-4 border-4 border-gray-200 bg-white hover:bg-gray-50 rounded-md shadow-xl'>
+              <div class='absolute lg:top-5 -right-16 -top-5 lg:right-0 z-20 w-14 p-2 mt-4 border-4 border-gray-200 bg-white hover:bg-gray-50 rounded-md shadow-xl'>
                 <button
                   onClick={() => {
                     handleChangeLang(oppositeLocale);

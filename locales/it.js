@@ -135,8 +135,8 @@ export default {
     ],
     viewOtherRooms: {
       title: 'Vedi gli altri Appartamenti',
-      text:
-        "Gli appartamenti sono spaziosi e ben arredati, forniti di ogni utensile necessario. Cliccate sull'immagine in alto per poter vedere un video tour dell'appartamento.",
+      /* text:
+        "Gli appartamenti sono spaziosi e ben arredati, forniti di ogni utensile necessario. Cliccate sull'immagine in alto per poter vedere un video tour dell'appartamento.", */
     },
     infoRooms: {
       features: [

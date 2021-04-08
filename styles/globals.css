@@ -24,11 +24,11 @@
 }
 
 .navLink_notActive {
-  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-200 lg:opacity-80 lg:hover:opacity-95 lg:text-white;
+  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-200 opacity-60 lg:hover:opacity-95 lg:text-white;
 }
 
 .navLink_notActive_simpl {
-  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-400 lg:opacity-80 lg:hover:opacity-95;
+  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-400 opacity-60 lg:hover:opacity-95;
 }
 
 .navLink_active {

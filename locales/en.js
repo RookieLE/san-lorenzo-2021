@@ -134,8 +134,8 @@ export default {
     ],
     viewOtherRooms: {
       title: 'View other Rooms',
-      text:
-        'The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey. Clicking on the image above you will also find a wonderful video showing the apartment in detail.',
+      /*  text:
+        'The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey.', */
     },
     infoRooms: {
       features: [
