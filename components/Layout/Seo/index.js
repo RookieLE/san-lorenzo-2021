@@ -37,6 +37,7 @@ export default function Seo({ description, title, keywords }) {
         content={description || website_description}
       />
       <meta property='og:type' content='website' />
+      <meta property='og:image' content='/assets/home/mountain.jpg' />
       <meta
         property='og:url'
         content={`https://agriturismosanlorenzodipersegno.it/${router?.asPath}`}
