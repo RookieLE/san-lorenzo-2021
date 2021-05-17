@@ -104,7 +104,7 @@ export default function Form({
     <form
       onSubmit={handleSubmit(onSubmit)}
       className='flex flex-wrap mx-auto -m-2 lg:w-1/2 md:w-2/3'>
-      <div className='w-1/2 p-2'>
+      <div className='w-full p-2 sm:w-1/2'>
         <div className='relative'>
           <label
             for='name'
@@ -122,7 +122,7 @@ export default function Form({
           {errors.name && <RenderRequired />}
         </div>
       </div>
-      <div className='w-1/2 p-2'>
+      <div className='w-full p-2 sm:w-1/2'>
         <div className='relative'>
           <label
             for='email'
