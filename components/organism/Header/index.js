@@ -14,7 +14,7 @@ export default function Header({
 }) {
   const { t } = useLocale();
   const renderImgText = img_text && (
-    <h1 className='absolute bottom-0 left-0 z-10 ml-2 font-serif text-6xl text-white lowercase sm:bottom-0 md:bottom-0 lg:-bottom-4 sm:-left-1 lg:text-9xl'>
+    <h1 className='absolute bottom-0 left-0 z-10 ml-2 font-serif text-4xl text-white lowercase sm:bottom-0 md:bottom-0 lg:-bottom-4 sm:-left-1 lg:text-9xl'>
       {img_text}
     </h1>
   );
@@ -28,7 +28,7 @@ export default function Header({
     <>
       <Menu navbar={t.navbar} simplified />
       <header
-        className={`w-full bg-cover p-6 relative max-w-screen-xl mx-auto`}>
+        className={`w-full bg-cover p-4 relative max-w-screen-xl mx-auto`}>
         <div
           className={`lg:flex-grow flex flex-col md:items-start md:text-left items-center text-center md:pl-2
             `}>
