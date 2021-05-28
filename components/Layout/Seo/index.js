@@ -48,6 +48,11 @@ export default function Seo({ description, title, keywords }) {
       <meta name='twitter:image' content='' />
       <meta name='twitter:description' content={description || website_description} /> */}
       <script
+        async
+        defer
+        data-website-id='3b5fb0f0-168b-4bc4-85d2-1676a4ba655f'
+        src='https://umami-easa.vercel.app/umami.js'></script>
+      <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(microformats) }}
       />
