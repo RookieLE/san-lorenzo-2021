@@ -14,8 +14,8 @@ export default function IndexPage() {
     title: t.seo.homepage,
   };
 
-  const { title, subTitle, text, cta } = t.header.san_lorenzo;
-  const headerText = { title, subTitle, text, cta };
+  const { title, subTitle, text, cta, notification } = t.header.san_lorenzo;
+  const headerText = { title, subTitle, text, cta, notification };
 
   return (
     <>
