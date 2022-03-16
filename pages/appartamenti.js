@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
-import Header from '@/components/organism/Header';
-import useLocale from 'hooks/useLocale';
-import Title from 'components/atoms/Title';
-import RoomsPreview from 'components/organism/RoomsPreview';
-import ImgCentral from '@/components/molecules/ImgCentral';
-import Carousel from 'components/molecules/Carousel';
-import InfoRoom from 'components/organism/InfoRoom';
-import Contact from '@/components/organism/Contact';
-import Footer from '@/components/organism/Footer';
-import Seo from '@/components/Layout/Seo';
+import { useState, useEffect } from "react";
+import Header from "@/components/organism/Header";
+import useLocale from "hooks/useLocale";
+import Title from "components/atoms/Title";
+import RoomsPreview from "components/organism/RoomsPreview";
+import ImgCentral from "@/components/molecules/ImgCentral";
+import Carousel from "components/molecules/Carousel";
+import InfoRoom from "components/organism/InfoRoom";
+import Contact from "@/components/organism/Contact";
+import Footer from "@/components/organism/Footer";
+import Seo from "@/components/Layout/Seo";
 export default function Appartamenti({ roomFrom }) {
   const { t, locale } = useLocale();
-  const [room, setRoom] = useState('serenity');
+  const [room, setRoom] = useState("serenity");
   const filteredRoom = t.rooms.rooms.filter(
     (room) => room.name === roomFrom
   )[0];
@@ -20,12 +20,11 @@ export default function Appartamenti({ roomFrom }) {
   useEffect(() => {
     if (roomFrom) {
       setRoom(roomFrom);
-      console.log(filteredRoom.videoUrl);
       setIsLoading(false);
     }
   }, []);
 
-  const textImage = `<h4 class='text-center font-extralight text-white text-5xl mb-2 capitalize'>${room} Suite</h4><p class="text-xl font-extralight">4 guests</p>`;
+  const textImage = `<h4 className='mb-2 text-5xl text-center text-white capitalize font-extralight'>${room} Suite</h4><p className="text-xl font-extralight">4 guests</p>`;
 
   const seoAttributes = {
     title: t.seo.apartments,
@@ -55,5 +54,5 @@ export default function Appartamenti({ roomFrom }) {
 
 Appartamenti.getInitialProps = async ({ query }) => {
   const { room } = query;
-  return { roomFrom: room || 'joy' };
+  return { roomFrom: room || "joy" };
 };
