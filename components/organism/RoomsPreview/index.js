@@ -29,7 +29,7 @@ export default function RoomsPreview({ locale, room }) {
                   await router.replace('/appartamenti' + '/?room=' + el.name);
                   await window.scrollTo(0, 0);
                 }}>
-                <div className='flex flex-col content-center px-8 rounded-lg bg-gray-50 h-2/3 group-hover:bg-gray-100'>
+                <div className='flex flex-col content-center px-8 bg-gray-50 h-2/3 group-hover:bg-gray-100'>
                   <div className='flex items-center'>
                     <div className='inline-flex items-center justify-center flex-shrink-0 mr-3'>
                       <Image

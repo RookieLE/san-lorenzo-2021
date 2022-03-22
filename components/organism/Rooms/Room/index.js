@@ -15,11 +15,11 @@ export default function Room({
       }
       className="transition transform cursor-pointer lg:py-12 lg:flex lg:justify-center rounded-2xl hover:scale-105 group"
     >
-      <div className="rounded-lg lg:mx-8 lg:max-w-5xl">
+      <div className="lg:mx-8 lg:max-w-5xl">
         <div className={``}>
-          <div className="rounded-lg lg:h-full">
+          <div className="lg:h-full">
             <Image
-              className="w-full h-full rounded-lg"
+              className="w-full h-full"
               alt={othersImages[0].alt}
               objectFit="cover"
               src={othersImages[0].url}
@@ -38,7 +38,7 @@ export default function Room({
             </span>
           </h2>
 
-          <button className="px-5 py-2 font-semibold text-gray-700 transition-colors duration-200 transform border-2 border-gray-700 group-hover:bg-gray-700 group-hover:text-gray-100 rounded-xl hover:bg-gray-700 hover:text-gray-100">
+          <button className="px-5 py-2 font-semibold text-gray-700 transition-colors duration-200 transform border-2 border-gray-700 group-hover:bg-gray-700 group-hover:text-gray-100 hover:bg-gray-700 hover:text-gray-100">
             {viewMore}
           </button>
         </div>

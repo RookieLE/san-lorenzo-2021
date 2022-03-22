@@ -57,7 +57,7 @@ export default function ScrollTopBtn() {
     <div
       id='scrollBtn'
       onClick={handleScroll}
-      className='rounded-md bg-gray-700 text-gray-50 fixed place-content-center w-10 h-10 bottom-5 right-5 z-50 hidden cursor-pointer'>
+      className='fixed z-50 hidden w-10 h-10 bg-gray-700 cursor-pointer text-gray-50 place-content-center bottom-5 right-5'>
       <svg
         className='w-2/3'
         xmlns='http://www.w3.org/2000/svg'

@@ -35,7 +35,7 @@ export default function DateRowPicker({
       type="text"
       id="arrival"
       name="arrival"
-      className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded shadow-none outline-none appearance-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+      className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 shadow-none outline-none appearance-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
     />
   ));
 
@@ -49,7 +49,7 @@ export default function DateRowPicker({
       type="text"
       id="departure"
       name="departure"
-      className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded shadow-none outline-none appearance-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+      className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 shadow-none outline-none appearance-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
     />
   ));
 
@@ -74,7 +74,7 @@ export default function DateRowPicker({
             popperModifiers={popperCustomStyle}
             customInput={<CustomInputArrival />}
             dateFormat="dd/MM/yyyy"
-            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
           />
           {errors.arrival && <RenderRequired />}
         </div>
@@ -94,7 +94,7 @@ export default function DateRowPicker({
             popperModifiers={popperCustomStyle}
             customInput={<CustomInputDeparture />}
             dateFormat="dd/MM/yyyy"
-            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+            className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 outline-none focus:border-green-700 focus:bg-white focus:ring-2 focus:ring-indigo-200"
           />
           {errors.departure && <RenderRequired />}
         </div>

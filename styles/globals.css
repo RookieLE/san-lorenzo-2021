@@ -4,6 +4,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
 .blackCarpet {
   background-image: linear-gradient(
     rgb(26, 26, 26, 0.8),
@@ -17,26 +18,6 @@
     rgb(0 0 0 / 21%),
     rgb(2 24 13)
   );
-}
-
-.navLink {
-  @apply pl-2 m-2 font-sans text-lg tracking-wider capitalize cursor-pointer lg:pl-0;
-}
-
-.navLink_notActive {
-  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-200 opacity-60 lg:hover:opacity-95 lg:text-white;
-}
-
-.navLink_notActive_simpl {
-  @apply h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-400 opacity-60 lg:hover:opacity-95;
-}
-
-.navLink_active {
-  @apply h-8 border-l-4 border-green-900 lg:border-b-2 lg:border-white lg:border-l-0 lg:text-white;
-}
-
-.navLink_active_simpl {
-  @apply h-8 border-l-4 border-green-900 lg:border-b-2 lg:border-gray-800 lg:border-l-0;
 }
 
 .title_section {
