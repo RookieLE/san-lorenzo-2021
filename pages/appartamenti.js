@@ -35,7 +35,7 @@ export default function Appartamenti({ roomFrom }) {
   return (
     <>
       <Seo {...seoAttributes} />
-      <Header simplified />
+      <Header />
       {/*  <Title title={roomFrom} t={t} locale={locale} margin='mt-10' /> */}
       <ImgCentral
         image={filteredRoom.img}

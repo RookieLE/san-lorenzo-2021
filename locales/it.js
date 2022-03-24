@@ -19,14 +19,32 @@ export default {
     lodge: "L'Agriturismo",
     activities: "Attività",
   },
-  navbar: {
-    home: "Home",
-    lodge: "L'Agriturismo",
-    apartments: "Appartamenti",
-    activities: "Attività",
-    position: "Posizione",
-    contact: "Contatti",
-  },
+  navbar:[
+    {
+      name: "home",
+      href: "/home",
+    },
+    {
+      name: "agriturismo",
+      href: "/agriturismo",
+    },
+    {
+      name: "appartamenti",
+      href: "/appartamenti",
+    },
+    {
+      name: "attività",
+      href: "attivita",
+    },
+    {
+      name: "posizione",
+      href: "posizione",
+    },
+    {
+      name: "contatto",
+      href: "#contact",
+    },
+  ],
   header: {
     welcome: "benvenuti",
     san_lorenzo: {
@@ -149,11 +167,15 @@ export default {
         title: "Informazioni all'Arrivo",
         arrivalDeparture: {
           title: "Check-in / Check-out",
-          text: "Il check-in è consentito dalle ore 14.00 alle ore 18.00. Il check-out non oltre le ore 11.00.",
+          text: "Il check-in è consentito dalle ore 14.30 alle ore 18.30. Il check-out non oltre le ore 10.00.",
         },
         towels: {
           title: "Lenzuola e Asciugamani",
-          text: "Le lenzuola e gli asciugamani sono extra, il prezzo è di € 10 per persona per soggiorno.",
+          text: "Le lenzuola e gli asciugamani sono incluse nel prezzo.",
+        },
+        conditions: {
+          title: "Pulizia",
+          text: "L'appartamento verrà presentato in perfette condizioni igieniche, e dovrà essere lasciato nelle stessse condizioni.",
         },
       },
     },
@@ -218,11 +240,11 @@ export default {
   },
   position: {
     img_text: "mountain",
-    title: `Where are`,
-    subTitle: 'we?',
+    title: `Dove`,
+    subTitle: 'siamo?',
     text: "L'Agriturismo San Lorenzo di Persegno si trova all'interno del Parco protetto Alto Garda Bresciano in una zona di montagna a 400 metri di altitudine a circa 30 minuti dal Lago di Garda. Qui si possono fare numerose passeggiate percorribili anche in mountain bike o a cavallo. La struttura è immersa in una natura silenziosa ed incontaminata, ideale per chi ama la pace e la tranquillità. Si può inoltre godere di un gradevole solarium e di numerosi spazi esterni dove prendere il sole o leggere un buon libro. L'Agriturismo San Lorenzo di Persegno dista 20 km da Salò e 1 ora da Desenzano.",
     sections: [
-      {  title: `How to get there`,
+      {  title: `Come arrivarci`,
       subTitle: undefined,
       text: undefined }
     ],

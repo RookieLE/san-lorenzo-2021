@@ -66,3 +66,17 @@
     width: 99% !important;
   }
 }
+
+.gradient-effect{
+  position: relative;
+  display: block;
+}
+.gradient-effect::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top,rgba(255,255,255,0),#fff) repeat left top;
+}

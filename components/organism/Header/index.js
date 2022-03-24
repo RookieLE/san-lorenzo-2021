@@ -30,8 +30,9 @@ export default function Header({
     <>
       <Menu navbar={t.navbar} simplified={simplified} />
       <header className={`w-full bg-cover mx-auto grid`}>
-        <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
-          {/* {showNotification && notification && (
+        {title && (
+          <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
+            {/* {showNotification && notification && (
             <div class="alert text-white shadow-lg mb-10 px-2 z-50 max-w-xl bg-gray-800">
               <div>
                 <svg
@@ -64,32 +65,35 @@ export default function Header({
               </div>
             </div>
           )} */}
-          <h1 className="mb-8 font-serif text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
-            {title} <span className="text-green-900">{subTitle}</span>
-          </h1>
+            <h1 className="mb-8 font-serif text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
+              {title} <span className="text-green-900">{subTitle}</span>
+            </h1>
 
-          <p className="max-w-screen-lg mb-10 text-lg text-gray-500 lg:mx-auto sm:text-2xl sm:leading-10 sm:mb-11">
-            {text}
-          </p>
+            <p className="max-w-screen-lg mb-10 text-lg text-gray-500 lg:mx-auto sm:text-2xl sm:leading-10 sm:mb-11">
+              {text}
+            </p>
 
-          {cta && (
-            <Link href="/agriturismo">
-              <a className="flex-none w-auto px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent lg:mx-auto hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
-                {cta}
-              </a>
-            </Link>
-          )}
-        </div>{" "}
-        <div className="relative max-w-[1920px] mx-auto order-1">
-          <img
-            alt="Mountains"
-            src={background}
-            quality={100}
-            layout="fill"
-            priority
-          />{" "}
-          {renderImgText}{" "}
-        </div>{" "}
+            {cta && (
+              <Link href="/agriturismo">
+                <a className="flex-none w-auto px-6 py-3 text-lg font-semibold leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent lg:mx-auto hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
+                  {cta}
+                </a>
+              </Link>
+            )}
+          </div>
+        )}
+        {background && (
+          <div className="relative max-w-[1920px] mx-auto order-1 gradient-effect">
+            <img
+              alt="Mountains"
+              src={background}
+              quality={100}
+              layout="fill"
+              priority
+            />{" "}
+            {renderImgText}{" "}
+          </div>
+        )}
       </header>{" "}
     </>
   );

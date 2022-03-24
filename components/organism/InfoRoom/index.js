@@ -49,7 +49,15 @@ export default function InfoRoom({
             {infoRooms.additionalInfo.towels.title}
           </h5>
           <p className='flex flex-col gap-2 mx-auto text-base leading-relaxed text-gray-600 list-disc list-inside lg:w-2/3'>
-            {infoRooms.additionalInfo.arrivalDeparture.text}
+            {infoRooms.additionalInfo.towels.text}
+          </p>
+        </div>
+        <div className='pb-6'>
+          <h5 className='my-2 text-xl font-light text-gray-600'>
+            {infoRooms.additionalInfo.conditions.title}
+          </h5>
+          <p className='flex flex-col gap-2 mx-auto text-base leading-relaxed text-gray-600 list-disc list-inside lg:w-2/3'>
+            {infoRooms.additionalInfo.conditions.text}
           </p>
         </div>
       </div>

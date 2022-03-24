@@ -1,5 +1,3 @@
-
-
 /* ==== ICONS ===== */
 import { GiSittingDog as DogIcon } from "react-icons/gi";
 import { AiOutlineWifi as WifiIcon } from "react-icons/ai";
@@ -20,14 +18,32 @@ export default {
     lodge: "The Lodge",
     activities: "Activities",
   },
-  navbar: {
-    home: "Home",
-    lodge: "Lodge",
-    apartments: "Apartments",
-    activities: "Activities",
-    position: "Location",
-    contact: "Contact",
-  },
+  navbar: [
+    {
+      name: "home",
+      href: "/home",
+    },
+    {
+      name: "lodge",
+      href: "/agriturismo",
+    },
+    {
+      name: "apartments",
+      href: "/appartamenti",
+    },
+    {
+      name: "activities",
+      href: "/attivita",
+    },
+    {
+      name: "location",
+      href: "/posizione",
+    },
+    {
+      name: "contact",
+      href: "#contact",
+    },
+  ],
   header: {
     welcome: "welcome",
     san_lorenzo: {
@@ -155,6 +171,10 @@ export default {
           title: "Bed sheets and Towels",
           text: "The bed sheets and towels are extra, they cost 10€ per person for the whole stay.",
         },
+        conditions: {
+          title: "Cleaning",
+          text: "The apartment will be presented in perfect hygiene conditions. You must leave it as you found it on your arrival.",
+        },
       },
     },
   },
@@ -209,42 +229,37 @@ export default {
     subTitle: "is like home",
     text: "Located at an altitude of 400 meters and situated at 12 km from Gargnano and from the shores of Lake Garda, the San Lorenzo Farm Holiday Accommodation offers a set of nice full equipped apartments in a quiet mountain area.",
     sections: [
-      {  title: `The facility`,
-      subTitle: undefined,
-      text: "Surrounded by 14 hectares of land, the facility is part of an ancient cheese-making farm dating back to the 19th century. Each room can host up to four guests in a warm and cozy atmosphere, distinctively charming and comfortable. The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey. The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area, with an outside solarium. At 5 minutes by car it has also a wonderful river where you can make a bath.",}, {  title: `You can have a massage`,
-      subTitle: undefined,
-      text: "Each drug has serious contraindications. Massage, on the other hand, is the most powerful of drugs, without having any contraindications. Remember to reserve with anticipation.",}
+      {
+        title: `The facility`,
+        subTitle: undefined,
+        text: "Surrounded by 14 hectares of land, the facility is part of an ancient cheese-making farm dating back to the 19th century. Each room can host up to four guests in a warm and cozy atmosphere, distinctively charming and comfortable. The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey. The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area, with an outside solarium. At 5 minutes by car it has also a wonderful river where you can make a bath.",
+      },
+      {
+        title: `You can have a massage`,
+        subTitle: undefined,
+        text: "Each drug has serious contraindications. Massage, on the other hand, is the most powerful of drugs, without having any contraindications. Remember to reserve with anticipation.",
+      },
     ],
   },
   position: {
     img_text: "mountain",
     title: `Where are`,
-    subTitle: 'we?',
+    subTitle: "we?",
     text: "Agriturismo San Lorenzo di Persegno is located inside the Upper Garda Brescia protected park in a mountain area at an altitude of 400 meters about 30 minutes from Lake Garda. Here you can make numerous walks that can also be covered by mountain bike or on horseback. The structure is immersed in a silent and uncontaminated nature, ideal for those who love peace and tranquility. You can also enjoy a pleasant solarium and numerous outdoor spots where you can sunbathe or read a good book. Agriturismo San Lorenzo di Persegno is 20km away from Salo and 1 hour from Desenzano.",
     sections: [
-      {  title: `How to get there`,
-      subTitle: undefined,
-      text: undefined }
+      { title: `How to get there`, subTitle: undefined, text: undefined },
     ],
   },
 
   activities_page: {
- 
-      img_text: "mountain",
-      title: `Around`,
-      subTitle: 'us',
-      text: undefined,
-      sections: [
-        {  title: `Around us`,
-        subTitle: undefined,
-        text: undefined },
-        {  title: `Gargnano`,
-        subTitle: undefined,
-        text: undefined },
-        {  title: `Toscolano Maderno`,
-        subTitle: undefined,
-        text: undefined }
-      ],
-    
+    img_text: "mountain",
+    title: `Around`,
+    subTitle: "us",
+    text: undefined,
+    sections: [
+      { title: `Around us`, subTitle: undefined, text: undefined },
+      { title: `Gargnano`, subTitle: undefined, text: undefined },
+      { title: `Toscolano Maderno`, subTitle: undefined, text: undefined },
+    ],
   },
 };
