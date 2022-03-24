@@ -34,11 +34,11 @@ export default {
     },
     {
       name: "attività",
-      href: "attivita",
+      href: "/attivita",
     },
     {
       name: "posizione",
-      href: "posizione",
+      href: "/posizione",
     },
     {
       name: "contatto",

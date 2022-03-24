@@ -8,6 +8,20 @@ module.exports = withOptimizedImages({
   images: {
     disableStaticImages: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/it/home',
+        permanent: true,
+      },
+      {
+        source: '/en',
+        destination: '/home',
+        permanent: true,
+      },
+    ]
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'

@@ -9,7 +9,7 @@ export default function useLocale() {
   const t = (locale === "it" && it) || (locale === "en" && en);
 
   const handleChangeLang = (locale) => {
-    router.push("/", "/", { locale });
+    router.push("/", "/home", { locale });
   };
 
   return { t, locale, handleChangeLang };
