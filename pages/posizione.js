@@ -36,7 +36,7 @@ export default function Posizione() {
           </p>
         </div>
       </section>
-      <img src='/assets/position/location-3.png' class="mb-20 px-2"/>
+      <img src='/assets/position/gargnano.png' class="mb-20 px-2"/>
      
       <Contact t={t} simplified />
       <Footer t={t} />

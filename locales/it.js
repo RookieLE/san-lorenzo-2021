@@ -1,4 +1,3 @@
-
 /* ==== ICONS ===== */
 import { GiSittingDog as DogIcon } from "react-icons/gi";
 import { AiOutlineWifi as WifiIcon } from "react-icons/ai";
@@ -19,7 +18,7 @@ export default {
     lodge: "L'Agriturismo",
     activities: "Attività",
   },
-  navbar:[
+  navbar: [
     {
       name: "home",
       href: "/home",
@@ -231,40 +230,36 @@ export default {
     subTitle: "ti sentirai a casa",
     text: "Situato a un’altitudine di 400 metri e ubicato a 7 km da Toscolano Maderno e dalle rive del Lago di Garda, l’Agriturismo San Lorenzo propone appartamenti in una tranquilla zona di montagna.",
     sections: [
-      {  title: `La struttura`,
-      subTitle: undefined,
-      text: "Circondata da 14 ettari di terreno, la struttura fa parte di un antico caseificio risalente all'800. Ciascuna camera può ospitare fino a quattro persone in un'atmosfera calda e accogliente, distintamente affascinante e confortevole. Gli appartamenti sono confortevoli e arredati con charme, con qualsiasi attrezzo di cui potresti aver bisogno durante il tuo viaggio. L'Agriturismo San Lorenzo offre una serie di graziosi appartamenti in una tranquilla zona di montagna, con solarium esterno. A 5 minuti di macchina ha anche un meraviglioso fiume dove si può fare il bagno..",}, {  title: `Puoi anche avere un massaggio`,
-      subTitle: undefined,
-      text: "Ogni droga ha pesanti controindicazioni. Il massaggio invece è la più potente delle droghe, senza avere alcuna controindicazione. Ricordati di prenotare il tuo massaggio con anticipo.",}
+      {
+        title: `La struttura`,
+        subTitle: undefined,
+        text: "Circondata da 14 ettari di terreno, la struttura fa parte di un antico caseificio risalente all'800. Ciascuna camera può ospitare fino a quattro persone in un'atmosfera calda e accogliente, distintamente affascinante e confortevole. Gli appartamenti sono confortevoli e arredati con charme, con qualsiasi attrezzo di cui potresti aver bisogno durante il tuo viaggio. L'Agriturismo San Lorenzo offre una serie di graziosi appartamenti in una tranquilla zona di montagna, con solarium esterno. A 5 minuti di macchina ha anche un meraviglioso fiume dove si può fare il bagno..",
+      },
+      {
+        title: `Prenditi cura di te stessa/o`,
+        subTitle: undefined,
+        text: "Ogni droga ha pesanti controindicazioni. Il massaggio invece è la più potente delle droghe, senza avere alcuna controindicazione. Ricordati di prenotare il tuo massaggio con anticipo.",
+      },
     ],
   },
   position: {
     img_text: "mountain",
     title: `Dove`,
-    subTitle: 'siamo?',
+    subTitle: "siamo?",
     text: "L'Agriturismo San Lorenzo di Persegno si trova all'interno del Parco protetto Alto Garda Bresciano in una zona di montagna a 400 metri di altitudine a circa 30 minuti dal Lago di Garda. Qui si possono fare numerose passeggiate percorribili anche in mountain bike o a cavallo. La struttura è immersa in una natura silenziosa ed incontaminata, ideale per chi ama la pace e la tranquillità. Si può inoltre godere di un gradevole solarium e di numerosi spazi esterni dove prendere il sole o leggere un buon libro. L'Agriturismo San Lorenzo di Persegno dista 20 km da Salò e 1 ora da Desenzano.",
     sections: [
-      {  title: `Come arrivarci`,
-      subTitle: undefined,
-      text: undefined }
+      { title: `Come arrivarci`, subTitle: undefined, text: undefined },
     ],
   },
   activities_page: {
-
     img_text: "mountain",
     title: `Intorno`,
-    subTitle: 'a noi',
+    subTitle: "a noi",
     text: undefined,
     sections: [
-      {  title: `Intorno a noi`,
-      subTitle: undefined,
-      text: undefined },
-      {  title: `Gargnano`,
-      subTitle: undefined,
-      text: undefined },
-      {  title: `Toscolano Maderno`,
-      subTitle: undefined,
-      text: undefined }
+      { title: `Intorno a noi`, subTitle: undefined, text: undefined },
+      { title: `Gargnano`, subTitle: undefined, text: undefined },
+      { title: `Toscolano Maderno`, subTitle: undefined, text: undefined },
     ],
   },
 };

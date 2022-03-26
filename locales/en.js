@@ -235,7 +235,7 @@ export default {
         text: "Surrounded by 14 hectares of land, the facility is part of an ancient cheese-making farm dating back to the 19th century. Each room can host up to four guests in a warm and cozy atmosphere, distinctively charming and comfortable. The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey. The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area, with an outside solarium. At 5 minutes by car it has also a wonderful river where you can make a bath.",
       },
       {
-        title: `You can have a massage`,
+        title: `Take care of your self`,
         subTitle: undefined,
         text: "Each drug has serious contraindications. Massage, on the other hand, is the most powerful of drugs, without having any contraindications. Remember to reserve with anticipation.",
       },
