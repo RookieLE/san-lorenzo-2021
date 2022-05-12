@@ -36,10 +36,10 @@ export default function Menu({ simplified = false, navbar }) {
   //     (router.pathname !== _menu && simplified && "h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-400 opacity-60 lg:hover:opacity-95");
 
   const isActive = (href) =>
-    (router.pathname.includes(href) && "text-white bg-gray-900") ||
-    "text-gray-600 font-normal";
+    (router.pathname.includes(href) && "text-gray-800 bg-gray-100 transition") ||
+    "text-gray-600 font-normal hover:bg-gray-50 transition";
 
-  const textColor = (simplified && "text-gray-800") || "text-gray-800";
+  const textColor = (simplified && "text-gray-700") || "text-gray-700";
 
   const parseFlag = (name) => {
     if (name === "it")

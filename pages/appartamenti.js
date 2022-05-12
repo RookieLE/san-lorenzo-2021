@@ -9,6 +9,7 @@ import InfoRoom from "components/organism/InfoRoom";
 import Contact from "@/components/organism/Contact";
 import Footer from "@/components/organism/Footer";
 import Seo from "@/components/Layout/Seo";
+
 export default function Appartamenti({ roomFrom }) {
   const { t, locale } = useLocale();
   const [room, setRoom] = useState("serenity");
@@ -25,7 +26,6 @@ export default function Appartamenti({ roomFrom }) {
   }, []);
 
   const textImage = `<h4 className='mb-2 text-5xl text-center text-white capitalize font-extralight'>${room} Suite</h4><p className="text-xl font-extralight">4 guests</p>`;
-
   const seoAttributes = {
     title: t.seo.apartments,
   };
@@ -38,10 +38,10 @@ export default function Appartamenti({ roomFrom }) {
       <Header />
       {/*  <Title title={roomFrom} t={t} locale={locale} margin='mt-10' /> */}
       <ImgCentral
-        image={filteredRoom.img}
         textImage={textImage}
         videoUrl={filteredRoom.videoUrl}
-        priorityImg
+        room={filteredRoom.name}
+        locale={locale}
       />
       {/* <Carousel t={t} selectedRoom={roomFrom} /> */}
       <InfoRoom t={t} />

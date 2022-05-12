@@ -11,16 +11,16 @@ module.exports = withOptimizedImages({
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/it/home',
+        source: "/",
+        destination: "/home",
         permanent: true,
       },
       {
-        source: '/en',
-        destination: '/home',
+        source: "/en",
+        destination: "/home",
         permanent: true,
       },
-    ]
+    ];
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
