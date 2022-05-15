@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import React from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
-const website_title = 'Agriturismo San Lorenzo';
+const website_title = "Agriturismo San Lorenzo";
 const website_description =
-  'Benvenuti in Persegno località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo. Offriamo stupendi appartamenti completamente accessoriati.';
+  "Benvenuti in Persegno località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo. Offriamo stupendi appartamenti completamente accessoriati.";
 
 export default function Seo({ description, title, keywords }) {
   const router = useRouter();
@@ -12,34 +12,34 @@ export default function Seo({ description, title, keywords }) {
   const pageTitle = `${website_title} - ${title}`;
 
   const microformats = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
     name: pageTitle,
-    url: 'https://agriturismosanlorenzodipersegno.it',
+    url: "https://agriturismosanlorenzodipersegno.it",
   };
 
   const globalMicroformats = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    "@context": "https://schema.org",
+    "@type": "WebPage",
     name: website_title,
     description: description || website_description,
-    URL: 'https://agriturismosanlorenzodipersegno.it',
+    URL: "https://agriturismosanlorenzodipersegno.it",
   };
 
   return (
     <Head>
       <title>{pageTitle}</title>
-      <meta name='description' content={description || website_description} />
-      <meta name='keywords' content={keywords} />
-      <meta property='og:title' content={pageTitle} />
+      <meta name="description" content={description || website_description} />
+      <meta name="keywords" content={keywords} />
+      <meta property="og:title" content={pageTitle} />
       <meta
-        property='og:description'
+        property="og:description"
         content={description || website_description}
       />
-      <meta property='og:type' content='website' />
-      <meta property='og:image' content='/assets/home/mountain.jpg' />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="/assets/home/mountain.jpg" />
       <meta
-        property='og:url'
+        property="og:url"
         content={`https://agriturismosanlorenzodipersegno.it/${router?.asPath}`}
       />
       {/*  <meta name='twitter:card' content='summary_large_image' />
@@ -50,18 +50,19 @@ export default function Seo({ description, title, keywords }) {
       <script
         async
         defer
-        data-website-id='3b5fb0f0-168b-4bc4-85d2-1676a4ba655f'
-        src='https://umami-easa.vercel.app/umami.js'></script>
+        data-website-id="e7fdbab3-f32b-45d5-9dc1-571b390c87d2"
+        src="https://umami-production-b8d7.up.railway.app/umami.js"
+      ></script>
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(microformats) }}
       />
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(globalMicroformats) }}
       />
       <link
-        rel='canonical'
+        rel="canonical"
         href={`https://agriturismosanlorenzodipersegno.it${router?.asPath}`}
       />
     </Head>
