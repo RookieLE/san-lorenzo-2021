@@ -11,7 +11,7 @@ export default function ImgCentral({
 }) {
   const roomId =
     (room === "serenity" && "757948") ||
-    (room === "harmony" && "757958") ||
+    (room === "armony" && "757958") ||
     (room === "joy" && "757956") ||
     (room === "silence" && "757954");
     console.log(locale)
