@@ -70,7 +70,7 @@ export default function Footer({
           <a href='mailto:info@sanlorenzodipersegno.it'>
             info@sanlorenzodipersegno.it
           </a>
-          <a href='tel:00393293103384'>Tel. +39 329 310 3384</a>
+          <a href='tel:00393882432306'>Tel. +39 388 243 2306</a>
         </div>
 
         <a
