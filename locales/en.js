@@ -65,11 +65,11 @@ export default {
     rooms: [
       {
         name: "serenity",
-        price: "50",
+        price: "94",
         guest: "2 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/serenity.jpg",
-        videoUrl: "https://www.youtube.com/embed/FCwlLM-Jqic",
+        videoUrl: "https://youtu.be/LNmRQhKBoX0",
         alt: "An internal view of serenity apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/serenity/1.jpeg", alt: "" },
@@ -84,11 +84,11 @@ export default {
       },
       {
         name: "armony",
-        price: "70",
+        price: "100",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/armony.jpg",
-        videoUrl: "https://www.youtube.com/embed/lG8iiNx6A2g",
+        videoUrl: "https://youtu.be/lb2J4dofalU",
         alt: "An internal view of Armony apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/armony/1.jpeg", alt: "" },
@@ -103,11 +103,11 @@ export default {
       },
       {
         name: "joy",
-        price: "60",
+        price: "100",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/joy.jpg",
-        videoUrl: "https://www.youtube.com/embed/Efg7OlrCklY",
+        videoUrl: "https://youtu.be/YFtzwdU_1zw",
         alt: "An internal view of Joy apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/joy/1.jpeg", alt: "" },
@@ -123,11 +123,11 @@ export default {
       },
       {
         name: "silence",
-        price: "75",
+        price: "100",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/silence.jpg",
-        videoUrl: "https://www.youtube.com/embed/BY4r-m_67oU",
+        videoUrl: "https://youtu.be/lxUSHimdKmA",
         alt: "An internal view of Silence apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/silence/1.jpeg", alt: "" },
@@ -138,6 +138,25 @@ export default {
           { url: "/assets/rooms/silence/6.jpeg", alt: "" },
           { url: "/assets/rooms/silence/7.jpeg", alt: "" },
           { url: "/assets/rooms/silence/8.jpeg", alt: "" },
+        ],
+      },
+      {
+        name: "freedom",
+        price: "100",
+        guest: "4 guests",
+        viewMore: "View more",
+        img: "/assets/rooms/thumbnail/freedom.jpg",
+        videoUrl: "https://youtu.be/0ZkLWq3Ntw8",
+        alt: "An internal view of Freedom apartment, with a balcony and a big window.",
+        othersImages: [
+          { url: "/assets/rooms/freedom/0.jpeg", alt: "" },
+          { url: "/assets/rooms/freedom/1.jpeg", alt: "" },
+          { url: "/assets/rooms/freedom/2.jpeg", alt: "" },
+          { url: "/assets/rooms/freedom/3.jpeg", alt: "" },
+          { url: "/assets/rooms/freedom/4.jpeg", alt: "" },
+          { url: "/assets/rooms/freedom/5.jpeg", alt: "" },
+          { url: "/assets/rooms/freedom/6.jpeg", alt: "" },
+          { url: "/assets/rooms/freedom/7.jpeg", alt: "" },
         ],
       },
     ],

@@ -24,7 +24,7 @@ export default function RoomsPreview({ locale, room }) {
             if (el.name === room) return;
             return (
               <div
-                className='w-full p-4 transition transform cursor-pointer lg:w-1/3 group hover:scale-105 active:scale-105'
+                className='w-full p-4 transition transform cursor-pointer lg:w-1/2 group hover:scale-105 active:scale-105'
                 onClick={async () => {
                   await router.replace('/appartamenti' + '/?room=' + el.name);
                   await window.scrollTo(0, 0);

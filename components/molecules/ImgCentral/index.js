@@ -13,8 +13,8 @@ export default function ImgCentral({
     (room === "serenity" && "757948") ||
     (room === "armony" && "757958") ||
     (room === "joy" && "757956") ||
-    (room === "silence" && "757954");
-    console.log(locale)
+    (room === "silence" && "757954") ||
+    (room === "freedom" && "757952");
 
   return (
     <section className={`text-gray-600 ${bgSmoke && "bg-gray-100"}`}>
