@@ -70,7 +70,7 @@ export default {
         guest: "2 ospiti",
         viewMore: "Scopri di più",
         img: "/assets/rooms/thumbnail/serenity.jpg",
-        videoUrl: "https://youtu.be/LNmRQhKBoX0",
+        videoUrl: "https://www.youtube.com/embed/LNmRQhKBoX0",
         alt: "An internal view of serenity apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/serenity/1.jpeg", alt: "" },
@@ -89,7 +89,7 @@ export default {
         guest: "4 ospiti",
         viewMore: "Scopri di più",
         img: "/assets/rooms/thumbnail/armony.jpg",
-        videoUrl: "https://youtu.be/lb2J4dofalU",
+        videoUrl: "https://www.youtube.com/embed/lb2J4dofalU",
         alt: "An internal view of Armony apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/armony/1.jpeg", alt: "" },
@@ -108,7 +108,7 @@ export default {
         guest: "4 ospiti",
         viewMore: "Scopri di più",
         img: "/assets/rooms/thumbnail/joy.jpg",
-        videoUrl: "https://youtu.be/YFtzwdU_1zw",
+        videoUrl: "https://www.youtube.com/embed/YFtzwdU_1zw",
         alt: "An internal view of Joy apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/joy/1.jpeg", alt: "" },
@@ -128,7 +128,7 @@ export default {
         guest: "4 ospiti",
         viewMore: "Scopri di più",
         img: "/assets/rooms/thumbnail/silence.jpg",
-        videoUrl: "https://youtu.be/lxUSHimdKmA",
+        videoUrl: "https://www.youtube.com/embed/lxUSHimdKmA",
         alt: "An internal view of Silence apartment, with a wood table and a big window.",
         othersImages: [
           { url: "/assets/rooms/silence/1.jpeg", alt: "" },
@@ -147,7 +147,7 @@ export default {
         guest: "4 opsiti",
         viewMore: "Scopri di più",
         img: "/assets/rooms/thumbnail/freedom.jpg",
-        videoUrl: "https://youtu.be/0ZkLWq3Ntw8",
+        videoUrl: "https://www.youtube.com/embed/0ZkLWq3Ntw8",
         alt: "An internal view of Freedom apartment, with a balcony and a big window.",
         othersImages: [
           { url: "/assets/rooms/freedom/0.jpeg", alt: "" },
