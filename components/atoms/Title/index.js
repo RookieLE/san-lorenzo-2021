@@ -1,18 +1,18 @@
-import { IoPlayCircle } from 'react-icons/io5';
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
+import { IoPlayCircle } from "react-icons/io5";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 export default function Title({ title, desc, cta, margin, t, locale }) {
   const room = t.rooms.rooms.filter((room) => room.name === title)[0];
 
   const watchText =
-    (locale === 'it' && 'Guarda il Video') ||
-    (locale === 'en' && 'Watch the Video');
+    (locale === "it" && "Guarda il Video") ||
+    (locale === "en" && "Watch the Video");
 
   return (
     <div className={`flex flex-col text-center w-full ${margin}`}>
       {title && (
-        <h1 className='mb-4 font-serif text-5xl font-bold text-green-800 capitalize sm:text-6xl'>
+        <h1 className="mb-4 text-5xl font-bold text-green-800 capitalize sm:text-6xl">
           {title}
         </h1>
       )}
@@ -41,14 +41,14 @@ export default function Title({ title, desc, cta, margin, t, locale }) {
       </Popup> */}
 
       {desc && (
-        <p className='mx-auto text-base leading-relaxed lg:w-2/3 max-w-prose'>
+        <p className="mx-auto text-base leading-relaxed lg:w-2/3 max-w-prose">
           {desc}
         </p>
       )}
 
       {cta && (
-        <div className='flex justify-center pt-5 md:pt-10'>
-          <Button text={cta} ctaStyle='underline' />
+        <div className="flex justify-center pt-5 md:pt-10">
+          <Button text={cta} ctaStyle="underline" />
         </div>
       )}
     </div>

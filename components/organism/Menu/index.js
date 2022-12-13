@@ -9,7 +9,7 @@ import Image from "next/image";
 import { SiInstagram } from "react-icons/si";
 const Flag = dynamic(() => import("react-flagpack"), { ssr: false });
 
-export default function Menu({ simplified = false, navbar }) {
+export default function Menu({ simplified = false, navbar, bookNow }) {
   const router = useRouter();
 
   const { locale, handleChangeLang } = useLocale();
@@ -36,8 +36,7 @@ export default function Menu({ simplified = false, navbar }) {
   //     (router.pathname !== _menu && simplified && "h-8 border-l-4 border-white lg:border-transparent lg:border-l-0 lg:border-b-2 lg:hover:border-gray-400 opacity-60 lg:hover:opacity-95");
 
   const isActive = (href) =>
-    (router.pathname.includes(href) && "text-gray-800 bg-gray-100 transition") ||
-    "text-gray-600 font-normal hover:bg-gray-50 transition";
+    router.pathname.includes(href) && "transition font-bold";
 
   const textColor = (simplified && "text-gray-700") || "text-gray-700";
 
@@ -59,117 +58,224 @@ export default function Menu({ simplified = false, navbar }) {
   const oppositeLocale = (locale === "it" && "en") || (locale === "en" && "it");
 
   return (
-    <nav
-      className={`flex w-full justify-between z-50 font-sans max-w-[1920px] lg:mx-auto ${textColor} ${
-        simplified && "px-4 lg:p-0 lg:py-2 bg-gray-800"
-      }`}
-    >
-      <div className="z-20 grid grid-cols-2 pt-4 lg:pt-0 justify-content-start md:place-content-center max-w-[200px] lg:max-w-[280px]">
-        <img
-          className={`object-container object-center w-20 lg:place-self-center`}
-          alt="hero"
-          src="/black-logo.png"
-          priority
-        />
-        <h1 className="font-serif text-3xl text-gray-800 font-medium justify-self-start tracking-wider md:flex md:flex-col min-w-[200px] md:place-content-center">
-          San Lorenzo{" "}
-          <span className="block text-lg font-light">di Persegno</span>
-        </h1>
-      </div>
+    // <nav
+    //   className={`flex w-full justify-between z-50  max-w-[1920px] lg:mx-auto ${textColor} ${
+    //     simplified && "px-4 lg:p-0 lg:py-2 bg-gray-800"
+    //   }`}
+    // >
+    //   <div className="z-20 grid grid-cols-2 pt-4 lg:pt-0 justify-content-start md:place-content-center max-w-[200px] lg:max-w-[280px]">
+    //     <img
+    //       className={`object-container object-center w-20 lg:place-self-center`}
+    //       alt="hero"
+    //       src="/black-logo.png"
+    //       priority
+    //     />
+    //     <h1 className="text-3xl text-gray-800 font-medium justify-self-start tracking-wider md:flex md:flex-col min-w-[200px] md:place-content-center">
+    //       San Lorenzo{" "}
+    //       <span className="block text-lg font-light">di Persegno</span>
+    //     </h1>
+    //   </div>
 
-      <div
-        className="z-50 hover:cursor-pointer lg:hidden place-self-center"
-        onClick={handleHamb}
-      >
-        <UseAnimations
-          animation={menu2}
-          wrapperStyle={
-            (isMenuOpen && { textColor: "black" }) || { textColor: "black" }
-          }
-          reverse={isMenuOpen}
-          size={42}
-          speed={3}
-          strokeColor="black"
-          className={`transform transition ${
-            (isMenuOpen && "bg-green-700") || ""
-          } ${(isMenuOpen || simplified) && "bg-gray-700 fill-current "}`}
-        />
-      </div>
+    //   <div
+    //     className="z-50 hover:cursor-pointer lg:hidden place-self-center"
+    //     onClick={handleHamb}
+    //   >
+    //     <UseAnimations
+    //       animation={menu2}
+    //       wrapperStyle={
+    //         (isMenuOpen && { textColor: "black" }) || { textColor: "black" }
+    //       }
+    //       reverse={isMenuOpen}
+    //       size={42}
+    //       speed={3}
+    //       strokeColor="black"
+    //       className={`transform transition ${
+    //         (isMenuOpen && "bg-green-700") || ""
+    //       } ${(isMenuOpen || simplified) && "bg-gray-700 fill-current "}`}
+    //     />
+    //   </div>
 
-      {isMenuOpen && (
-        <div className="absolute top-0 left-0 z-20 w-full h-screen bg-gray-900 opacity-50"></div>
-      )}
+    //   {isMenuOpen && (
+    //     <div className="absolute top-0 left-0 z-20 w-full h-screen bg-gray-900 opacity-50"></div>
+    //   )}
 
-      <ul
-        className={`grid absolute lg:border-0 bg-white text-black shadow left-0 top-0 z-20 p-2 w-2/3 sm:w-1/3 lg:w-full m-6 lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
-          (isMenuOpen && "block") || "hidden"
-        }`}
-      >
-        {navbar.map((link) => (
-          <li
-            className={`pl-2 m-2 font-sans text-lg tracking-wider capitalize px-3 p-1 cursor-pointer flex lg:place-content-center ${isActive(
-              link.href
-            )}`}
-          >
-            {(link.href.includes("contact") && (
-              <a href={`${link.href}`}>{link.name}</a>
-            )) || (
-              <Link href={`/${locale}${link.href}`}>
-                <a>{link.name}</a>
-              </Link>
-            )}
-          </li>
-        ))}
-        <li className="pl-2 m-2 font-sans text-lg tracking-wider capitalize cursor-pointer text-gray-800 lg:pl-0">
-          <div className="relative flex w-1/3 px-2 py-3 transition rounded-md lg:w-full place-items-center place-content-center sm:px-2 sm:py-1 hover:bg-gray-50/30 bg-gray-200/60 lg:bg-gray-50/10">
-            {/*  <!-- Dropdown toggle button --> */}
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="relative z-10 flex text-sm uppercase text-gray-800 focus:outline-none place-content-center place-items-center"
-            >
-              <svg
-                className={`relative w-5 h-5 text-gray-800 top-1 transform transition-transform mb-1 ${
-                  isDropdownOpen && "rotate-180"
-                }`}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              {locale}
-            </button>
+    //   <ul
+    //     className={`grid absolute lg:border-0 bg-white text-black shadow left-0 top-0 z-20 p-2 w-2/3 sm:w-1/3 lg:w-full m-6 lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
+    //       (isMenuOpen && "block") || "hidden"
+    //     }`}
+    //   >
+    //     {navbar.map((link) => (
+    //       <li
+    //         className={`text-center h-7 text-gray-800 font-semibold text-md tracking-wider capitalize px-1 mx-1 lg:place-self-center cursor-pointer flex ${isActive(
+    //           link.href
+    //         )}`}
+    //       >
+    //         {(link.href.includes("contact") && (
+    //           <a href={`${link.href}`}>{link.name}</a>
+    //         )) || (
+    //           <Link href={`/${locale}${link.href}`}>
+    //             <a>{link.name}</a>
+    //           </Link>
+    //         )}
+    //       </li>
+    //     ))}
+    //     <li className="pl-2 m-2 text-lg tracking-wider text-gray-800 capitalize cursor-pointer lg:pl-0">
+    //       <div className="relative flex w-1/3 px-2 py-3 transition rounded-md lg:w-full place-items-center place-content-center sm:px-2 sm:py-1 hover:bg-gray-50/30 bg-gray-200/60 lg:bg-gray-50/10">
+    //         {/*  <!-- Dropdown toggle button --> */}
+    //         <button
+    //           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+    //           className="relative z-10 flex text-sm text-gray-800 uppercase focus:outline-none place-content-center place-items-center"
+    //         >
+    //           <svg
+    //             className={`relative w-5 h-5 text-gray-800 top-1 transform transition-transform mb-1 ${
+    //               isDropdownOpen && "rotate-180"
+    //             }`}
+    //             xmlns="http://www.w3.org/2000/svg"
+    //             viewBox="0 0 20 20"
+    //             fill="currentColor"
+    //           >
+    //             <path
+    //               fill-rule="evenodd"
+    //               d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+    //               clip-rule="evenodd"
+    //             />
+    //           </svg>
+    //           {locale}
+    //         </button>
 
-            {/* <!-- Dropdown menu --> */}
-            {isDropdownOpen && (
-              <div className="absolute z-20 p-1 mt-4 border border-gray-200 rounded-md shadow-xl bg-gray-50/70 lg:top-5 -right-16 -top-5 lg:right-0 w-14 hover:bg-gray-50/80">
-                <button
-                  onClick={() => {
-                    handleChangeLang(oppositeLocale);
-                    setIsDropdownOpen(false);
-                  }}
-                  className="flex w-full py-1 text-sm text-gray-800 uppercase transition-colors duration-200 transform place-content-center focus:outline-none"
-                >
-                  {oppositeLocale}
-                </button>
-              </div>
-            )}
+    //         {/* <!-- Dropdown menu --> */}
+    //         {isDropdownOpen && (
+    //           <div className="absolute z-20 p-1 mt-4 border border-gray-200 rounded-md shadow-xl bg-gray-50/70 lg:top-5 -right-16 -top-5 lg:right-0 w-14 hover:bg-gray-50/80">
+    //             <button
+    //               onClick={() => {
+    //                 handleChangeLang(oppositeLocale);
+    //                 setIsDropdownOpen(false);
+    //               }}
+    //               className="flex w-full py-1 text-sm text-gray-800 uppercase transition-colors duration-200 transform place-content-center focus:outline-none"
+    //             >
+    //               {oppositeLocale}
+    //             </button>
+    //           </div>
+    //         )}
+    //       </div>
+    //     </li>
+    //     <li className="flex pl-2 m-2 text-lg tracking-wider text-gray-800 capitalize cursor-pointer lg:pl-0">
+    //       <a
+    //         href="https://www.instagram.com/sanlorenzo.dipersegno/"
+    //         target="_blank"
+    //         className="flex text-gray-800 transition transform hover:scale-110 place-content-center"
+    //       >
+    //         <SiInstagram className="text-3xl text-gray-800" />
+    //       </a>
+    //     </li>
+    //   </ul>
+    // </nav>
+    <nav class="py-10" data-config-="">
+      <div class="px-4 mx-auto">
+        <div class="flex items-center justify-between relative">
+          <div className="z-20 grid grid-cols-2 justify-content-start md:place-content-center max-w-[200px] lg:max-w-[280px] lg:mr-20">
+            <img
+              className={`object-container object-center w-20 lg:place-self-center`}
+              alt="hero"
+              src="/black-logo.png"
+              priority
+            />
+            <h1 className="text-3xl text-gray-800 font-medium justify-self-start tracking-wider md:flex md:flex-col min-w-[200px] md:place-content-center">
+              San Lorenzo{" "}
+              <span className="block text-lg font-light">di Persegno</span>
+            </h1>
           </div>
-        </li>
-        <li className="flex pl-2 m-2 font-sans text-lg tracking-wider capitalize cursor-pointer text-gray-800 lg:pl-0">
-          <a
-            href="https://www.instagram.com/sanlorenzo.dipersegno/"
-            target="_blank"
-            className="flex text-gray-800 transition transform hover:scale-110 place-content-center"
-          >
-            <SiInstagram className="text-3xl text-gray-800" />
-          </a>
-        </li>
-      </ul>
+          <div class="hidden lg:block">
+            <ul class="flex items-center">
+              {navbar.map((link) => (
+                <li class="mr-8">
+                  {(link.href.includes("contact") && (
+                    <a
+                      href={`${link.href}`}
+                      aria-current="page"
+                      class={`inline-block capitalize hover:text-gray-900 ${isActive(
+                        link.href
+                      )}`}
+                    >
+                      {link.name}
+                    </a>
+                  )) || (
+                    <Link href={`/${locale}${link.href}`}>
+                      <a
+                        class={`inline-block capitalize hover:text-gray-900 ${isActive(
+                          link.href
+                        )}`}
+                      >
+                        {link.name}
+                      </a>
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="hidden lg:flex lg:place-content-center ml-auto">
+          {/* <div className="flex place-content-center place-items-center text-lg tracking-wider text-gray-800 capitalize cursor-pointer">
+              <a
+                href="https://www.instagram.com/sanlorenzo.dipersegno/"
+                target="_blank"
+                className="flex text-gray-800 transition transform hover:scale-110 place-content-center"
+              >
+                <SiInstagram className="text-2xl text-gray-800" />
+              </a>
+            </div> */}
+            <div className="text-lg tracking-wider text-gray-800 capitalize cursor-pointer bg-gray-50 h-12 place-content-center place-items-center flex mx-4">
+              <div className="relative flex w-1/3 px-2 py-3 transition rounded-md lg:w-full place-items-center place-content-center sm:px-2 sm:py-1 hover:bg-gray-50/30 bg-gray-200/60 lg:bg-gray-50/10">
+                {/*  <!-- Dropdown toggle button --> */}
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="relative z-10 flex text-sm text-gray-800 uppercase focus:outline-none place-content-center place-items-center"
+                >
+                  <svg
+                    className={`relative w-5 h-5 text-gray-800 top-1 transform transition-transform mb-1 ${
+                      isDropdownOpen && "rotate-180"
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  {locale}
+                </button>
+
+                {/* <!-- Dropdown menu --> */}
+                {isDropdownOpen && (
+                  <div className="absolute z-20 p-1 mt-4 border border-gray-200 shadow-xl bg-gray-50/70 lg:top-5 -right-16 -top-5 lg:right-0 w-14 hover:bg-gray-50/80">
+                    <button
+                      onClick={() => {
+                        handleChangeLang(oppositeLocale);
+                        setIsDropdownOpen(false);
+                      }}
+                      className="flex w-full py-1 text-sm text-gray-800 uppercase transition-colors duration-200 transform place-content-center focus:outline-none"
+                    >
+                      {oppositeLocale}
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+           
+            <a
+              class="px-8 h-12 flex place-content-center place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
+              href={bookNow.href}
+              target="_blank"
+            >
+              {bookNow.name}
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

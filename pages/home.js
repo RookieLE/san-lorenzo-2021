@@ -7,6 +7,7 @@ import Contact from "@/components/organism/Contact";
 import Footer from "@/components/organism/Footer";
 import Seo from "@/components/Layout/Seo";
 import Head from "next/head";
+import Menu from "@/components/organism/Menu";
 
 export default function IndexPage() {
   const { t } = useLocale();
@@ -32,7 +33,7 @@ export default function IndexPage() {
 
       <Contact t={t} />
       <Ratings />
-      <section class="py-24">
+      {/* <section class="py-24">
         <div class="container px-4 mx-auto">
           <h4 class="leading-8 text-gray-800 text-center mb-12 text-4xl font-serif">
             We also accept cryptocurrencies.
@@ -55,7 +56,7 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer t={t} />
     </>

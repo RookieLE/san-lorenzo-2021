@@ -8,7 +8,7 @@ export default function InfoRoom({
       <section className="text-gray-600">
         <div className="container px-5 py-2 mx-auto">
           <div className="flex flex-col w-full my-12 text-center">
-            <h4 className="pb-5 font-serif text-4xl font-medium text-green-900">
+            <h4 className="pb-5 text-4xl font-medium text-green-900">
               {infoRooms.bulletList.title}
             </h4>
             <ul className="flex flex-col gap-2 mx-auto text-base leading-relaxed list-disc list-inside lg:w-2/3">
@@ -34,7 +34,7 @@ export default function InfoRoom({
       </section>
 
       <div className="flex flex-col w-full py-12 mb-12 text-center lg:py-24 bg-gray-50">
-        <h4 className="pb-5 font-serif text-4xl font-medium text-green-900">
+        <h4 className="pb-5 text-4xl font-medium text-green-900">
           {infoRooms.additionalInfo.title}
         </h4>
         <div className="pb-6">

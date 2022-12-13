@@ -18,6 +18,10 @@ export default {
     lodge: "The Lodge",
     activities: "Activities",
   },
+  announcement: {
+    title: "Next Opening",
+    text: "The Lodge will open on Friday 07 April, 2023.",
+  },
   navbar: [
     {
       name: "home",
@@ -44,6 +48,10 @@ export default {
       href: "#contact",
     },
   ],
+  book_now: {
+    name: "booking now",
+    href: "https://direct-book.com/properties/sanlorenzodipersegnodirect?locale=it&items%5B0%5D%5Badults%5D=2&items%5B0%5D%5Bchildren%5D=0&items%5B0%5D%5Binfants%5D=0&currency=EUR&checkInDate=2022-12-12&checkOutDate=2022-12-15&trackPage=yes",
+  },
   header: {
     welcome: "welcome",
     san_lorenzo: {
@@ -184,11 +192,11 @@ export default {
         title: "Additional Info",
         arrivalDeparture: {
           title: "Check-in / Check-out",
-          text: "The check-in is allowed from 2:00 pm to 6:00 pm. The check-out limit is 11:00 am.",
+          text: "The check-in is allowed from 2:00 pm to 6:00 pm. The check-out limit is 10:00 am.",
         },
         towels: {
           title: "Bed sheets and Towels",
-          text: "The bed sheets and towels are extra, they cost 10€ per person for the whole stay.",
+          text: "The bed sheets and towels are included in the price.",
         },
         conditions: {
           title: "Cleaning",
@@ -210,21 +218,21 @@ export default {
     ],
   },
   contact: {
-    title: "Book Now",
-    desc: "At our Lodge, there is a variety of rooms to choose from. Whether you.",
+    title: "Contact Us",
+    desc: "Get it in touch. Clear any doubts.",
     form: {
       name: {
         name: "name",
         placeholder: "Full Name",
       },
-      arrival: {
-        name: "arrival",
-        placeholder: "Select an arrival date",
-      },
-      departure: {
-        name: "departure",
-        placeholder: "Select a departure date",
-      },
+      // arrival: {
+      //   name: "arrival",
+      //   placeholder: "Select an arrival date",
+      // },
+      // departure: {
+      //   name: "departure",
+      //   placeholder: "Select a departure date",
+      // },
       email: {
         name: "email",
         placeholder: "Email",

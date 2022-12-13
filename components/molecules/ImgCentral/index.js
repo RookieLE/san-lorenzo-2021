@@ -7,7 +7,7 @@ export default function ImgCentral({
   cta,
   title,
   room,
-  locale
+  locale,
 }) {
   const roomId =
     (room === "serenity" && "757948") ||
@@ -18,30 +18,30 @@ export default function ImgCentral({
 
   return (
     <section className={`text-gray-600 ${bgSmoke && "bg-gray-100"}`}>
-      <div className="flex place-content-end">
+      {/* <div className="flex place-content-end">
         <a
           href={`https://booking.hospitable.com/widget/external/${roomId}`}
           target="_blank"
-          className="mt-8 lg:mt-0 w-40 h-12 bg-green-900 hover:bg-green-900/90 transition p-1 flex place-contente-center"
+          className="flex w-40 h-12 p-1 mt-8 transition bg-green-900 lg:mt-0 hover:bg-green-900/90 place-contente-center"
         >
-          <div className="relative w-full text-white flex place-content-center place-items-center">
-            <BsBookHalf className="mr-2 text-white transition transform text-xl group-hover:scale-125" />{" "}
+          <div className="relative flex w-full text-white place-content-center place-items-center">
+            <BsBookHalf className="mr-2 text-xl text-white transition transform group-hover:scale-125" />{" "}
           {locale === "en" && "Book Now" || "Prenota Ora"}
           </div>
         </a>
-      </div>
+      </div> */}
 
       <div className="flex flex-col items-center justify-center px-2 py-12 mx-auto max-w-screen-2xl md:px-5 md:py-24">
         {title && (
           <>
-            <h4 className="font-serif text-4xl font-medium text-center text-green-900">
+            <h4 className="text-4xl font-medium text-center text-green-900">
               {title}
             </h4>
 
             <div className="" dangerouslySetInnerHTML={{ __html: textImage }} />
           </>
         )}
-        <div className="w-full grid place-content-center videoWrapper rounded-none">
+        <div className="grid w-full rounded-none place-content-center videoWrapper">
           <iframe
             width="560"
             height="315"

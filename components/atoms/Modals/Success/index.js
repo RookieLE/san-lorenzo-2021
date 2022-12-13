@@ -1,6 +1,6 @@
 export default function Success({ message, close }) {
   return (
-    <div className="w-full text-white bg-green-400 rounded m-2">
+    <div className="w-full text-white bg-green-800 m-2">
       <div className="container flex items-center justify-between px-6 py-3 mx-auto">
         <div className="flex">
           <svg viewBox="0 0 40 40" className="w-6 h-6 fill-current">
@@ -11,7 +11,7 @@ export default function Success({ message, close }) {
         </div>
 
         <button
-          className="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none"
+          className="p-1 transition-colors duration-200 transform hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none"
           onClick={() => close()}
         >
           <svg

@@ -18,6 +18,10 @@ export default {
     lodge: "L'Agriturismo",
     activities: "Attività",
   },
+  announcement: {
+    title: "Prossima Apertura",
+    text: "L'agriturismo aprirà Venerdi 07 Aprile 2023.",
+  },
   navbar: [
     {
       name: "home",
@@ -44,6 +48,11 @@ export default {
       href: "#contact",
     },
   ],
+
+  book_now: {
+    name: "prenota ora",
+    href: "https://direct-book.com/properties/sanlorenzodipersegnodirect?locale=it&items%5B0%5D%5Badults%5D=2&items%5B0%5D%5Bchildren%5D=0&items%5B0%5D%5Binfants%5D=0&currency=EUR&checkInDate=2022-12-12&checkOutDate=2022-12-15&trackPage=yes",
+  },
   header: {
     welcome: "benvenuti",
     san_lorenzo: {
@@ -185,7 +194,7 @@ export default {
         title: "Informazioni all'Arrivo",
         arrivalDeparture: {
           title: "Check-in / Check-out",
-          text: "Il check-in è consentito dalle ore 14.30 alle ore 18.30. Il check-out non oltre le ore 10.00.",
+          text: "Il check-in è consentito dalle ore 14.00 alle ore 18.00. Il check-out non oltre le ore 10.00.",
         },
         towels: {
           title: "Lenzuola e Asciugamani",
@@ -211,21 +220,21 @@ export default {
     ],
   },
   contact: {
-    title: "Prenota Ora",
-    desc: "Potete scriverci qualsiasi informazione che possa esserci utile al fine di regalarvi la miglior esperienza possibile.",
+    title: "Scrivici",
+    desc: "Mettiti in contatto per risolvere qualsiasi dubbio.",
     form: {
       name: {
         name: "nome",
         placeholder: "Nome completo",
       },
-      arrival: {
-        name: "arrivo",
-        placeholder: "Seleziona una data di arrivo",
-      },
-      departure: {
-        name: "partenza",
-        placeholder: "Select a departure date",
-      },
+      // arrival: {
+      //   name: "arrivo",
+      //   placeholder: "Seleziona una data di arrivo",
+      // },
+      // departure: {
+      //   name: "partenza",
+      //   placeholder: "Select a departure date",
+      // },
       email: {
         name: "email",
         placeholder: "esempio@gmail.com",

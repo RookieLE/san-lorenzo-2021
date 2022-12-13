@@ -22,7 +22,7 @@ export default function Posizione() {
       <Header />
       <section className={`w-full bg-cover mx-auto grid`}>
         <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
-          <h1 className="mb-8 font-serif text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
+          <h1 className="mb-8 text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
             {sections[0].title}
           </h1>
 
@@ -36,7 +36,7 @@ export default function Posizione() {
 
       <section className={`w-full bg-cover mx-auto grid`}>
         <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
-          <h1 className="mb-8 font-serif text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
+          <h1 className="mb-8 text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
             {sections[1].title}
           </h1>
 
@@ -50,7 +50,7 @@ export default function Posizione() {
       <img src="/assets/activities/activities-2.png" class="mb-20 px-2" />
       <section className={`w-full bg-cover mx-auto grid`}>
         <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
-          <h1 className="mb-8 font-serif text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
+          <h1 className="mb-8 text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
             {sections[2].title}
           </h1>
 

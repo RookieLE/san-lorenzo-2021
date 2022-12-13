@@ -1,20 +1,21 @@
-import Room from './Room';
-import Button from 'components/atoms/Button';
+import Room from "./Room";
+import Button from "components/atoms/Button";
 export default function Rooms({
   t: {
     rooms: { title, desc, rooms },
   },
 }) {
   return (
-    <section className='text-gray-600 bg-gray-100 body-font'>
-      <div className='container px-5 py-24 mx-auto'>
-        <div className='flex flex-col w-full mb-20 text-center'>
-          <h2 className='title_section'>{title}</h2>
-          <p className='mx-auto text-base leading-relaxed lg:w-2/3 max-w-prose'>
-            {desc}
-          </p>
+    <section className="bg-gray-100">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="flex flex-col w-full mb-20 text-center">
+          <h2 className="title_section">{title}</h2>
+          {/* <p className="mx-auto leading-6 max-w-prose">{desc}</p> */}
+          <p className="max-w-screen-lg text-lg text-gray-800 lg:mx-auto sm:leading-8">
+              {desc}
+            </p>
         </div>
-        <div className='grid gap-8 mx-auto xl:grid-cols-2 place-content-center'>
+        <div className="grid gap-8 mx-auto xl:grid-cols-3 place-content-center">
           {rooms.map((room, index) => (
             <Room room={room} index={index} key={index} />
           ))}

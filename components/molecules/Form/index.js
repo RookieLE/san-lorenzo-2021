@@ -144,7 +144,7 @@ export default function Form({
         </div>
       </div>
 
-      <DateRowPicker {...pickerAttributes} />
+      {/* <DateRowPicker {...pickerAttributes} /> */}
 
       <div className="w-full p-2">
         <div className="relative">
@@ -174,7 +174,7 @@ export default function Form({
         <input
           type="submit"
           className={`flex px-8 py-2 mx-auto text-lg text-white capitalize border-0 cursor-pointer focus:outline-none ${
-            (status.submitted && "bg-green-400") ||
+            (status.submitted && "bg-green-900") ||
             "hover:bg-gray-900 bg-gray-700"
           }`}
           value={buttonTxt()}
