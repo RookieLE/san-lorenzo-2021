@@ -43,7 +43,7 @@ export default function Header({
 
               {cta && (
                 <Link href="/agriturismo">
-                  <a className="flex-none w-auto rounded my-6 px-4 py-2 text-md leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent lg:mx-auto hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
+                  <a className="flex-none w-auto rounded place-self-start my-6 px-4 py-2 text-md leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
                     {cta}
                   </a>
                 </Link>

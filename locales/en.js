@@ -19,8 +19,8 @@ export default {
     activities: "Activities",
   },
   announcement: {
-    title: "Next Opening",
-    text: "The Lodge will open on Friday 07 April, 2023.",
+    title: "Announcement",
+    text: "The Lodge will open on Friday 07 April, 2023. The last 4km are more suitable for 4x4 cars or tall cars. But it's up to you.",
   },
   navbar: [
     {
@@ -73,7 +73,7 @@ export default {
     rooms: [
       {
         name: "serenity",
-        price: "94",
+        price: "from 110 € per night",
         guest: "2 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/serenity.jpg",
@@ -92,7 +92,7 @@ export default {
       },
       {
         name: "armony",
-        price: "100",
+        price: "from 120 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/armony.jpg",
@@ -111,7 +111,7 @@ export default {
       },
       {
         name: "joy",
-        price: "100",
+        price: "from 120 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/joy.jpg",
@@ -131,7 +131,7 @@ export default {
       },
       {
         name: "silence",
-        price: "100",
+        price: "from 120 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/silence.jpg",
@@ -150,7 +150,7 @@ export default {
       },
       {
         name: "freedom",
-        price: "100",
+        price: "from 120 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/freedom.jpg",

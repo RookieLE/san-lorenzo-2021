@@ -19,8 +19,8 @@ export default {
     activities: "Attività",
   },
   announcement: {
-    title: "Prossima Apertura",
-    text: "L'agriturismo aprirà Venerdi 07 Aprile 2023.",
+    title: "Annuncio",
+    text: "L'agriturismo aprirà Venerdi 07 Aprile 2023. Gli ultimi 4 km sono più adatti ad auto alte o 4x4. Però non è strettamente necessario.",
   },
   navbar: [
     {
@@ -60,7 +60,7 @@ export default {
       title: `San Lorenzo`,
       subTitle: "un paradiso nascosto",
       text: "Benvenuti in Persegno località immersa nella natura del parco Alto Garda Bresciano, ai piedi del Monte Pizzocolo. L'agriturismo San Lorenzo offre vari appartamenti in una bella zona di montagna.",
-      cta: "Scopri di più",
+      cta: "Mostra",
       img: {
         url: "",
         alt: "Una vista del lago di garda dal monte pizzoccolo",
@@ -75,9 +75,9 @@ export default {
     rooms: [
       {
         name: "serenity",
-        price: "94",
+        price: "da 110 € notte",
         guest: "2 ospiti",
-        viewMore: "Scopri di più",
+        viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/serenity.jpg",
         videoUrl: "https://www.youtube.com/embed/LNmRQhKBoX0",
         alt: "An internal view of serenity apartment, with a wood table and a big window.",
@@ -94,9 +94,9 @@ export default {
       },
       {
         name: "armony",
-        price: "100",
+        price: "da 120 € notte",
         guest: "4 ospiti",
-        viewMore: "Scopri di più",
+        viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/armony.jpg",
         videoUrl: "https://www.youtube.com/embed/lb2J4dofalU",
         alt: "An internal view of Armony apartment, with a wood table and a big window.",
@@ -113,9 +113,9 @@ export default {
       },
       {
         name: "joy",
-        price: "100",
+        price: "da 120 € notte",
         guest: "4 ospiti",
-        viewMore: "Scopri di più",
+        viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/joy.jpg",
         videoUrl: "https://www.youtube.com/embed/YFtzwdU_1zw",
         alt: "An internal view of Joy apartment, with a wood table and a big window.",
@@ -133,9 +133,9 @@ export default {
       },
       {
         name: "silence",
-        price: "100",
+        price: "da 120 € notte",
         guest: "4 ospiti",
-        viewMore: "Scopri di più",
+        viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/silence.jpg",
         videoUrl: "https://www.youtube.com/embed/lxUSHimdKmA",
         alt: "An internal view of Silence apartment, with a wood table and a big window.",
@@ -152,9 +152,9 @@ export default {
       },
       {
         name: "freedom",
-        price: "100",
+        price: "da 120 € notte",
         guest: "4 opsiti",
-        viewMore: "Scopri di più",
+        viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/freedom.jpg",
         videoUrl: "https://www.youtube.com/embed/0ZkLWq3Ntw8",
         alt: "An internal view of Freedom apartment, with a balcony and a big window.",
