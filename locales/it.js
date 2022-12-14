@@ -261,10 +261,10 @@ export default {
       {
         title: `La struttura`,
         subTitle: undefined,
-        text: "Circondata da 14 ettari di terreno, la struttura fa parte di un antico caseificio risalente all'800. Ciascuna camera può ospitare fino a quattro persone in un'atmosfera calda e accogliente, distintamente affascinante e confortevole. Gli appartamenti sono confortevoli e arredati con charme, con qualsiasi attrezzo di cui potresti aver bisogno durante il tuo viaggio. L'Agriturismo San Lorenzo offre una serie di graziosi appartamenti in una tranquilla zona di montagna, con solarium esterno. A 5 minuti di macchina ha anche un meraviglioso fiume dove si può fare il bagno..",
+        text: "Circondata da 14 ettari di terreno, la struttura fa parte di un antico caseificio risalente all'800.  </br></br>  Ciascuna camera può ospitare fino a quattro persone in un'atmosfera calda e accogliente, distintamente affascinante e confortevole. Gli appartamenti sono confortevoli e arredati con charme, con qualsiasi attrezzo di cui potresti aver bisogno durante il tuo viaggio.  </br></br>  L'Agriturismo San Lorenzo offre una serie di graziosi appartamenti in una tranquilla zona di montagna, con solarium esterno. A 5 minuti di macchina ha anche un meraviglioso fiume dove si può fare il bagno..",
       },
       {
-        title: `Prenditi cura di te stessa/o`,
+        title: `Prenditi cura di te`,
         subTitle: undefined,
         text: "Ogni droga ha pesanti controindicazioni. Il massaggio invece è la più potente delle droghe, senza avere alcuna controindicazione. Ricordati di prenotare il tuo massaggio con anticipo.",
       },

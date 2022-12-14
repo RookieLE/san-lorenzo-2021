@@ -89,7 +89,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
           size={42}
           speed={3}
           strokeColor="black"
-          className={`transform transition ${
+          className={`transform transition rounded ${
             (isMenuOpen && "bg-green-700") || ""
           } ${(isMenuOpen || simplified) && "bg-gray-700 fill-current "}`}
         />
@@ -100,7 +100,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
       )}
 
       <ul
-        className={`grid absolute lg:border-0 bg-white text-black shadow left-0 top-0 z-20 p-2 w-2/3 sm:w-1/3 lg:w-full m-6 lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
+        className={`grid absolute lg:border-0 bg-white rounded text-black shadow left-0 top-0 z-20 p-2 w-2/3 sm:w-1/3 lg:w-full m-6 lg:flex lg:relative lg:bg-transparent lg:${textColor} lg:shadow-none lg:justify-end ${
           (isMenuOpen && "block") || "hidden"
         }`}
       >
@@ -139,7 +139,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
               <SiInstagram className="text-2xl text-gray-800" />
             </a>
           </div> */}
-          <div className="text-lg tracking-wider text-gray-800 capitalize cursor-pointer bg-gray-50 h-12 place-content-center place-items-center flex">
+          <div className="text-lg tracking-wider text-gray-800 capitalize cursor-pointer bg-gray-50 rounded h-12 place-content-center place-items-center flex">
             <div className="relative flex w-1/3 px-2 py-3 transition rounded-md lg:w-full place-items-center place-content-center sm:px-2 sm:py-1">
               {/*  <!-- Dropdown toggle button --> */}
               <button
@@ -167,7 +167,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
 
               {/* <!-- Dropdown menu --> */}
               {isDropdownOpen && (
-                <div className="absolute z-20 p-1 mt-4 border border-gray-200 shadow-xl bg-gray-50/70 lg:top-5 -right-16 -top-5 lg:right-0 w-14 hover:bg-gray-50/80">
+                <div className="absolute z-20 p-1 mt-4 border border-gray-200 shadow-xl rounded bg-gray-50/70 lg:top-5 -right-16 -top-5 lg:right-0 w-14 hover:bg-gray-50/80">
                   <button
                     onClick={() => {
                       handleChangeLang(oppositeLocale);
@@ -184,7 +184,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
           </div>
 
           <a
-            class="px-8 h-12 flex place-content-center place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
+            class="px-8 h-12 flex place-content-center rounded place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
             href={bookNow.href}
             target="_blank"
           >

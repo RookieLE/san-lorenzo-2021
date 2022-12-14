@@ -259,7 +259,7 @@ export default {
       {
         title: `The facility`,
         subTitle: undefined,
-        text: "Surrounded by 14 hectares of land, the facility is part of an ancient cheese-making farm dating back to the 19th century. Each room can host up to four guests in a warm and cozy atmosphere, distinctively charming and comfortable. The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey. The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area, with an outside solarium. At 5 minutes by car it has also a wonderful river where you can make a bath.",
+        text: "Surrounded by 14 hectares of land, the facility is part of an ancient cheese-making farm dating back to the 19th century. </br></br> Each room can host up to four guests in a warm and cozy atmosphere, distinctively charming and comfortable. </br></br> The apartments are comfortable and charmingly furnished, with any tool that you may need during your journey. </br></br> The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area, with an outside solarium. At 5 minutes by car it has also a wonderful river where you can make a bath.",
       },
       {
         title: `Take care of your self`,

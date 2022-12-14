@@ -9,7 +9,7 @@ export default function Layout({ children }) {
     <main className="grid">
       <div class="px-4 pt-4 pb-4 lg:pb-0">
         <div class="mx-auto">
-          <div class="p-4 bg-blue-100">
+          <div class="p-4 bg-blue-100 rounded-md">
             <div class="flex w-full h-full items-center justify-center text-center">
               <div class="flex pr-6">
                 <div>

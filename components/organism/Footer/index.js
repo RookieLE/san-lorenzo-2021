@@ -9,7 +9,7 @@ export default function Footer({
 }) {
   const { locale } = useLocale();
   return (
-    <footer className="relative z-50 flex flex-col justify-end w-full py-10 text-gray-800 bg-bottom bg-gray-50 max-h-800">
+    <footer className="relative flex flex-col justify-end w-full py-10 text-gray-800 bg-bottom bg-gray-50 max-h-800">
       <div className="z-50 flex justify-center w-full">
         <Image
           src={"/black-logo.png"}

@@ -19,27 +19,32 @@ export default function Agriturismo() {
     <>
       <Seo {...seoAttributes} />
       <Header background="/assets/agriturismo/lodge.png" {...headerText} />
-
-      <img src="/assets/agriturismo/lodge-2.png" class="mb-20 px-2" />
-      <section className={`w-full bg-cover mx-auto grid`}>
-        <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
-          <h1 className="mb-8 text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
+      <section
+        className={`w-full mx-auto grid 2xl:grid-cols-2 bg-gray-50 px-4`}
+      >
+        <img
+          src="/assets/agriturismo/lodge-3.png"
+          class="my-10 2xl:my-20  order-2 2xl:order-1"
+        />
+        <div className="flex px-4 flex-col items-end place-content-center mt-10 mb-16 text-left lg:my-20 lg:flex-grow  order-1 2xl:order-2">
+          <h1 className="my-4 text-5xl text-left text-gray-900 lg:text-6xl sm:text-6xl">
             {sections[0].title}
           </h1>
 
-          <p className="max-w-screen-lg mb-10 text-lg text-gray-500 lg:mx-auto sm:text-2xl sm:leading-10 sm:mb-11">
-            {sections[0].text}
-          </p>
+          <p
+            className="text-lg text-right text-gray-800 sm:leading-8 max-w-2xl"
+            dangerouslySetInnerHTML={{ __html: sections[0].text }}
+          />
         </div>
       </section>
-      <img src="/assets/agriturismo/lodge-3.png" class="mb-20 px-2" />
-      <section className={`w-full bg-cover mx-auto grid`}>
+
+      <section className={`w-full bg-cover mx-auto grid px-4`}>
         <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
-          <h1 className="mb-8 text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
+          <h1 className="my-4 text-5xl text-left text-gray-900 lg:text-6xl sm:text-6xl">
             {sections[1].title}
           </h1>
 
-          <p className="max-w-screen-lg mb-10 text-lg text-gray-500 lg:mx-auto sm:text-2xl sm:leading-10 sm:mb-11">
+          <p className="text-lg text-gray-800 sm:leading-8 max-w-2xl">
             {sections[1].text}
           </p>
         </div>

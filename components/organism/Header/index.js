@@ -31,57 +31,25 @@ export default function Header({
       <Menu navbar={t.navbar} bookNow={t.book_now} simplified={simplified} />
       <header className={`w-full bg-cover mx-auto grid`}>
         {title && (
-          <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
-            {/* {showNotification && notification && (
-            <div class="alert text-white shadow-lg mb-10 px-2 z-50 max-w-xl bg-gray-800">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  class="stroke-info flex-shrink-0 w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <div>
-                  <h3 class="font-bold">
-                    {(locale === "en" && "New message!") || "Nuovo messaggio!"}
-                  </h3>
-                  <div class="text-sm">{notification}</div>
-                </div>
-              </div>
-              <div class="flex-none">
-                <button
-                  onClick={() => setShowNotification(false)}
-                  class="btn btn-sm bg-gray-600 border-none text-gray-100 hover:bg-gray-700 capitalize"
-                >
-                  Ok
-                </button>
-              </div>
+          <div className="grid 2xl:grid-cols-2 order-2 px-4 mb-12 lg:my-20">
+            <div className="flex px-4 flex-col items-start place-content-center max-w-screen-md my-5 text-left lg:my-20 lg:flex-grow md:pl-2">
+              <h1 className="my-4 text-5xl text-left text-gray-900 lg:text-6xl sm:text-6xl">
+                {title} <span className="text-green-900">{subTitle}</span>
+              </h1>
+
+              <p className="text-lg text-gray-800 sm:leading-8">
+                {text}
+              </p>
+
+              {cta && (
+                <Link href="/agriturismo">
+                  <a className="flex-none w-auto rounded my-6 px-4 py-2 text-md leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent lg:mx-auto hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
+                    {cta}
+                  </a>
+                </Link>
+              )}
             </div>
-          )} */}
-            <h1 className="my-4 text-5xl text-center text-gray-900 lg:text-6xl font-heading sm:text-6xl">
-              {title} <span className="text-green-900">{subTitle}</span>
-            </h1>
-
-            <p className="max-w-screen-lg mb-10 text-lg text-gray-800 lg:mx-auto sm:leading-8 sm:mb-11">
-              {text}
-            </p>
-
-            {cta && (
-              <Link href="/agriturismo">
-                <a className="flex-none w-auto px-4 py-2 text-md leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent lg:mx-auto hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
-                  {cta}
-                </a>
-              </Link>
-            )}
-
-            <img src="/assets/agriturismo/lodge-2.png" class="my-20 px-2" />
+            <img src="/assets/agriturismo/lodge-2.png" class="px-2 place-self-center" />
           </div>
         )}
         {background && (

@@ -1,21 +1,20 @@
-export default function InfoRoom({
-  t: {
+export default function InfoRoom({ t }) {
+  const {
+    book_now,
     rooms: { infoRooms },
-  },
-}) {
+  } = t;
+
   return (
     <>
-      <section className="text-gray-600">
+      <section className="text-gray-600 bg-gray-50">
         <div className="container px-5 py-2 mx-auto">
           <div className="flex flex-col w-full my-12 text-center">
-            <h4 className="pb-5 text-4xl font-medium text-green-900">
+            <h4 className="pb-5 text-4xl font-medium text-gray-900">
               {infoRooms.bulletList.title}
             </h4>
-            <ul className="flex flex-col gap-2 mx-auto text-base leading-relaxed list-disc list-inside lg:w-2/3">
-              {infoRooms.bulletList.list.map((el) => (
-                <li>{el}</li>
-              ))}
-            </ul>
+            <div className="flex flex-col gap-2 mx-auto text-base leading-relaxed list-disc list-inside lg:w-2/3">
+              {infoRooms.bulletList.list.map((el) => el + " ")}
+            </div>
           </div>
         </div>
 
@@ -33,8 +32,8 @@ export default function InfoRoom({
         </section>
       </section>
 
-      <div className="flex flex-col w-full py-12 mb-12 text-center lg:py-24 bg-gray-50">
-        <h4 className="pb-5 text-4xl font-medium text-green-900">
+      <div className="flex flex-col w-full py-12 mb-12 text-center lg:py-24">
+        <h4 className="pb-5 text-4xl font-medium text-gray-900">
           {infoRooms.additionalInfo.title}
         </h4>
         <div className="pb-6">
@@ -62,6 +61,14 @@ export default function InfoRoom({
           </p>
         </div>
       </div>
+
+      <a
+        class="px-8 h-12 bottom-4 left-4 z-50 fixed flex place-content-center rounded place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
+        href={book_now.href}
+        target="_blank"
+      >
+        {book_now.name}
+      </a>
     </>
   );
 }
