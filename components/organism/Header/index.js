@@ -65,7 +65,7 @@ export default function Header({
               </div>
             </div>
           )} */}
-            <h1 className="mb-4 text-5xl text-center text-gray-900 lg:text-6xl font-heading sm:text-6xl title_section">
+            <h1 className="my-4 text-5xl text-center text-gray-900 lg:text-6xl font-heading sm:text-6xl">
               {title} <span className="text-green-900">{subTitle}</span>
             </h1>
 

@@ -8,9 +8,9 @@ export default function Contact({
 }) {
   return (
     <section className='relative text-gray-600 body-font' id='contact'>
-      <div className='container px-5 py-24 mx-auto'>
-        <div className='flex flex-col w-full mb-12 text-center'>
-          <h2 className='title_section'>{title}</h2>
+      <div className='container px-5 py-12 lg:py-24 mx-auto'>
+        <div className='flex flex-col w-full mb-6 lg:mb-12 text-center'>
+        <h2 className="my-4 text-5xl text-center text-gray-900 lg:text-6xl font-heading sm:text-6xl">{title}</h2>
           <p className='mx-auto text-base leading-relaxed lg:w-2/3'>{desc}</p>
         </div>
         <Form form={form} />
