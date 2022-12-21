@@ -24,6 +24,7 @@ export default function IndexPage() {
       <Seo {...seoAttributes} />
       <Header
         background="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199"
+        customSrcSet="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 1800w, https://ik.imagekit.io/dcwkdo37k/tr:w-1200/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 1200w, https://ik.imagekit.io/dcwkdo37k/tr:w-800/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 800w, https://ik.imagekit.io/dcwkdo37k/tr:w-400/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 400w"
         {...headerText}
         img_text={t.header.welcome}
         simplified={false}

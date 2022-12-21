@@ -18,12 +18,12 @@ export default function Agriturismo() {
   return (
     <>
       <Seo {...seoAttributes} />
-      <Header background="/assets/agriturismo/lodge.png" {...headerText} />
+      <Header background="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/lodge.png?ik-sdk-version=javascript-1.4.3&updatedAt=16716615929077" {...headerText} />
       <section
         className={`w-full mx-auto grid 2xl:grid-cols-2 bg-gray-50 px-4`}
       >
         <img
-          src="/assets/agriturismo/lodge-3.png"
+          src="https://ik.imagekit.io/dcwkdo37k/Agriturismo/tr:w-850/lodge-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671664739769"
           class="my-10 2xl:my-20  order-2 2xl:order-1"
         />
         <div className="flex px-4 flex-col items-end place-content-center mt-10 mb-16 text-left lg:my-20 lg:flex-grow  order-1 2xl:order-2">
@@ -49,7 +49,7 @@ export default function Agriturismo() {
           </p>
         </div>
       </section>
-      <img src="/assets/agriturismo/massage.png" class="mb-20 px-2" />
+      <img src="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/massage.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671665046624" class="mb-20 px-2" />
       <Contact t={t} simplified />
       <Footer t={t} />
     </>
