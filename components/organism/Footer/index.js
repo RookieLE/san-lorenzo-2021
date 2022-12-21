@@ -11,41 +11,39 @@ export default function Footer({
   let year = new Date().getFullYear();
   return (
     <footer className="relative flex flex-col justify-end w-full py-10 text-gray-800 bg-bottom bg-gray-50 max-h-800">
-      <div className="z-50 flex justify-center w-full">
-        <Image
-          src={"/black-logo.png"}
-          className={`object-container object-center`}
+      <div className="flex justify-center w-full mb-8">
+        <img
+          src={"/black-logo.webp"}
+          className={`object-container object-center w-20`}
           alt="hero"
-          width={120}
-          height={80}
           lazy
         />
       </div>
 
-      <ul className="z-50 grid max-w-screen-sm gap-3 pb-16 mx-auto text-center place-content-center md:grid-cols-4">
-        <li className="text-lg font-light tracking-wider text-gray-800 cursor-pointer lg:hover:border-white md:text-xl">
+      {/* <ul className="grid max-w-screen-sm gap-3 mx-auto text-center place-content-center md:grid-cols-4">
+        <li className="text-lg tracking-wider text-gray-800 cursor-pointer md:text-xl">
           <Link href={`/${locale}`}>
-            <a>{home}</a>
+            <a class="text-gray-800">{home}</a>
           </Link>
         </li>
-        <li className="text-lg font-light tracking-wider text-gray-800 cursor-pointer lg:hover:border-white md:text-xl">
+        <li className="text-lg tracking-wider text-gray-800 cursor-pointer md:text-xl">
           <Link href={`/${locale}/agriturismo`}>
             <a>{lodge}</a>
           </Link>
         </li>
-        <li className="text-lg font-light tracking-wider text-gray-800 cursor-pointer lg:hover:border-white md:text-xl">
+        <li className="text-lg tracking-wider text-gray-800 cursor-pointer md:text-xl">
           <Link href={`/${locale}/appartamenti`}>
             <a>{apartments}</a>
           </Link>
         </li>
-        <li className="text-lg font-light tracking-wider text-gray-800 cursor-pointer lg:hover:border-white md:text-xl">
+        <li className="text-lg tracking-wider text-gray-800 cursor-pointer md:text-xl">
           <Link href={`/${locale}/attivita`}>
             <a>{activities}</a>
           </Link>
         </li>
-      </ul>
+      </ul> */}
 
-      <div className="z-50 grid font-light text-center place-content-center">
+      <div className="grid font-light text-center place-content-center">
         <span className="flex justify-center pb-16">
           <a
             href="https://www.facebook.com/AgriturismoSanLorenzoDiPersegno"

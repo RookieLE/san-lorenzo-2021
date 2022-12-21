@@ -71,7 +71,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
           width="60"
           priority
         />
-        <h1 className="col-span-2 text-3xl text-gray-800 font-medium justify-self-start tracking-wider xl:flex md:flex-col min-w-[200px] md:place-content-center">
+        <h1 className="col-span-2 text-xl lg:text-3xl text-gray-800 font-medium justify-self-start tracking-wider xl:flex md:flex-col md:place-content-center">
           San Lorenzo{" "}
           <span className="block text-lg font-light relative bottom-2 italic">
             di Persegno
