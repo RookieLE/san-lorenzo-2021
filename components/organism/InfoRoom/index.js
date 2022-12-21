@@ -62,13 +62,13 @@ export default function InfoRoom({ t }) {
         </div>
       </div>
 
-      <a
+      {/* <a
         class="px-8 h-12 bottom-4 left-4 z-50 fixed flex place-content-center rounded place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
         href={book_now.href}
         target="_blank"
       >
         {book_now.name}
-      </a>
+      </a> */}
     </>
   );
 }

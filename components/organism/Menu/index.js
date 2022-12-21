@@ -59,40 +59,52 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
 
   return (
     <nav
-      className={`flex w-full justify-between z-50  max-w-[1920px] lg:mx-auto px-4 ${textColor} ${
+      className={`flex w-full justify-between z-50 sticky top-0 py-2 bg-white max-w-[1920px] lg:mx-auto px-4 ${textColor} ${
         simplified && "px-4 lg:p-0 lg:py-2 bg-gray-800"
       }`}
     >
-      <div className="z-20 grid grid-cols-2 justify-content-start md:place-content-center max-w-[200px] lg:max-w-[280px] lg:mr-20">
+      <div className="z-20 grid lg:grid-cols-2 justify-content-start md:place-content-center max-w-[200px] lg:max-w-[280px] lg:mr-20">
         <img
           className={`object-container object-center w-20 lg:place-self-center`}
           alt="hero"
           src="/black-logo.png"
           priority
         />
-        <h1 className="text-3xl text-gray-800 font-medium justify-self-start tracking-wider md:flex md:flex-col min-w-[200px] md:place-content-center">
+        <h1 className="hidden text-3xl text-gray-800 font-medium justify-self-start tracking-wider md:flex md:flex-col min-w-[200px] md:place-content-center">
           San Lorenzo{" "}
-          <span className="block text-lg font-light">di Persegno</span>
+          <span className="block text-lg font-light relative bottom-2">
+            di Persegno
+          </span>
         </h1>
       </div>
 
-      <div
-        className="z-50 hover:cursor-pointer lg:hidden place-self-center"
-        onClick={handleHamb}
-      >
-        <UseAnimations
-          animation={menu2}
-          wrapperStyle={
-            (isMenuOpen && { textColor: "black" }) || { textColor: "black" }
-          }
-          reverse={isMenuOpen}
-          size={42}
-          speed={3}
-          strokeColor="black"
-          className={`transform transition rounded ${
-            (isMenuOpen && "bg-green-700") || ""
-          } ${(isMenuOpen || simplified) && "bg-gray-700 fill-current "}`}
-        />
+      <div className="flex gap-2 place-content-end place-items-center">
+        <a
+          class="lg:hidden px-4 h-12 place-self-center flex place-content-center rounded place-items-center text-white bg-green-900 hover:bg-green-800 capitalize"
+          href={bookNow.href}
+          target="_blank"
+        >
+          {bookNow.name}
+        </a>
+
+        <div
+          className="z-50 hover:cursor-pointer lg:hidden place-self-center w-12 h-12 border-2 border-gray-700 flex place-content-center place-items-center rounded-md"
+          onClick={handleHamb}
+        >
+          <UseAnimations
+            animation={menu2}
+            wrapperStyle={
+              (isMenuOpen && { textColor: "black" }) || { textColor: "black" }
+            }
+            reverse={isMenuOpen}
+            size={42}
+            speed={3}
+            strokeColor="black"
+            className={`transform transition rounded ${
+              (isMenuOpen && "bg-green-700") || ""
+            } ${(isMenuOpen || simplified) && "bg-gray-700 fill-current "}`}
+          />
+        </div>
       </div>
 
       {isMenuOpen && (
@@ -146,8 +158,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="relative z-10 flex text-sm text-gray-800 uppercase focus:outline-none place-content-center place-items-center"
               >
-                
-                <img src={`/assets/flag/${locale}.png`} className="w-5 mr-2"/>
+                <img src={`/assets/flag/${locale}.png`} className="w-5 mr-2" />
                 {locale}
                 {/* <svg
                   className={`relative w-5 h-5 text-gray-800 transform transition-transform ${
@@ -175,7 +186,10 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
                     }}
                     className="flex w-full py-1 text-sm text-gray-800 uppercase transition-colors duration-200 transform place-content-center focus:outline-none"
                   >
-                    <img src={`/assets/flag/${oppositeLocale}.png`} className="w-5 mr-2"/>
+                    <img
+                      src={`/assets/flag/${oppositeLocale}.png`}
+                      className="w-5 mr-2"
+                    />
                     {oppositeLocale}
                   </button>
                 </div>
