@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function RoomsPreview({ locale, room }) {
@@ -33,7 +32,7 @@ export default function RoomsPreview({ locale, room }) {
                 <div className="flex flex-col content-center px-8 bg-gray-50 h-2/3 group-hover:bg-gray-100">
                   <div className="flex items-center">
                     <div className="inline-flex items-center justify-center flex-shrink-0 mr-3">
-                      <Image
+                      <img
                         src={el.othersImages[0].url}
                         className="object-cover rounded-full shadow-md w-44 h-44"
                         width={140}
