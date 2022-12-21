@@ -63,16 +63,17 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
         simplified && "px-4 lg:p-0 lg:py-2 bg-gray-800"
       }`}
     >
-      <div className="z-20 grid lg:grid-cols-2 justify-content-start md:place-content-center max-w-[200px] lg:max-w-[280px] lg:mr-20">
+      <div className="z-20 grid md:grid-cols-3 justify-content-start md:place-content-center lg:mr-10">
         <img
-          className={`object-container object-center w-20 lg:place-self-center`}
+          className={`object-container object-center w-14 lg:place-self-center hidden xl:flex`}
           alt="hero"
-          src="/black-logo.png"
+          src="/black-logo.webp"
+          width="60"
           priority
         />
-        <h1 className="hidden text-3xl text-gray-800 font-medium justify-self-start tracking-wider md:flex md:flex-col min-w-[200px] md:place-content-center">
+        <h1 className="col-span-2 text-3xl text-gray-800 font-medium justify-self-start tracking-wider xl:flex md:flex-col min-w-[200px] md:place-content-center">
           San Lorenzo{" "}
-          <span className="block text-lg font-light relative bottom-2">
+          <span className="block text-lg font-light relative bottom-2 italic">
             di Persegno
           </span>
         </h1>

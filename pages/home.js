@@ -23,7 +23,7 @@ export default function IndexPage() {
     <>
       <Seo {...seoAttributes} />
       <Header
-        background="/assets/home/mountain.jpg"
+        background="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199"
         {...headerText}
         img_text={t.header.welcome}
         simplified={false}

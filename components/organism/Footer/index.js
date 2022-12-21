@@ -8,6 +8,7 @@ export default function Footer({
   },
 }) {
   const { locale } = useLocale();
+  let year = new Date().getFullYear();
   return (
     <footer className="relative flex flex-col justify-end w-full py-10 text-gray-800 bg-bottom bg-gray-50 max-h-800">
       <div className="z-50 flex justify-center w-full">
@@ -80,7 +81,7 @@ export default function Footer({
           target="_blank"
           title="Web Developer Website"
         >
-          © 2023 powered by Leonardo Tononi
+          © {year} powered by Leonardo Tononi
         </a>
       </div>
     </footer>

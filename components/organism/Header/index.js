@@ -37,9 +37,7 @@ export default function Header({
                 {title} <span className="text-green-900">{subTitle}</span>
               </h1>
 
-              <p className="text-lg text-gray-800 sm:leading-8">
-                {text}
-              </p>
+              <p className="text-lg text-gray-800 sm:leading-8">{text}</p>
 
               {cta && (
                 <Link href="/agriturismo">
@@ -49,7 +47,10 @@ export default function Header({
                 </Link>
               )}
             </div>
-            <img src="/assets/agriturismo/lodge-2.png" class="px-2 place-self-center" />
+            <img
+              src="https://ik.imagekit.io/dcwkdo37k/tr:w-850/lodge-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671661530113"
+              class="px-2 place-self-center"
+            />
           </div>
         )}
         {background && (
@@ -57,6 +58,7 @@ export default function Header({
             <img
               alt="Mountains"
               src={background}
+              srcSet="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 1800w, https://ik.imagekit.io/dcwkdo37k/tr:w-1200/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 1200w, https://ik.imagekit.io/dcwkdo37k/tr:w-800/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 800w, https://ik.imagekit.io/dcwkdo37k/tr:w-400/mountain.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1671660729199 400w"
               quality={100}
               layout="fill"
               priority

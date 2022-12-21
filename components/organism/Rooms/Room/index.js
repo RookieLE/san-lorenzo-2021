@@ -18,7 +18,7 @@ export default function Room({
       <div className="mx-6 lg:max-w-5xl">
         <div className={``}>
           <div className="lg:h-full">
-            <Image
+            <img
               className="w-full h-full rounded"
               alt={othersImages[0].alt}
               objectFit="cover"
