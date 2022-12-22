@@ -18,9 +18,9 @@ export default function Posizione() {
   return (
     <>
       <Seo {...seoAttributes} />
-      <Header background="/assets/position/location.png" {...headerText} />
+      <Header background="https://ik.imagekit.io/dcwkdo37k/Agriturismo/tr:w-1800/location.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671672242962" {...headerText} />
 
-      <img src="/assets/position/location-2.png" class="mb-20 px-2" />
+      <img src="https://ik.imagekit.io/dcwkdo37k/Agriturismo/tr:w-1800/location-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671672241079" class="mb-20 px-2" />
       <section className={`w-full bg-cover mx-auto grid`}>
         <div className="flex flex-col items-center order-2 max-w-screen-xl my-5 text-center lg:my-20 lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
           <h1 className="mb-8 text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl sm:mb-10">
@@ -32,7 +32,7 @@ export default function Posizione() {
           </p>
         </div>
       </section>
-      <img src="/assets/position/gargnano.png" class="mb-20 px-2" />
+      <img src="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/gargnano.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671662413179" class="mb-20 px-2" />
 
       <Contact t={t} simplified />
       <Footer t={t} />

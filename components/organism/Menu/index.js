@@ -29,6 +29,13 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
     setTimeout(() => setIsMenuOpen(!isMenuOpen), 300);
   };
 
+  const handleScroll = () => {
+    window?.scrollTo({
+      bottom: 0,
+      behavior: "smooth",
+    });
+  };
+
   // const isMenuActive = (_menu) =>
   //     (router.pathname === _menu && !simplified && "h-8 border-l-4 lg:border-b-2 border-white lg:border-l-0 lg:text-gray-800") ||
   //     (router.pathname === _menu && simplified && "h-8 border-l-4 border-green-900 lg:border-b-2 lg:border-gray-800 lg:border-l-0") ||
@@ -63,7 +70,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
         simplified && "px-4 lg:p-0 lg:py-2 bg-gray-800"
       }`}
     >
-      <div className="z-20 grid md:grid-cols-3 justify-content-start md:place-content-center lg:mr-10">
+      <div className="z-20 grid md:grid-cols-4 justify-content-start md:place-content-center lg:mr-10 lg:min-w-[280px]">
         <img
           className={`object-container object-center w-14 lg:place-self-center hidden xl:flex`}
           alt="hero"
@@ -71,7 +78,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
           width="60"
           priority
         />
-        <h1 className="col-span-2 text-xl lg:text-3xl text-gray-800 font-medium justify-self-start tracking-wider xl:flex md:flex-col md:place-content-center">
+        <h1 className="col-span-3 text-xl lg:text-3xl text-gray-800 font-medium justify-self-start tracking-wider xl:flex md:flex-col md:place-content-center">
           San Lorenzo{" "}
           <span className="block text-lg font-light relative bottom-2 italic">
             di Persegno
