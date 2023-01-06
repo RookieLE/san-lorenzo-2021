@@ -10,7 +10,7 @@ export default function Footer({
   const { locale } = useLocale();
   let year = new Date().getFullYear();
   return (
-    <footer className="relative flex flex-col justify-end w-full py-10 text-gray-800 bg-bottom bg-gray-50 max-h-800">
+    <footer className="relative flex flex-col justify-end w-full pt-10 text-gray-800 bg-bottom bg-gray-50 max-h-800">
       <div className="flex justify-center w-full mb-8">
         <img
           src={"/black-logo.webp"}
@@ -66,15 +66,28 @@ export default function Footer({
           <br />
           Toscolano Maderno (BS) - 25088
         </p>
-        <div className="grid gap-2 mt-6 mb-8 text-gray-800 underline">
+        <div className="grid gap-2 mt-2 mb-8 text-gray-800 underline">
           <a href="mailto:info@sanlorenzodipersegno.it">
             info@sanlorenzodipersegno.it
           </a>
           <a href="tel:00393882432306">Tel. +39 388 243 2306</a>
         </div>
+      </div>
+
+      <div className="grid font-light text-center place-content-center bg-black text-gray-100 pb-6">
+        <div className="grid mt-6 mb-8  text-sm">
+          <p className="leading-normal ">P.iva 01558810980</p>
+          <p className="leading-normal ">
+            Codice Regione 017187-AGR-00007
+          </p>
+          <p className="leading-normal ">
+            Ragione sociale - Agriturismo San Lorenzo di persegno
+          </p>
+          <p className="leading-normal ">Tononi Luca Antonio</p>
+        </div>
 
         <a
-          className="text-gray-800"
+          className=""
           href="https://leonardotononi.com"
           target="_blank"
           title="Web Developer Website"
