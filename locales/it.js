@@ -19,8 +19,8 @@ export default {
     activities: "Attività",
   },
   announcement: {
-    title: "Annuncio",
-    text: "L'agriturismo aprirà Venerdi 07 Aprile 2023. Gli ultimi 4 km sono più adatti ad auto alte o 4x4. Però non è strettamente necessario.",
+    title: "Sul nostro sito trovi i prezzi migliori",
+    text: "Tra il 15/20% in meno rispetto allo stesso appartamento prenotato su Booking o Airbnb. Gli ultimi 4 km sono più adatti ad auto alte o 4x4. Però non è strettamente necessario.",
   },
   navbar: [
     {
@@ -75,98 +75,221 @@ export default {
     rooms: [
       {
         name: "serenity",
-        price: "da 110 € notte",
+        price: "da 90 € notte",
         guest: "2 ospiti",
         viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/serenity.jpg",
         videoUrl: "https://www.youtube.com/embed/LNmRQhKBoX0",
         alt: "An internal view of serenity apartment, with a wood table and a big window.",
         othersImages: [
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/serenity/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685", alt: "" },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/serenity/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662756685",
+            alt: "",
+          },
         ],
       },
       {
         name: "armony",
-        price: "da 120 € notte",
+        price: "da 105 € notte",
         guest: "4 ospiti",
         viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/armony.jpg",
         videoUrl: "https://www.youtube.com/embed/lb2J4dofalU",
         alt: "An internal view of Armony apartment, with a wood table and a big window.",
         othersImages: [
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/armony/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810", alt: "" },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/armony/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662738810",
+            alt: "",
+          },
         ],
       },
       {
         name: "joy",
-        price: "da 120 € notte",
+        price: "da 105 € notte",
         guest: "4 ospiti",
         viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/joy.jpg",
         videoUrl: "https://www.youtube.com/embed/YFtzwdU_1zw",
         alt: "An internal view of Joy apartment, with a wood table and a big window.",
         othersImages: [
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/joy/9.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302", alt: "" },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/joy/9.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662746302",
+            alt: "",
+          },
         ],
       },
       {
         name: "silence",
-        price: "da 120 € notte",
+        price: "da 105 € notte",
         guest: "4 ospiti",
         viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/silence.jpg",
         videoUrl: "https://www.youtube.com/embed/lxUSHimdKmA",
         alt: "An internal view of Silence apartment, with a wood table and a big window.",
         othersImages: [
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/silence/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268", alt: "" },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/silence/8.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662765268",
+            alt: "",
+          },
         ],
       },
       {
         name: "freedom",
-        price: "da 120 € notte",
+        price: "da 105 € notte",
         guest: "4 opsiti",
         viewMore: "Mostra",
         img: "/assets/rooms/thumbnail/freedom.jpg",
         videoUrl: "https://www.youtube.com/embed/0ZkLWq3Ntw8",
         alt: "An internal view of Freedom apartment, with a balcony and a big window.",
         othersImages: [
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/0.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
-          { url: "https://ik.imagekit.io/dcwkdo37k/freedom/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089", alt: "" },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/0.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/1.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/2.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/3.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/4.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/5.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/6.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
+          {
+            url: "https://ik.imagekit.io/dcwkdo37k/freedom/7.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1671662739089",
+            alt: "",
+          },
         ],
       },
     ],

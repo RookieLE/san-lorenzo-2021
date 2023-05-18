@@ -19,8 +19,8 @@ export default {
     activities: "Activities",
   },
   announcement: {
-    title: "Announcement",
-    text: "The Lodge will open on Friday 07 April, 2023. The last 4km are more suitable for 4x4 cars or tall cars. But it's up to you.",
+    title: "On our website you have the best prices",
+    text: "Between 15/20% of the same listing on Booking & Airbnb. The last 4km are more suitable for 4x4 cars or tall cars. But it's up to you.",
   },
   navbar: [
     {
@@ -73,7 +73,7 @@ export default {
     rooms: [
       {
         name: "serenity",
-        price: "from 110 € per night",
+        price: "from 90 € per night",
         guest: "2 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/serenity.jpg",
@@ -92,7 +92,7 @@ export default {
       },
       {
         name: "armony",
-        price: "from 120 € per night",
+        price: "from 105 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/armony.jpg",
@@ -111,7 +111,7 @@ export default {
       },
       {
         name: "joy",
-        price: "from 120 € per night",
+        price: "from 105 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/joy.jpg",
@@ -131,7 +131,7 @@ export default {
       },
       {
         name: "silence",
-        price: "from 120 € per night",
+        price: "from 105 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/silence.jpg",
@@ -150,7 +150,7 @@ export default {
       },
       {
         name: "freedom",
-        price: "from 120 € per night",
+        price: "from 105 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/freedom.jpg",
