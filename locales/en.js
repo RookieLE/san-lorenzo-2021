@@ -44,6 +44,10 @@ export default {
       href: "/posizione",
     },
     {
+      name: "how to arrive",
+      href: "/come-arrivare",
+    },
+    {
       name: "contact",
       href: "#contact",
     },
@@ -289,4 +293,12 @@ export default {
       { title: `Toscolano Maderno`, subTitle: undefined, text: undefined },
     ],
   },
+
+  come_arrivare: {
+    title: "Download the guide",
+    youtube: "https://www.youtube.com/embed/a_Uxmq9g2cQ",
+    cta: "Download",
+    pdf_url: "/how-to-arrive-2023.pdf",
+    pdf_name: "agriturismo-san-lorenzo-how-to-arrive"
+  }
 };
