@@ -19,8 +19,8 @@ export default {
     activities: "Activities",
   },
   announcement: {
-    title: "On our website you have the best prices",
-    text: "Between 15/20% of the same listing on Booking & Airbnb. The last 4km are more suitable for 4x4 cars or tall cars. But it's up to you.",
+    title: "Best prices here",
+    text: "Between 10 - 20% of the same listing on other platforms.",
   },
   navbar: [
     {
@@ -222,8 +222,8 @@ export default {
     ],
   },
   contact: {
-    title: "Contact Us",
-    desc: "Get it in touch. Clear any doubts.",
+    title: "Book Now at a Super Advantageous Price",
+    desc: "Write in the 'message' the dates you would like to book and if you have a preference for the apartment. We will contact you as soon as possible",
     form: {
       name: {
         name: "name",

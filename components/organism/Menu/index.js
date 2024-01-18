@@ -207,8 +207,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
 
           <a
             class="px-8 h-12 flex place-content-center rounded place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
-            href={bookNow.href}
-            target="_blank"
+            href="#contact"
           >
             {bookNow.name}
           </a>

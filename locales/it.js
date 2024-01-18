@@ -19,8 +19,8 @@ export default {
     activities: "Attività",
   },
   announcement: {
-    title: "Sul nostro sito trovi i prezzi migliori",
-    text: "Tra il 15/20% in meno rispetto allo stesso appartamento prenotato su Booking o Airbnb. Gli ultimi 4 km sono più adatti ad auto alte o 4x4. Però non è strettamente necessario.",
+    title: "Qua trovi i migliori prezzi",
+    text: "Tra il 10 - 20% in meno rispetto allo stesso appartamento prenotato su altre piattaforme.",
   },
   navbar: [
     {
@@ -347,8 +347,8 @@ export default {
     ],
   },
   contact: {
-    title: "Scrivici",
-    desc: "Mettiti in contatto per risolvere qualsiasi dubbio.",
+    title: "Prenota ora a un prezzo super vantaggioso",
+    desc: "Scrivi nel 'messaggio' le date in cui vorresti prenotare e se hai una preferenza per l'appartamento. Ti contatteremo il prima possibile.",
     form: {
       name: {
         name: "nome",
