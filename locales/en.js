@@ -40,10 +40,6 @@ export default {
       href: "/attivita",
     },
     {
-      name: "location",
-      href: "/posizione",
-    },
-    {
       name: "how to arrive",
       href: "/come-arrivare",
     },
@@ -62,7 +58,7 @@ export default {
       notification: "Big re opening from May 2022",
       title: `San Lorenzo`,
       subTitle: "a hidden paradise",
-      text: "Welcome in Persegno, a wonderful location surrounded by nature in the Alto Garda Bresciano natural park. The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a quiet mountain area.",
+      text: "The San Lorenzo Farm Holiday Accommodation offers a set of nice apartments in a wonderful location surrounded by nature in the Alto Garda Bresciano natural park.",
       cta: "Learn More",
       img: {
         url: "",
@@ -96,7 +92,7 @@ export default {
       },
       {
         name: "armony",
-        price: "from 105 € per night",
+        price: "from 100 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/armony.jpg",
@@ -115,7 +111,7 @@ export default {
       },
       {
         name: "joy",
-        price: "from 105 € per night",
+        price: "from 100 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/joy.jpg",
@@ -135,7 +131,7 @@ export default {
       },
       {
         name: "silence",
-        price: "from 105 € per night",
+        price: "from 100 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/silence.jpg",
@@ -154,7 +150,7 @@ export default {
       },
       {
         name: "freedom",
-        price: "from 105 € per night",
+        price: "from 100 € per night",
         guest: "4 guests",
         viewMore: "View more",
         img: "/assets/rooms/thumbnail/freedom.jpg",
@@ -278,7 +274,7 @@ export default {
     subTitle: "we?",
     text: "Agriturismo San Lorenzo di Persegno is located inside the Upper Garda Brescia protected park in a mountain area at an altitude of 400 meters about 30 minutes from Lake Garda. Here you can make numerous walks that can also be covered by mountain bike or on horseback. The structure is immersed in a silent and uncontaminated nature, ideal for those who love peace and tranquility. You can also enjoy a pleasant solarium and numerous outdoor spots where you can sunbathe or read a good book. Agriturismo San Lorenzo di Persegno is 20km away from Salo and 1 hour from Desenzano.",
     sections: [
-      { title: `How to get there`, subTitle: undefined, text: undefined },
+      { title: `The around area`, subTitle: undefined, text: undefined },
     ],
   },
 

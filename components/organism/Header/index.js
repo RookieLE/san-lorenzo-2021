@@ -4,6 +4,7 @@ import useLocale from "@/hooks/useLocale";
 import Menu from "@/components/organism/Menu";
 import { useState } from "react";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
+import Announcement from "@/components/atoms/Announcement";
 
 export default function Header({
   background,
@@ -15,6 +16,7 @@ export default function Header({
   customSrcSet = "",
   text,
   cta,
+  noMenu = false
 }) {
   const [showNotification, setShowNotification] = useLocalStorage(
     "showNotification",
@@ -22,51 +24,55 @@ export default function Header({
   );
   const { t, locale } = useLocale();
   const renderImgText = img_text && (
-    <h1 className="absolute bottom-0 left-0 z-10 ml-2 text-4xl text-white lowercase sm:bottom-0 md:bottom-0 lg:-bottom-4 sm:-left-1 lg:text-9xl">
+    <h1 className="absolute left-3 z-10 ml-2 text-4xl text-white lowercase bottom-2 sm:left-2 lg:text-7xl">
       {img_text}
     </h1>
   );
 
   return (
     <>
-      <Menu navbar={t.navbar} bookNow={t.book_now} simplified={simplified} />
-      <header className={`w-full bg-cover mx-auto grid`}>
+      {!noMenu && <Menu navbar={t.navbar} bookNow={t.book_now} simplified={simplified} />}
+      <header className={`w-full mx-auto grid pattern-leaf-green-500/5`}>
         {title && (
-          <div className="grid 2xl:grid-cols-2 order-2 px-4 mb-12 lg:my-20">
-            <div className="flex px-4 flex-col items-start place-content-center max-w-screen-md my-5 text-left lg:my-20 lg:flex-grow md:pl-2">
-              <h1 className="my-4 text-5xl text-left text-gray-900 lg:text-6xl sm:text-6xl">
-                {title} <span className="text-green-900">{subTitle}</span>
+          <div className="grid lg:grid-cols-2 px-4 mb-12 lg:my-20 max-w-[1920px] mx-auto">
+            <div className="flex px-4 flex-col items-start place-content-center max-w-screen-sm my-5 text-left lg:my-20 lg:flex-grow lg:place-self-end lg:mr-14">
+              {renderImgText && <Announcement />}
+              <h1 className="my-4 text-5xl text-left text-gray-900 lg:text-7xl sm:text-6xl font-semibold">
+                {title}, <span className="text-green-900">{subTitle}</span>
               </h1>
 
-              <p className="text-lg text-gray-800 sm:leading-8">{text}</p>
+              <p className="text-md text-gray-700 leading-5 sm:leading-6">{text}</p>
 
               {cta && (
                 <Link href="/agriturismo">
-                  <a className="flex-none w-auto rounded place-self-start my-6 px-4 py-2 text-md leading-6 text-white transition-colors duration-200 bg-green-900 border border-transparent hover:bg-green-800 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
+                  <a className="flex-none w-auto rounded-lg place-self-start my-6 px-4 py-2 text-md leading-6 text-green-900 transition-colors duration-200 bg-transparent border-2 font-bold border-green-900 hover:bg-green-800 hover:text-white focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none">
                     {cta}
                   </a>
                 </Link>
               )}
             </div>
-            <img
+            {/* <img
               src="https://ik.imagekit.io/dcwkdo37k/tr:w-850/lodge-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671661530113"
               class="px-2 place-self-center"
-            />
+            /> */}
+
+            {background && (
+              <div className="relative mx-auto place-self-center">
+                <img
+                  className="rounded-[2rem] lg:rounded-[3rem] lg:w-4/5 lg:max-w-3xl bg-cover bg-center"
+                  alt="Mountains"
+                  src={background}
+                  srcSet={customSrcSet}
+                  quality={100}
+                  layout="fill"
+                  priority
+                />{" "}
+                {renderImgText}{" "}
+              </div>
+            )}
           </div>
         )}
-        {background && (
-          <div className="relative max-w-[1920px] mx-auto order-1 gradient-effect">
-            <img
-              alt="Mountains"
-              src={background}
-              srcSet={customSrcSet}
-              quality={100}
-              layout="fill"
-              priority
-            />{" "}
-            {renderImgText}{" "}
-          </div>
-        )}
+
       </header>{" "}
     </>
   );

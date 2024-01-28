@@ -31,7 +31,7 @@ export default function ImgCentral({
         </a>
       </div> */}
 
-      <div className="flex flex-col items-center justify-center px-2 py-12 mx-auto max-w-screen-2xl md:px-5 md:py-24">
+      <div className="flex flex-col items-center justify-center px-2 py-12 mx-auto max-w-4xl md:px-5 md:py-24">
         {title && (
           <>
             <h4 className="text-4xl font-medium text-center text-green-900">

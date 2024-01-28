@@ -20,6 +20,7 @@ export default function Posizione() {
       <Seo {...seoAttributes} />
 
       <Header />
+      <div className="max-w-5xl mx-auto">
       <section className={`w-full bg-cover mx-auto grid`}>
         <div className="flex flex-col items-center order-2 max-w-screen-xl mt-10 text-center lg:mx-auto lg:text-center lg:flex-grow md:items-center md:text-left md:pl-2">
           <h1 className="text-4xl font-extrabold leading-none text-center text-gray-900 sm:text-6xl lg:text-7xl">
@@ -61,6 +62,8 @@ export default function Posizione() {
       </section>
       <img src="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/toscolano-maderno.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671662415304" class="mb-20 px-2" />
       <img src="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/activities-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671662437045" class="mb-20 px-2" />
+      </div>
+      
       <Contact t={t} simplified />
       <Footer t={t} />
     </>

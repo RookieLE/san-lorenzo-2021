@@ -6,7 +6,7 @@ export default function Rooms({
   },
 }) {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-50">
       <div className="container px-5 py-12 lg:py-24 mx-auto">
         <div className="flex flex-col w-full mb-20 text-center">
           <h2 className="my-4 text-5xl text-center text-gray-900 lg:text-6xl font-heading sm:text-6xl">

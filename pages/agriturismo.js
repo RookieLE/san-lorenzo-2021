@@ -20,7 +20,7 @@ export default function Agriturismo() {
       <Seo {...seoAttributes} />
       <Header background="https://ik.imagekit.io/dcwkdo37k/tr:w-1800/lodge.png?ik-sdk-version=javascript-1.4.3&updatedAt=16716615929077" {...headerText} />
       <section
-        className={`w-full mx-auto grid 2xl:grid-cols-2 bg-gray-50 px-4`}
+        className={`w-full mx-auto grid xl:grid-cols-2 bg-gray-50 px-4`}
       >
         <img
           src="https://ik.imagekit.io/dcwkdo37k/Agriturismo/tr:w-850/lodge-3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671664739769"

@@ -18,5 +18,5 @@ module.exports = {
   daisyui: {
     themes: false,
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('tailwindcss-patterns')],
 };

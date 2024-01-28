@@ -66,7 +66,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
 
   return (
     <nav
-      className={`flex w-full justify-between z-50 sticky top-0 py-2 bg-white max-w-[1920px] lg:mx-auto px-4 ${textColor} ${
+      className={`flex w-full justify-between z-50 sticky top-0 py-2 lg:py-0 bg-white max-w-[1920px] lg:mx-auto px-4 ${textColor} ${
         simplified && "px-4 lg:p-0 lg:py-2 bg-gray-800"
       }`}
     >
@@ -88,7 +88,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
 
       <div className="flex gap-2 place-content-end place-items-center">
         <a
-          class="lg:hidden px-4 h-12 place-self-center flex place-content-center rounded place-items-center text-white bg-green-900 hover:bg-green-800 capitalize"
+          class="lg:hidden px-4 h-12 place-self-center flex place-content-center rounded-lg place-items-center text-white bg-green-900 hover:bg-green-800 capitalize"
           href={bookNow.href}
           target="_blank"
         >
@@ -96,7 +96,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
         </a>
 
         <div
-          className="z-50 hover:cursor-pointer lg:hidden place-self-center w-12 h-12 border-2 border-gray-700 flex place-content-center place-items-center rounded-md"
+          className="z-50 hover:cursor-pointer lg:hidden place-self-center w-12 h-12 border-2 border-gray-700 flex place-content-center place-items-center rounded-lg"
           onClick={handleHamb}
         >
           <UseAnimations
@@ -164,7 +164,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
               {/*  <!-- Dropdown toggle button --> */}
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="relative z-10 flex text-sm text-gray-800 uppercase focus:outline-none place-content-center place-items-center"
+                className="relative z-10 flex text-sm text-gray-800 uppercase focus:outline-none place-content-center place-items-center rounded-lg"
               >
                 <img src={`/assets/flag/${locale}.png`} className="w-5 mr-2" />
                 {locale}
@@ -206,7 +206,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
           </div>
 
           <a
-            class="px-8 h-12 flex place-content-center rounded place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
+            class="px-8 h-12 flex place-content-center rounded-lg place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
             href="#contact"
           >
             {bookNow.name}
