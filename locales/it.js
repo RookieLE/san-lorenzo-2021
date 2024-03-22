@@ -51,7 +51,7 @@ export default {
 
   book_now: {
     name: "prenota ora",
-    href: "https://direct-book.com/properties/sanlorenzodipersegnodirect?locale=it&items%5B0%5D%5Badults%5D=2&items%5B0%5D%5Bchildren%5D=0&items%5B0%5D%5Binfants%5D=0&currency=EUR&checkInDate=2022-12-12&checkOutDate=2022-12-15&trackPage=yes",
+    href: "#contact",
   },
   header: {
     welcome: "benvenuti",
