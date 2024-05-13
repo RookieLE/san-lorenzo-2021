@@ -51,7 +51,7 @@ export default {
 
   book_now: {
     name: "prenota ora",
-    href: "#contact",
+    href: "https://booking.inreception.com/agriturismosanlorenzodipersegno",
   },
   header: {
     welcome: "benvenuti",
