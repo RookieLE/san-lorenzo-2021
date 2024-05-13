@@ -89,7 +89,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
       <div className="flex gap-2 place-content-end place-items-center">
         <a
           class="lg:hidden px-4 h-12 place-self-center flex place-content-center rounded-lg place-items-center text-white bg-green-900 hover:bg-green-800 capitalize"
-          href={bookNow.href}
+          href={"https://booking.inreception.com/agriturismosanlorenzodipersegno"}
           target="_blank"
         >
           {bookNow.name}
@@ -207,7 +207,7 @@ export default function Menu({ simplified = false, navbar, bookNow }) {
 
           <a
             class="px-8 h-12 flex place-content-center rounded-lg place-items-center text-white font-semibold bg-green-900 hover:bg-green-800 capitalize"
-            href="#contact"
+            href="https://booking.inreception.com/agriturismosanlorenzodipersegno"
           >
             {bookNow.name}
           </a>
